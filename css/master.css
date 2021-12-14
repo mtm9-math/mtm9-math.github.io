@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Klee', 'Tsukushi B Round Gothic', 'YuMincho +36p Kana', 'YuGothic';
+    color: black;
+}
+
+h1 {
+    font-family: 'Klee';
+    font-weight: bold;
+    border-bottom: 0.3rem solid skyblue;
+}
+
+h2 {
+    background-color: rgb(255, 168, 188);
+    margin-right: 20%;
+} h2::before {
+    content: "　";
+}
+
+em {
+    font-family: 'YuGothic';
+    font-style: normal;
+    font-weight: bold;
+} em::before {
+    content: " ";
+} em::after {
+    content: " ";
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.arrowlink {
+    font-weight: bold;
+    text-align: right;
+    margin-right: 2rem;
+} .arrowlink a {
+    color: rgb(0, 85, 255);
+    text-decoration: underline;
+} .arrowlink a::before {
+    content: "→";
+} .arrowlink a:hover {
+    text-decoration: none;
+}
+
+.boxlink {
+    text-align: right;
+}
+.boxlink div{
+    display: block;
+    margin-right: 2rem;
+    /* padding:1rem, 0; */
+    background-color: skyblue;
+    color: black;
+}
+
+
+main {
+    background-color:lightgoldenrodyellow;
+    padding: 0.5rem;
+}
+
+footer {
+
+    background-color: lightgray;
+    color: gray;
+}
+
+#copyright {
+    margin-right: 1rem;
+    text-align: right;
+}
