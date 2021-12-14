@@ -1,7 +1,0 @@
-@charset "utf-8";
-
-#news article:hover{
-    opacity: 0.5;
-    transition-property: all;
-    transition-duration: 300ms;
-}
