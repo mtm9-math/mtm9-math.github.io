@@ -1,25 +1,31 @@
 @charset "utf-8";
+@import "header.css";
 
+html {
+    font-size: 0.5cm;
+}
 body {
-    font-family: 'Klee', 'Tsukushi B Round Gothic', 'YuMincho +36p Kana', 'YuGothic';
+    font-family: "TsukuBRdGothic-Regular", "Hiragino Sans W1", sans-serif;
     color: black;
 }
 
 h1 {
-    font-family: 'Klee';
+    font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W5";
     font-weight: bold;
     border-bottom: 0.3rem solid skyblue;
 }
 
 h2 {
+    font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W5";
     background-color: rgb(255, 168, 188);
-    margin-right: 20%;
+    width: 80%;
+    min-width: 15em;
 } h2::before {
     content: "　";
 }
 
 em {
-    font-family: 'YuGothic';
+    font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W5";
     font-style: normal;
     font-weight: bold;
 } em::before {
@@ -59,12 +65,12 @@ a {
 
 
 main {
-    background-color:lightgoldenrodyellow;
     padding: 0.5rem;
+    background-color:lightgoldenrodyellow;
 }
 
 footer {
-
+    padding: 0;
     background-color: lightgray;
     color: gray;
 }

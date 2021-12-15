@@ -1,58 +1,52 @@
 @charset "utf-8";
 
 header {
+  margin: 0;
+  padding: 0.5rem;
+  
   background-color: #ffd7dc;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 0;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 #logo {
-  display: flex;
-  /* background-color: white; */
-  margin-top: 0rem;
-  margin-bottom: 0;
+  margin: 0;
   padding: 0;
 }
 #logo img{
-  height: 5rem;
+  width: 18rem;
+  max-width: 100%;
 }
 
 nav {
-  width: 100%;
-  margin-top: -2rem;
+  margin: 0;
   padding: 0;
-  /* background-color: yellow; */
 }
 nav ul{
+  margin: 0;
+  padding: 0;
+
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
   list-style-position: outside;
-  width: 100%;
-  padding: 0;
 }
 nav ul li{
   display: block;
   text-align: center;
-  width: 6rem;
-  min-width: 5rem;
-  max-width: 8rem;
+  width: 6em;
+  max-width: 100%;
   padding: 0 1%;
-}
-nav ul li:last-child{
-  margin-right: 0;
+  margin-bottom: 0.5rem;
 }
 nav ul li a{
   display: block;
-  border-style: none none solid;
-  border-color: gray;
-  font-family: "tsukushi B round Gothic", "Yu Gothic", serif;
-  font-size: 1rem;
+  border-bottom: 0.2rem solid gray;
   text-decoration: none;
+
+  font-family: "TsukuBRdGothic-Regular", "Hiragino Sans W3";
 }
 nav ul li a:hover {
   background-color: gray;
