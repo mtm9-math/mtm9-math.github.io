@@ -5,26 +5,24 @@ html {
     font-size: 0.5cm;
 }
 body {
-    font-family: "TsukuBRdGothic-Regular", "Hiragino Sans W1", "YuGothic Medium", sans-serif;
+    font-family: "TsukuBRdGothic-Regular", "Hiragino Sans W1", "Hiragino Sans W3", "YuGothic Medium", sans-serif;
     color: black;
 }
 
 h1 {
-    font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W5", "YuGothic Medium", sans-serif;
+    font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W3", "YuGothic Medium", sans-serif;
     border-bottom: 0.3rem solid skyblue;
 }
 
 h2 {
-    font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W5", "YuGothic Medium", sans-serif;
+    font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W3", "YuGothic Medium", sans-serif;
     background-color: rgb(255, 168, 188);
     width: 80%;
     min-width: 15em;
-} h2::before {
-    content: "　";
 }
 
 em {
-    font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W5", "YuGothic Medium", sans-serif;
+    font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W6", "YuGothic Medium", sans-serif;
     font-style: normal;
     font-weight: bold;
 } em::before {
