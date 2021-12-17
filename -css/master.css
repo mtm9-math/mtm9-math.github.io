@@ -15,9 +15,11 @@
 }
 
 html {
-    font-size: 0.5cm;
+    /* font-size: 0.5cm; */
+    font-size: 62.5%;
 }
 body {
+    font-size: 1.6em;
     /* font-family: "TsukuBRdGothic-Regular", "Hiragino Sans W1", "Hiragino Sans W3", "Hiragino Maru Gothic ProN", "YuGothic Medium", sans-serif; */
     font-family: var(--font_sans);
     color: black;
