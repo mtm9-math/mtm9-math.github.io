@@ -4,17 +4,27 @@
         <meta charset="utf-8">
         <title>世界にはiしかない｜トップページ</title>
 
-        <base href="">
+        <base href="./">
         <link rel="stylesheet" href="-css/master.css">
-        <!-- <link rel="stylesheet" href="-css/header.css"> -->
         <link rel="stylesheet" href="-css/top.css">
+        <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+
         <!--MathJax-->
-        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script>
+            MathJax = {
+              chtml: {
+                matchFontHeight: false
+              }
+            };
+        </script>
+        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
     </head>
     <body>
         <header>
             <div id="logo">
-                <a href=""><img src="-img/toplogo.svg" alt="世界にはiしかない"></a>
+                <a href="index.html"><img src="-img/toplogo.svg" alt="世界にはiしかない"></a>
             </div>
             <nav>
                 <ul>
@@ -31,7 +41,8 @@
 
             <section id="intro">
                 <p>「三角函数の教科書」にはじまった教科書プロジェクト。ひたすら「9期生のための教科書」を追求し、表面的な理解とテクニックで終わらせない、数学の本当の意味をお届けします。</p>
-                <p class="arrowlink"><a href="about/index.html">はじまりについて</a></p>
+                <div class="arrowlink"><a href="about/index.html">はじまりについて</a></div>
+                <div class="boxlink"><a href="about/index.html">はじまりについて</a></div>
                 <p>オイラーの恒等式：\( e^{ix} = \cos x + i \sin x \)</p>
                 <p>オイラーの公式　：\( e^{i\pi} = -1 \)</p>
 
