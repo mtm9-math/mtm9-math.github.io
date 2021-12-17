@@ -7,13 +7,24 @@
         <base href="../">
         <link rel="stylesheet" href="-css/master.css">
         <link rel="stylesheet" href="-css/test.css">
+        <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+        
         <!--MathJax-->
-        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script>
+            MathJax = {
+              chtml: {
+                matchFontHeight: false
+              }
+            };
+        </script>
+        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
     </head>
     <body>
         <header>
             <div id="logo">
-                <a href=""><img src="-img/toplogo.svg" alt="世界にはiしかない"></a>
+                <a href="index.html"><img src="-img/toplogo.svg" alt="世界にはiしかない"></a>
             </div>
             <nav>
                 <ul>
@@ -29,6 +40,7 @@
             <section>
                 <ul>
                     <li><a href="test/font.html">Font</a></li>
+                    <li><a href="test/include/index.html">include</a></li>
                 </ul>
             </section>
             <section id="cols_2">
