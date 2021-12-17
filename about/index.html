@@ -6,13 +6,24 @@
 
         <base href="../">
         <link rel="stylesheet" href="-css/master.css">
+        <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+        
         <!--MathJax-->
-        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script>
+            MathJax = {
+              chtml: {
+                matchFontHeight: false
+              }
+            };
+        </script>
+        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
     </head>
     <body>
         <header>
             <div id="logo">
-                <a href=""><img src="-img/toplogo.svg" alt="世界にはiしかない"></a>
+                <a href="index.html"><img src="-img/toplogo.svg" alt="世界にはiしかない"></a>
             </div>
             <nav>
                 <ul>
@@ -27,14 +38,7 @@
         <main>
             <h1>About \(i^i\) ── アイを染めよう</h1>
             <p>「三角函数の教科書」にはじまった教科書プロジェクト。ひたすら「9期生のための教科書」を追求し、表面的な理解とテクニックで終わらせない、数学の本当の意味をお届けします。</p>
-
-            <!--T&E中-->
-            <p class="boxlink">
-                <div>
-                    <a href="mania/i^i.html">\(i^i\)の意味について</a>
-                </div>
-            </p>
-            
+            <div class="boxlink"><a href="mania/i^i.html">\(i^i\)の意味について</a></div>
         </main>
         <footer>
             <p id="copyright">&copy; 2021 Ruri</p>
