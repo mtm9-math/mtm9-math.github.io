@@ -1,33 +1,61 @@
 @charset "utf-8";
 @import "header.css";
 
+:root {
+    --h2_color: rgb(255, 168, 188);
+    --arrowlink_color: rgb(0, 85, 255);
+    --boxlink_color: rgb(155, 215, 239);
+    --boxlink_color_hover: rgb(194, 233, 249);
+
+    --arrow: "→";
+    --font_r: "TsukuBRdGothic-Regular", "Hiragino Sans W1", "Hiragino Sans W3", "Hiragino Maru Gothic ProN", "YuGothic Medium", sans-serif;
+    --font_b: "TsukuBRdGothic-Bold", "Hiragino Sans W3", "YuGothic Medium", sans-serif;
+    --font_sans: "Sawarabi Gothic", sans-serif;
+    --font_serif: "Sawarabi Mincho", serif;
+}
+
 html {
     font-size: 0.5cm;
 }
 body {
-    font-family: "TsukuBRdGothic-Regular", "Hiragino Sans W1", "Hiragino Sans W3", "Hiragino Maru Gothic ProN", "YuGothic Medium", sans-serif;
+    /* font-family: "TsukuBRdGothic-Regular", "Hiragino Sans W1", "Hiragino Sans W3", "Hiragino Maru Gothic ProN", "YuGothic Medium", sans-serif; */
+    font-family: var(--font_sans);
     color: black;
 }
 
 h1 {
-    font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W3", "YuGothic Medium", sans-serif;
+    /* font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W3", "YuGothic Medium", sans-serif; */
     border-bottom: 0.3rem solid skyblue;
+    font-weight: normal;
 }
 
 h2 {
-    font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W3", "YuGothic Medium", sans-serif;
-    background-color: rgb(255, 168, 188);
+    /* font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W3", "YuGothic Medium", sans-serif; */
+    background-color: var(--h2_color);
     width: 80%;
     min-width: 15em;
+    font-weight: normal;
+}
+
+h3 {
+    font-weight: normal;
 }
 
 em {
-    font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W6", "YuGothic Medium", sans-serif;
+    /* font-family: "TsukuBRdGothic-Bold", "Hiragino Sans W6", "YuGothic Medium", sans-serif; */
     font-style: normal;
     font-weight: bold;
 } em::before {
     content: " ";
 } em::after {
+    content: " ";
+}
+
+code {
+    font-family: "Courier", sans-serif;
+} code::before {
+    content: " ";
+} code::after {
     content: " ";
 }
 
@@ -37,29 +65,34 @@ a {
 }
 
 .arrowlink {
-    font-weight: bold;
-    text-align: right;
+    /* font-family: "Hiragino Sans W4", sans-serif; */
     margin-right: 2rem;
 } .arrowlink a {
-    color: rgb(0, 85, 255);
+    color: var(--arrowlink_color);
     text-decoration: underline;
 } .arrowlink a::before {
-    content: "→";
+    content: var(--arrow);
 } .arrowlink a:hover {
     text-decoration: none;
 }
 
 .boxlink {
-    text-align: right;
-}
-.boxlink div{
-    display: block;
-    margin-right: 2rem;
-    /* padding:1rem, 0; */
-    background-color: skyblue;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: fit-content;
+    background-color: var(--boxlink_color);
+} .boxlink a {
+    /* font-family: "Hiragino Sans W4", sans-serif; */
     color: black;
+} .boxlink a::after {
+    content: var(--arrow);
+} .boxlink:hover{
+    background-color: var(--boxlink_color_hover);
+    transition-property: all;
+    transition-duration: 500ms;
 }
-
 
 main {
     padding: 0.5rem;
