@@ -18,9 +18,9 @@ html {
     font-size: 62.5％;
 }
 body {
-    font-size: clamp(16px, 10vw, 22px);
+    /* font-size: clamp(16px, 10vw, 22px); */
     /* font-size: max(16px, min(10vw, 24px)); */
-    /* font-size: clamp(1rem, 2.5vw, 1.2rem); */
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     font-family: var(--font_sans);
     color: black;
 }
