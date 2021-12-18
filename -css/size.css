@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+html {
+    font-size: 62.5％;
+}
+body {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+header {
+    background-color: lavenderblush;
+}
+main {
+    background-color: lightcyan;
+}
+footer {
+    background-color: honeydew;
+}
+
+.img {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: lightgrey;
+    text-align: center;
+}
+.img img {
+    margin: 0;
+    width: 70%;
+    max-width: 40rem;
+    min-width: min(30rem, 100%);
+}
+
+#div1 {
+    margin: 1rem;
+    padding: 1rem;
+    width: fit-content;
+    background-color: darkgray;
+}
+#div2 {
+    margin: 1rem;
+    padding: 1rem;
+    width: min-content;
+    background-color: darkgray;
+}
+#div3 {
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 50%;
+    min-width: min-content;
+    background-color: darkgray;
+}
+#div4 {
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 50rem;
+    overflow-wrap: break-word;
+    background-color: darkgray;
+}
+#div4 p {
+    overflow-wrap: break-word;
+}
