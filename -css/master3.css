@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "header.css";
+/* @import "header.css"; */
 
 :root {
     --h2_color: rgb(255, 168, 188);
@@ -15,7 +15,7 @@
 }
 
 html {
-    font-size: 62.5％;
+    font-size: 62.5%;
 }
 body {
     font-size: clamp(1rem, 2.5vw, 1.2rem);

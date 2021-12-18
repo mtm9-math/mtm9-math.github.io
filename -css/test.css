@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* 2段組 */
 #cols_2 {
     columns: 2;
     column-rule-style: solid;

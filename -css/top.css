@@ -1,7 +1,8 @@
 @charset "utf-8";
 
-#news article:hover{
-    opacity: 0.5;
+#news article h2:hover{
+    background-color: rgb(251, 215, 223);
+    /* opacity: 0.5; */
     transition-property: all;
-    transition-duration: 300ms;
+    transition-duration: 500ms;
 }
