@@ -1,9 +1,0 @@
-@charset "utf-8";
-
-/* 2段組 */
-#cols_2 {
-    columns: 2;
-    column-rule-style: solid;
-    column-rule-width: 0.1rem;
-    column-rule-color: gray;
-}
