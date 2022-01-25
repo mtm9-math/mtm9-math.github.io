@@ -27,6 +27,15 @@ body > main {
     padding: 0.5rem;
     background-color:lightgoldenrodyellow;
 }
+main > footer {
+    border-top: 0.1rem solid gray;
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+main > footer p {
+    line-height: 1rem;
+}
+
 body > footer {
     padding: 0;
     background-color: lightgray;
@@ -73,6 +82,12 @@ h1 {
     border-bottom: 0.3rem solid skyblue;
     font-weight: normal;
     font-size: 1.8rem;
+}
+.info {
+    text-align: right;
+    margin-bottom: 0;
+    color: rgb(60, 60, 60);
+    font-size: 0.9rem;
 }
 h2 {
     /* text-align: center; */
@@ -123,6 +138,10 @@ p {
     line-height: 1rem;
     background-color: rgb(222, 222, 222);
 }
+.dasoku p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
 
 .box {
     padding: 0 1rem;
@@ -171,11 +190,14 @@ code {
     text-align: center;
 }
 
-.ref {
+.ref a, .note a{
     color: gray;
 }
-.ref:hover {
+.ref a:hover, .note a:hover {
     color: lightgray;
+}
+.note a::after {
+    content: "　";
 }
 
 
@@ -232,10 +254,10 @@ a {
     text-align: center;
 }
 .math::before {
-    content: "\(";
+    content: " \(";
 }
 .math::after {
-    content: "\)";
+    content: "\) ";
 }
 
 figure {
@@ -256,4 +278,15 @@ figure img {
     width: 70%;
     max-width: 40rem;
     min-width: min(30rem, 100%);
+}
+
+.img2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.img2 img {
+    margin: 0;
+    width: 70%;
+    max-width: 40rem;
 }

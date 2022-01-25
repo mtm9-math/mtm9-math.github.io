@@ -31,7 +31,7 @@
                     <li><a href="index.html">TOP</a></li>
                     <li><a href="article/index.html">記事一覧</a></li>
                     <li><a href="tips/index.html">Tips</a></li>
-                    <li><a href="about/index.html">About \(i^i\)</a></li>
+                    <li><a href="about/index.html">About \(i^i\) </a></li>
                     <li><a href="mania/index.html">暇人編</a></li>
                 </ul>
             </nav>
@@ -46,11 +46,14 @@
                     </ul>
                 </nav>
                 <span class="subtitle">高次方程式入門　①</span>
-                <h1>因数定理</h1>
+                <h1>剰余の定理</h1>
+                <div class="info">最終更新日：22.1.25</div>
             </header>
             <section>
                 <h2>多項式の掛け算</h2>
-                <p>例えば、\((x^3-2x^2+x-3)(3x+5)\)の展開は、次のように筆算することができます。</p>
+                <p>
+                    例えば、 \((x^3-2x^2+x-3)(3x+5)\) の展開は、次のように筆算することができます。
+                </p>
                 <div class="eq">
                     \begin{array}{rr}
                                && x^3 &-2x^2 &+x  &-3 \\
@@ -74,8 +77,12 @@
                                &3 &-1 &-7 &-4 &-15
                     \end{array}
                 </div>
-                <p>としても同じです。<strong>ちゃんと列を揃えて書けるなら</strong>このように書いた方が簡潔で、ミスも減ります。</p>
-                <div class="dasoku">「列を揃える」を強調しているのは、むろん雑に書くと係数が0の項が出たときに悲惨なことが起こるからです。</div>
+                <p>
+                    としても同じです。<strong>ちゃんと列を揃えて書けるなら</strong>このように書いた方が簡潔で、ミスも減ります。
+                </p>
+                <div class="dasoku">
+                    「列を揃える」を強調しているのは、むろん雑に書くと係数が0の項が出たときに悲惨なことが起こるからです。
+                </div>
                 <!-- <div class="Q">
                     練習問題
                     クリックで答えを表示
@@ -83,8 +90,10 @@
             </section>
             <section>
                 <h2>多項式の割り算</h2>
-                <p>割り算も同じ要領で行うことができます。割り算とはきちんと言えば「商と余りを求める計算」です。</p>
-                <p>たとえば、\(x^4-6x^2+7x-6\) を \(x-1\) で割ると</p>
+                <p>
+                    割り算も同じ要領で行うことができます。割り算とはきちんと言えば「<strong>商と余りを求める計算</strong>」です。
+                </p>
+                <p>たとえば、 \(x^4-6x^2+7x-6\) を \(x-1\) で割ると</p>
 
                 <div class="eq">
                     \begin{array}{rrrrrr}
@@ -104,33 +113,24 @@
                         \hline
                         & & & & &-4
                     \end{array}
-                </div>      
-                <!-- <div class="eq">
-                    \begin{array}{r}
-                        \;x^3 +\;x^2 -5x +\;2 \\[-3pt]
-                        x-1\enclose{longdiv}{ x^4 \quad -6x^2 +7x -\;6 }\\[-3pt]
-                    \end{array}
-                </div> -->
-                <!-- <div class="eq">
-                    \begin{array}{r}
-                        7.6 \\[-3pt]
-                        25\enclose{longdiv}{190\phantom{0}} \\[-3pt]
-                        \underline{175\phantom{.0}} \\[-3pt]
-                        15\phantom{.}0 \\[-3pt]
-                        \underline{15\phantom{.}0} \\[-3pt]
-                        \phantom{000}0
-                    \end{array}
-                </div> -->
+                </div>
             
                 <p>となって、余りは \(-4\) であることがわかります。</p>
-                <p class="dasoku">横棒が長すぎるのは許して</p>
-                <p>同じようにして、\((x-2),\; (x-3)\)で割る計算を自分で一回やってみてください。</p>
+                <p class="dasoku">
+                    商の \(x^3\) を \(x^4\) の真上に書く流儀もある。<sup id="ref1" class="ref"><a href="article/houteishiki/1.html#note1">[1]</a></sup>
+                </p>
+                <p class="dasoku">横棒が長すぎるのは許して。綺麗に表示する方法がわからなかった。</p>
+                <p>
+                    同じようにして、 \((x-2),\; (x-3)\) で割る計算を自分で一回やってみてください。
+                </p>
                 <div class="Q">
                     \(x^4-6x^2+7x-6\) を \((x-2),\; (x-3)\) で割った商とあまりを求めよ
                 </div>
-                <p class="dasoku"><strong>計算してからスクロールしてください。</strong>ちゃんと手を動かして確かめることが一番の近道です。</p>
+                <p class="dasoku">
+                    <strong>計算してからスクロールしてください。</strong>ちゃんと手を動かして確かめることが一番の近道です。
+                </p>
 
-                <p>\((x-2)\)で割ると、</p>
+                <p> \((x-2)\) で割ると、</p>
                 <div class="eq">
                     \begin{array}{rrrrrr}
                         & &x^3 &+2x^2 &+25x &+3 \\
@@ -151,7 +151,7 @@
                     \end{array}
                 </div>
 
-                <p>\((x-3)\)で割ると、</p>
+                <p> \((x-3)\) で割ると、</p>
                 <div class="eq">
                     \begin{array}{rrrrrr}
                         & &x^3 &+3x^2 &+3x &+16 \\
@@ -171,44 +171,158 @@
                         & & & & &42
                     \end{array}
                 </div>
-                <div class="dasoku">\(-6x^2 - (-4x^2)\)のように負の数同士の引き算は特にミスをしやすいので気をつけたい</div>
+                <div class="dasoku">
+                    \(-6x^2 - (-4x^2)\) のように負の数同士の引き算は特にミスをしやすいので気をつけたい
+                </div>
             </section>
             <section>
-                <h2>剰余の定理</h2>
+                <h2>代入してみる</h2>
                 <p>
-                    さて、\(x^4-6x^2+7x-6\)を\((x-1),(x-2),(x-3)\)で割ったあまりはそれぞれ\(-4, 0, 42\)であることがわかりました。
+                    さて、 \(x^4-6x^2+7x-6\) を \((x-1),(x-2),(x-3)\) で割ったあまりはそれぞれ \(\boldsymbol{-4, 0, 42}\) であることがわかりました。
                     
                 </p>
                 <p>
-                    ここで、<strong>試しに</strong> \(x^4-6x^2+7x-6\) に\(x=1,2,3\)を代入してみるとどうなるでしょうか？
+                    ここで、<strong>試しに</strong> \(x^4-6x^2+7x-6\) に \(x=1,2,3\) を代入してみるとどうなるでしょうか？
                 </p>
                 <div class="eq">
                     \begin{array}{lrl}
-                        x=1 \rightarrow &1-6+7-6 &= -4 \\
-                        x=2 \rightarrow &16-24+14-6 &= 0 \\
-                        x=3 \rightarrow &81-54+21-6 &= 42 
+                        x=1 \rightarrow &1-6+7-6 &= \boldsymbol{-4} \\
+                        x=2 \rightarrow &16-24+14-6 &= \boldsymbol{0} \\
+                        x=3 \rightarrow &81-54+21-6 &= \boldsymbol{42} 
                     \end{array}
                 </div>
-                <p>するとあら不思議、それぞれ\((x-1),(x-2),(x-3)\)で割ったあまりと一致しました。</p>
-                <p>これが単なる偶然ではないことを確かめていきましょう。</p>
+                <p><strong>!!!</strong></p>
+                <p>
+                    それぞれ \((x-1),(x-2),(x-3)\) で割ったあまりと全く同じです。
+                </p>
+                <p>これが単なる偶然なのか、それとも当然の結果なのかを確かめていきましょう。</p>
+            </section>
 
-                <h3>「商」と「余り」の意味</h3>
-                <p>割り算のおさらいをします。13を5で割った商が2、余りが3であるということは、13という数が</p>
+            <section>
+                <h2>偶然の一致？</h2>
+
+                <h3>「商」と「あまり」の意味</h3>
+                <p>
+                    割り算のおさらいをします。13を5で割った商が2、余りが3であるということは、13という数が
+                </p>
                 <div class="eq">
-                    \(13 = 5 \times 2 + 3\)
+                    \(13 = 5 \times 2 + 3\) 
                 </div>
                 <p>と表せるということです。</p>
                 <p>同じように考えると、</p>
                 <div class="eq">
-                    「\(x^4-6x^2+7x-6\) を \(x-1\) で割った商が\(x^3+x^2-5x+2\)、余りが\(-4\)である」
+                    「 \(x^4-6x^2+7x-6\) を \(x-1\) で割った商が \(x^3+x^2-5x+2\) 、余りが \(-4\) である」
                 </div>
                 <p>を式で表現すると、</p>
                 <div class="eq">
-                    \(x^4-6x^2+7x-6 = (x-1)(x^3+x^2-5x+2) - 4\)
+                    \(x^4-6x^2+7x-6 = (x-1)(x^3+x^2-5x+2) - 4\) 
                 </div>
                 <p>となります。</p>
-                <p>この式をよーく見てみると、\(x=1\) を代入したとき \(x-1=0\) になるから、 \((x-1)(x^3+x^2-5x+2)=0\) となってごちゃごちゃしたものが全部消えることがわかります。</p>
+                <p>
+                    この式に \(x=1\) を代入することを考えてみてください。
+                </p>
+                <p>
+                    \((x-1)(x^3+x^2-5x+2)\) という項がありますが、これは \(x=1\) のとき \(0\) になって消えますよね？　（ \(x-1=0\) になるから、 \((x^3+x^2-5x+2)\) は計算するまでもない）　そうすると、残ったものは \(-4\) だけになることがわかります。
+                </p>
+                <div class="img2">
+                    <img src="article/houteishiki/1.png" alt="" style="width: 15rem;">
+                </div>
+                <p>
+                    いちいち「この式に \(x=1\) を代入すると…」なんて書くのは煩わしいので、代わりに式を \(P(x)\) とおいて、
+                </p>
+                <div class="eq">
+                    「 \( \boldsymbol{P(1)=-4} \) である」
+                </div>
+                <p>なんていうふうに表現します。</p>
+                <div class="dasoku">
+                    いきなりPとかQとかxとかたくさん文字を出されると混乱するけど、こうしてみると「文字」のおかげで複雑なことを簡潔に表現できることがわかると思います。
+                </div>
+                <p>同じようにして、</p>
+                <div class="eq">
+                    \begin{align*}
+                        P(x) &= (x-2)(x^3+2x^2+25x+3) \\
+                        P(x) &= (x-3)(x^3+3x^2+3x+16) + 42
+                    \end{align*}
+                </div>
+                <p>と表現できます。それぞれ \(x=2,\; x=3\) を代入してみると、ごちゃごちゃした部分が \(0\) になって</p>
+                <div class="eq">
+                    \begin{align}
+                        P(2) &= (2-2)(\cdots\cdots) &= 0 \\
+                        P(3) &= (3-3)(\cdots\cdots)+42 &= 42
+                    \end{align}
+                </div>
+                <p>になることがわかります。</p>
+                <p><strong>もうわかりましたね？</strong></p>
+                <p> \(P(x)\) を \((x-\bigcirc)\) で割り算した結果は、必ず</p>
+                <div class="eq">
+                    \[
+                        \boldsymbol{P(x) = (x-\bigcirc)\big(\cdots\cdots\big)+\triangle}
+                    \] 
+                </div>
+                <p>という形で表せます。</p>
+                <p>
+                    ここで \(x=\bigcirc\) を代入すれば、 \((x-\bigcirc)\big(\cdots\cdots\big)\) の部分は \(0\) になって消えてしまい、 <strong>\(\boldsymbol{\triangle}\) だけが残る</strong>ことになります。つまり
+                </p>
+                <div class="eq">
+                    \[
+                        \boldsymbol{P(\bigcirc)=\triangle}
+                    \]
+                </div>
+                <p>
+                    です。そしてこれは割り算の<strong>あまり</strong>に他なりません！
+                </p>
             </section>
+
+            <section>
+                <h2>剰余の定理</h2>
+                <p>
+                    いまわかったことを、<strong>数学の言葉で</strong>整理してみましょう。
+                </p>
+                <p>
+                    まず \(\bigcirc\) を数学っぽく \(\boldsymbol\alpha\) と書き換えます。 \(\big(\cdots\cdots\big)\) の部分は<strong> \(\boldsymbol{x}\) についての多項式</strong>ですから \(\boldsymbol{Q(x)}\) と書けますね。最後の \(\triangle\) は \(\boldsymbol r\) とでも置いてあげましょう。
+                </p>
+                <p>そうすると、</p>
+                <div class="eq">
+                    「 \(P(x)\) を \((x-\alpha)\) で割ったあまりが \(r\) である」
+                </div>
+                <p>ことは、 \(P(x)\) が</p>
+                <div class="eq">
+                    \[
+                        P(x) = (x-\alpha)Q(x)+r
+                    \]
+                </div>
+                <p>と表せることと同じですね。</p>
+                <p>
+                    それでは最後にこのことを「きちんと」記述してみます。
+                </p>
+                <div class="Q">
+                    <div class="boxtitle">剰余の定理</div>
+                     \(x\) についての多項式 \(P(x)\) を \((x-\alpha)\) で割ったあまりは、 \(\boldsymbol{P(\alpha)}\) に等しい。
+                </div>
+                <p>
+                    これが私たちの得た剰余の定理です。この定理の何がすごいって、<strong>実際に割り算を行うことなく</strong>あまりを求めることができちゃうんです。これって、すごく便利ですよね。
+                </p>
+            </section>
+            <section>
+                <h2>次回予告</h2>
+                <p>
+                    最後まで読んでいただいてありがとうございます。次回は剰余の定理の特別な場合である「因数定理」について紹介します。お楽しみに！
+                </p>
+                <div class="dasoku">
+                    <span class="boxtitle">蛇足</span>
+                    <p>
+                        気づいてほしいのは、\(\bigcirc\)や\(\big(\cdots\cdots\big)\)や\(\triangle\)のように書くのと、 \(\alpha,\;Q(x),\;r\) のように書くのでは、後者の方がいかにも数学っぽく感じられるかもしれないけれど、意味としては<strong>全く同じことを表している</strong>ということです。変数を表すのに \(\Box\) と書こうが \(x\) と書こうが何ら変わりはありません。中学校に入って \(x\) や \(y\) といった文字がでてきて戸惑う人は一定数いますが、小学校のときすでに「 \(\Box\) を使った計算」をやっているはずです。
+                    </p>
+                    <p>
+                        文字がたくさん出てきて「うわっ」と思ったらそれを一回「 \(\Box\) 」などの簡単な記号に置き換えてみるか、文字をただの「図形」だと思ってみてみるといいです。<sup class="ref" id="ref1"><a href="rticle/houteishiki/1.html#note2">[2]</a></sup> 慣れてくると文字を使う便利さがわかってきます
+                    </p>
+                </div>
+            </section>
+
+            <footer>
+                <p class="note" id="note1"><a href="article/houteishiki/1.html#ref1">[1]</a>筆者はこの流儀には反対で、 \(x^3,x^2,x,(\text{定数})\) の縦のラインを揃えたほうがいいと思う。だって普通の整数の割り算だってそうだもの。</p>
+                <p class="note" id="note2"><a href="article/houteishiki/2.html#ref2">[2]</a>まあそもそも文字だってそれ自体はただの図形に過ぎなくて、それに人間が「記号」としての意味を共通認識として持っているだけなんだけれども。。</p>
+            </footer>
         </main>
         <footer>
             <p id="copyright">&copy; 2021 Ruri</p>
