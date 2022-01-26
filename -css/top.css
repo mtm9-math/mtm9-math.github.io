@@ -31,8 +31,10 @@
     max-width: 40rem;
     /* min-width: 100%; */
 }
-#hero img:hover {
+#hero a:hover {
     opacity: 0.5;
     transition-property: all;
     transition-duration: 500ms;
 }
+
+
