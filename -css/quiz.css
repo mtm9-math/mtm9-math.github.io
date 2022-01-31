@@ -1,0 +1,54 @@
+
+
+
+.quiz input[type="radio"] {
+    display: none;
+}
+.quiz .choice {
+    display: flex;
+}
+.quiz label {
+    display: block;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    width: fit-content;
+    min-width: 5rem;
+
+    text-align: center;
+    background-color: azure;
+    border: 0.1rem solid gray;
+    border-radius: 0.2rem;
+}
+.quiz label:hover {
+    cursor: pointer;
+}
+.quiz .a_print, .quiz .w_print {
+    display: none;
+    margin: 1rem;
+}
+.quiz .a:checked~.choice label.la {
+    background-color: lightgreen;
+}
+.quiz .w:checked~.choice label.lw {
+    background-color: lightpink;
+}
+.quiz .a:checked ~ .a_print {
+    display: block;
+}
+.quiz .w:checked ~ .w_print {
+    display: block;
+}
+.quiz .expl,
+.quiz .close {
+    display: none;
+    margin: 1rem;
+}
+.quiz input:checked ~ .expl,
+.quiz input:checked ~ .close {
+    display: block;
+}
+
+/* .quiz .close:visited,
+.quiz .close:visited~.expl {
+    display: none;
+} */
