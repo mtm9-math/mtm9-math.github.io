@@ -2,6 +2,7 @@
     display: none;
 }
 .quiz .choice {
+    margin-left: 1rem;
     display: flex;
     flex-wrap: wrap;
 }
@@ -22,10 +23,29 @@
 .quiz label:hover {
     cursor: pointer;
 }
-.quiz .a_print, .quiz .w_print {
+.quiz .a_print,
+.quiz .w_print {
     display: none;
     margin: 1rem;
+    font-family: sans-serif;
+    font-weight: bold;
 }
+.quiz .a_print::before,
+.quiz .w_print::before {
+    content: "　";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-size: contain;
+    vertical-align: middle;
+}
+.quiz .a_print::before {
+    background-image: url("../-img/correct.svg");
+}
+.quiz .w_print::before {
+    background-image: url("../-img/wrong.svg");
+}
+
 .quiz .a:checked~.choice label.la {
     background-color: lightgreen;
 }
