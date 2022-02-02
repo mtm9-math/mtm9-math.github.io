@@ -128,8 +128,14 @@ h1 {
     background-color: var(--boxlink_color);
     font-size: 0.9rem;
 }
+.tweet {
+    margin-top: 2rem;
+    margin-right: 1rem;
+    text-align: right;
+}
 .info {
     text-align: right;
+    margin-top: 1rem;
     margin-bottom: 0;
     color: rgb(60, 60, 60);
     font-size: 0.9rem;
