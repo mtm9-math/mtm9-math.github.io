@@ -2,7 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>剰余の定理 - 高次方程式#1｜iを紡ぐ</title>
+        <title>#1_TEST</title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <base href="../../">
@@ -11,8 +11,16 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet"> -->
         
         <!--MathJax-->
-        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-            
+        <!-- <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script> -->
+        <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha256-tkzDFSl16wERzhCWg0ge2tON2+D6Qe9iEaJqM4ZGd4E=" crossorigin="anonymous" type="text/css" rel="stylesheet"> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha256-gNVpJCw01Tg4rruvtWJp9vS0rRchXP2YF+U+b2lp8Po=" crossorigin="anonymous" type="text/javascript"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous" type="text/javascript"></script> -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js" integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous"></script>
+        <script>$(document).ready(function(){renderMathInElement(document.body,{delimiters: [{left: "$$", right: "$$", display: true},{left: "$", right: "$", display: false}]})});</script>
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="#1 剰余の定理" />
@@ -29,7 +37,7 @@
                     <li><a href="index.html">TOP</a></li>
                     <li><a href="article/index.html">記事一覧</a></li>
                     <li><a href="tips/index.html">Tips</a></li>
-                    <li><a href="about/index.html">About \(i^i\) </a></li>
+                    <li><a href="about/index.html">About $i^i$ </a></li>
                     <li><a href="mania/index.html">暇人編</a></li>
                 </ul>
             </nav>
@@ -44,7 +52,7 @@
                     </ul>
                 </nav>
                 <span class="subtitle">高次方程式入門 #1</span>
-                <h1>剰余の定理</h1>
+                <h1>【TEST】剰余の定理</h1>
                 <div id="p_and_n">
                     <a href="article/hts/2.html" id="next">#2 因数定理</a>
                 </div>
@@ -56,9 +64,9 @@
             <section>
                 <h2>多項式の掛け算</h2>
                 <p>
-                    例えば、 \((x^3-2x^2+x-3)(3x+5)\) の展開は、次のように筆算することができます。
+                    例えば、 $(x^3-2x^2+x-3)(3x+5)$ の展開は、次のように筆算することができます。
                 </p>
-                <div class="eq">
+                <div class="eq">$$
                     \begin{array}{rr}
                                 && x^3 &-2x^2 &+x  &-3 \\
                         \times) &&     &      &3x  &+5  \\
@@ -68,7 +76,7 @@
                         \hline
                                 &3x^4 &-x^3 &-7x^2 &-4x &-15
                     \end{array}
-                </div>
+                $$</div>
                 <!-- <p>ちゃんと列を揃えて書くなら、係数だけを取り出して</p>
                 <div class="eq">
                     \begin{array}{rr}
@@ -97,9 +105,10 @@
                 <p>
                     割り算も同じ要領で行うことができます。割り算とはきちんと言えば「<strong>商と余りを求める計算</strong>」です。
                 </p>
-                <p>たとえば、 \(x^4-6x^2+7x-6\) を \(x-1\) で割ると</p>
+                <p>たとえば、 $x^4-6x^2+7x-6$ を $x-1$ で割ると</p>
 
                 <div class="eq">
+                $$
                     \begin{array}{rrrrrr}
                         & &x^3 &+x^2 &-5x &+2 \\
                         \hline
@@ -117,26 +126,27 @@
                         \hline
                         & & & & &-4
                     \end{array}
+                $$
                 </div>
             
-                <p>となって、余りは \(-4\) であることがわかります。</p>
+                <p>となって、余りは $-4$ であることがわかります。</p>
                 <p class="dasoku">
-                    商の \(x^3\) を \(x^4\) の真上に書く流儀もある。
+                    商の $x^3$ を $x^4$ の真上に書く流儀もある。
                     <sup id="ref1" class="ref"><a href="article/hts/1.html#note1">[1]</a></sup>
                 </p>
                 <p class="dasoku">横棒が長すぎるのは許して。綺麗に表示する方法がわからなかった。</p>
                 <p>
-                    同じようにして、 \((x-2),\; (x-3)\) で割る計算を自分で一回やってみてください。
+                    同じようにして、 $(x-2),\; (x-3)$ で割る計算を自分で一回やってみてください。
                 </p>
                 <div class="Q">
-                     \(x^4-6x^2+7x-6\) を \((x-2),\; (x-3)\) で割った商とあまりを求めよ
+                     $x^4-6x^2+7x-6$ を $(x-2),\; (x-3)$ で割った商とあまりを求めよ
                 </div>
                 <p class="dasoku">
                     <strong>計算してからスクロールしてください。</strong>ちゃんと手を動かして確かめることが一番の近道です。
                 </p>
 
-                <p> \((x-2)\) で割ると、</p>
-                <div class="eq">
+                <p> $(x-2)$ で割ると、</p>
+                <div class="eq">$$
                     \begin{array}{rrrrrr}
                         & &x^3 &+2x^2 &-2x &+3 \\
                         \hline
@@ -154,10 +164,10 @@
                         \hline
                         & & & & &0
                     \end{array}
-                </div>
+                $$</div>
 
-                <p> \((x-3)\) で割ると、</p>
-                <div class="eq">
+                <p> $(x-3)$ で割ると、</p>
+                <div class="eq">$$
                     \begin{array}{rrrrrr}
                         & &x^3 &+3x^2 &+3x &+16 \\
                         \hline
@@ -175,30 +185,30 @@
                         \hline
                         & & & & &42
                     \end{array}
-                </div>
+                $$</div>
                 <div class="dasoku">
-                    \(-6x^2 - (-4x^2)\) のように負の数同士の引き算は特にミスをしやすいので気をつけたい
+                    $-6x^2 - (-4x^2)$ のように負の数同士の引き算は特にミスをしやすいので気をつけたい
                 </div>
             </section>
             <section>
                 <h2>代入してみる</h2>
                 <p>
-                    さて、 \(x^4-6x^2+7x-6\) を \((x-1),(x-2),(x-3)\) で割ったあまりはそれぞれ \(\boldsymbol{-4,\quad 0, \quad 42}\) であることがわかりました。
+                    さて、 $x^4-6x^2+7x-6$ を $(x-1),(x-2),(x-3)$ で割ったあまりはそれぞれ $\bm{-4,\quad 0, \quad 42}$ であることがわかりました。
                     
                 </p>
                 <p>
-                    ここで、<strong>試しに</strong> \(x^4-6x^2+7x-6\) に \(x=1,2,3\) を代入してみるとどうなるでしょうか？
+                    ここで、<strong>試しに</strong> $x^4-6x^2+7x-6$ に $x=1,2,3$ を代入してみるとどうなるでしょうか？
                 </p>
-                <div class="eq">
+                <div class="eq">$$
                     \begin{array}{lrl}
-                        x=1 \rightarrow &1-6+7-6 &= \boldsymbol{-4} \\
-                        x=2 \rightarrow &16-24+14-6 &= \boldsymbol{0} \\
-                        x=3 \rightarrow &81-54+21-6 &= \boldsymbol{42} 
+                        x=1 \rightarrow &1-6+7-6 &= \bm{-4} \\
+                        x=2 \rightarrow &16-24+14-6 &= \bm{0} \\
+                        x=3 \rightarrow &81-54+21-6 &= \bm{42} 
                     \end{array}
-                </div>
+                $$</div>
                 <p><strong>!!!</strong></p>
                 <p>
-                    それぞれ \((x-1),(x-2),(x-3)\) で割ったあまりと全く同じです。
+                    それぞれ $(x-1),(x-2),(x-3)$ で割ったあまりと全く同じです。
                 </p>
                 <p>これが単なる偶然なのか、それとも当然の結果なのかを確かめていきましょう。</p>
             </section>
@@ -211,75 +221,73 @@
                     割り算のおさらいをします。13を5で割った商が2、余りが3であるということは、13という数が
                 </p>
                 <div class="eq">
-                    \(13 = 5 \times 2 + 3\) 
+                    $13 = 5 \times 2 + 3$ 
                 </div>
                 <p>と表せるということです。</p>
                 <p>同じように考えると、</p>
                 <div class="eq">
-                    「 \(x^4-6x^2+7x-6\) を \(x-1\) で割った商が \(x^3+x^2-5x+2\) 、余りが \(-4\) である」
+                    「 $x^4-6x^2+7x-6$ を $x-1$ で割った商が $x^3+x^2-5x+2$ 、余りが $-4$ である」
                 </div>
                 <p>を式で表現すると、</p>
                 <div class="eq">
-                    \(x^4-6x^2+7x-6\) \(= (x-1)(x^3+x^2-5x+2) - 4\) 
+                    $x^4-6x^2+7x-6$ $= (x-1)(x^3+x^2-5x+2) - 4$ 
                 </div>
                 <p>となります。</p>
                 <figure>
                     <img src="-img/hts1/1.jpg" alt="">
                 </figure>
                 <p>
-                    この式に \(x=1\) を代入することを考えてみてください。
+                    この式に $x=1$ を代入することを考えてみてください。
                 </p>
                 <p>
-                    \((x-1)(x^3+x^2-5x+2)\) という項がありますが、これは \(x=1\) のとき \(0\) になって消えますよね。
+                    $(x-1)(x^3+x^2-5x+2)$ という項がありますが、これは $x=1$ のとき $0$ になって消えますよね。
                 </p>
                 <figure>
                     <img src="-img/hts1/2.jpg" alt="">
                 </figure>
                 <p>
-                    \(x-1=0\) になるから、 \((x^3+x^2-5x+2)\) の中身は計算するまでもありません。そうすると、残ったものは \(-4\) だけになることがわかります。
+                    $x-1=0$ になるから、 $(x^3+x^2-5x+2)$ の中身は計算するまでもありません。そうすると、残ったものは $-4$ だけになることがわかります。
                 </p>
 
                 <h3>記号の導入</h3>
                 <p>
-                    いちいち「この式に \(x=1\) を代入すると…」なんて書くのは煩わしいので、代わりに式を \(P(x)\) とおいて、
+                    いちいち「この式に $x=1$ を代入すると…」なんて書くのは煩わしいので、代わりに式を $P(x)$ とおいて、
                 </p>
                 <div class="eq">
-                    「 \( \boldsymbol{P(1)=-4} \) である」
+                    「 $ \bm{P(1)=-4} $ である」
                 </div>
                 <p>なんていうふうに表現します。</p>
                 <div class="dasoku">
                     いきなりPとかQとかxとかたくさん文字を出されると混乱するけど、こうしてみると「文字」のおかげで複雑なことを簡潔に表現できることがわかると思います。
                 </div>
                 <p>同じようにして、</p>
-                <div class="eq">
-                    \begin{align}
+                <div class="eq">$$
+                    \begin{aligned}
                         P(x) &= (x-2)(x^3+2x^2-2x+3) \\
                         P(x) &= (x-3)(x^3+3x^2+3x+16) + 42
-                    \end{align}
-                </div>
-                <p>と表現できます。それぞれ \(x=2,\; x=3\) を代入してみると、ごちゃごちゃした部分が \(0\) になって</p>
-                <div class="eq">
-                    \begin{align}
+                    \end{aligned}
+                $$</div>
+                <p>と表現できます。それぞれ $x=2,\; x=3$ を代入してみると、ごちゃごちゃした部分が $0$ になって</p>
+                <div class="eq">$$
+                    \begin{aligned}
                         P(2) &= (2-2)(\cdots\cdots) &= 0 \\
                         P(3) &= (3-3)(\cdots\cdots)+42 &= 42
-                    \end{align}
-                </div>
+                    \end{aligned}
+                $$</div>
                 <p>になることがわかります。</p>
                 <p><strong>もうわかりましたね？</strong></p>
-                <p> \(P(x)\) を \((x-\bigcirc)\) で割り算した結果は、必ず</p>
-                <div class="eq">
-                    \[
-                        \boldsymbol{P(x) = (x-\bigcirc)\big(\cdots\cdots\big)+\triangle}
-                    \] 
-                </div>
+                <p> $P(x)$ を $(x-\bigcirc)$ で割り算した結果は、必ず</p>
+                <div class="eq">$$
+                    \bm{P(x) = (x-\bigcirc)\big(\cdots\cdots\big)+\triangle}
+                $$</div>
                 <p>という形で表せます。</p>
                 <p>
-                    ここで \(x=\bigcirc\) を代入すれば、 \((x-\bigcirc)\big(\cdots\cdots\big)\) の部分は \(0\) になって消えてしまい、 <strong>\(\boldsymbol{\triangle}\) だけが残る</strong>ことになります。つまり
+                    ここで $x=\bigcirc$ を代入すれば、 $(x-\bigcirc)\big(\cdots\cdots\big)$ の部分は $0$ になって消えてしまい、 <strong>$\bm{\triangle}$ だけが残る</strong>ことになります。つまり
                 </p>
                 <div class="eq">
-                    \[
-                        \boldsymbol{P(\bigcirc)=\triangle}
-                    \]
+                $$
+                    \bm{P(\bigcirc)=\triangle}
+                $$
                 </div>
                 <p>
                     です。そしてこれは割り算の<strong>あまり</strong>に他なりません！
@@ -292,17 +300,17 @@
                     いまわかったことを、<strong>数学の言葉で</strong>整理してみましょう。
                 </p>
                 <p>
-                    まず \(\bigcirc\) を数学っぽく \(\boldsymbol\alpha\) と書き換えます。 \(\big(\cdots\cdots\big)\) の部分は<strong> \(\boldsymbol{x}\) についての多項式</strong>ですから \(\boldsymbol{Q(x)}\) と書けますね。最後の \(\triangle\) は \(\boldsymbol r\) とでも置いてあげましょう。
+                    まず $\bigcirc$ を数学っぽく $\bm\alpha$ と書き換えます。 $\big(\cdots\cdots\big)$ の部分は<strong> $\bm{x}$ についての多項式</strong>ですから $\bm{Q(x)}$ と書けますね。最後の $\triangle$ は $\bm r$ とでも置いてあげましょう。
                 </p>
                 <p>そうすると、</p>
                 <div class="eq">
-                    「 \(P(x)\) を \((x-\alpha)\) で割ったあまりが \(r\) である」
+                    「 $P(x)$ を $(x-\alpha)$ で割ったあまりが $r$ である」
                 </div>
-                <p>ことは、 \(P(x)\) が</p>
+                <p>ことは、 $P(x)$ が</p>
                 <div class="eq">
-                    \[
-                        P(x) = (x-\alpha)Q(x)+r
-                    \]
+                $$
+                    P(x) = (x-\alpha)Q(x)+r
+                $$
                 </div>
                 <p>と表せることと同じですね。</p>
                 <p>
@@ -311,7 +319,7 @@
                 <div class="Q">
                     <div class="boxtitle">剰余の定理</div>
                     <div class="center">
-                        \(P(x)\) を \((x-\alpha)\) で割ったあまりは、 \(\boldsymbol{P(\alpha)}\) に等しい。
+                        $P(x)$ を $(x-\alpha)$ で割ったあまりは、 $\bm{P(\alpha)}$ に等しい。
                     </div>
                 </div>
                 <p>
@@ -328,7 +336,7 @@
                 <div>
                     <h3>第1問</h3>
                     <div class="Q">
-                         \(P(x)=x^3-2x^2+x+4\) を \((x-3)\) で割ったあまりを求めよ
+                         $P(x)=x^3-2x^2+x+4$ を $(x-3)$ で割ったあまりを求めよ
                     </div>
                     <div class="quiz">
                         <input type="radio" name="q1" id="q1_a" class="a">
@@ -345,7 +353,7 @@
                             <div>
                                 答え：16
                             </div>
-                            <p> \(P(3)=27-18+3+4=16\) ですから、 \((x-3)\) で割ったあまりは16になります。実際、</p>
+                            <p> $P(3)=27-18+3+4=16$ ですから、 $(x-3)$ で割ったあまりは16になります。実際、</p>
                             <figure>
                                 <img src="-img/hts1/q1.jpg" alt="">
                             </figure>
@@ -356,7 +364,7 @@
                 <div>
                     <h3>第2問</h3>
                     <div class="Q">
-                         \(P(x)=3x^3+6x^2-3\) を \((x+2)\) で割ったあまりを求めよ
+                         $P(x)=3x^3+6x^2-3$ を $(x+2)$ で割ったあまりを求めよ
                     </div>
                     <div class="quiz">
                         <input type="radio" name="q2" id="q2_a" class="a">
@@ -373,11 +381,11 @@
                             <div>
                                 答え：-3
                             </div>
-                            <p> \((x+\bigcirc)\) で割ったあまりも、剰余の定理で求められます。</p>
+                            <p> $(x+\bigcirc)$ で割ったあまりも、剰余の定理で求められます。</p>
                             <figure>
                                 <img src="-img/hts1/q2_1.jpg" alt="">
                             </figure>
-                            <p> \(P(-2)=-24+24-3=-3\) より、あまりは-3になります。これも割り算で確かめてみましょう。</p>
+                            <p> $P(-2)=-24+24-3=-3$ より、あまりは-3になります。これも割り算で確かめてみましょう。</p>
                             <figure>
                                 <img src="-img/hts1/q2_2.jpg" alt="">
                             </figure>
@@ -387,38 +395,38 @@
                 <div>
                     <h3>第3問</h3>
                     <div class="Q">
-                         \(P(x)=3x^3+2x^2-5x+9\) を \((3x-1)\) で割ったあまりを求めよ
+                         $P(x)=3x^3+2x^2-5x+9$ を $(3x-1)$ で割ったあまりを求めよ
                     </div>
                     <div class="quiz">
                         <input type="radio" name="q3" id="q3_a" class="a">
                         <input type="radio" name="q3" id="q3_w" class="w">
                         <div class="choice">
-                            <label for="q3_w" class="lw"> \(2\) </label>
-                            <label for="q3_w" class="lw"> \(-\dfrac{2}{3}\) </label>
-                            <label for="q3_a" class="la"> \(\dfrac{23}{3}\) </label>
+                            <label for="q3_w" class="lw"> $2$ </label>
+                            <label for="q3_w" class="lw"> $-\dfrac{2}{3}$ </label>
+                            <label for="q3_a" class="la"> $\dfrac{23}{3}$ </label>
                         </div>
                         <div class="a_print">正解</div>
                         <div class="w_print">不正解</div>
                         <!-- <label for="hide1" class="close">閉じる</label> -->
                         <div class="expl">
                             <div>
-                                答え： \(\dfrac{23}{3}\) 
+                                答え： $\dfrac{23}{3}$ 
                             </div>
-                            <p> \(x\) の係数が1じゃない!!　割り算しないといけないのか……。</p>
+                            <p> $x$ の係数が1じゃない!!　割り算しないといけないのか……。</p>
                             <p>いえいえ、割り算をしなくても大丈夫。</p>
-                            <p> \(P(x)\) を \((3x-1)\) で割った商を \(Q(x)\) 、あまりを \(r\) と置いてやると、</p>
+                            <p> $P(x)$ を $(3x-1)$ で割った商を $Q(x)$ 、あまりを $r$ と置いてやると、</p>
                             <figure>
                                 <img src="-img/hts1/q3_1.jpg" alt="">
                             </figure>
-                            <p>ここで、 \((3x-1)\) が \(0\) になってくれればうまく \(r\) だけを取り出せますね。そのような \(x\) は、 \(x=\dfrac{1}{3}\) です。</p>
+                            <p>ここで、 $(3x-1)$ が $0$ になってくれればうまく $r$ だけを取り出せますね。そのような $x$ は、 $x=\dfrac{1}{3}$ です。</p>
                             <figure>
                                 <img src="-img/hts1/q3_2.jpg" alt="">
                             </figure>
-                            <p>そこで実際に \(x=\dfrac{1}{3}\) を代入すると、</p>
+                            <p>そこで実際に $x=\dfrac{1}{3}$ を代入すると、</p>
                             <div class="eq">
-                                \[
+                                $$
                                     P\left(\dfrac{1}{3}\right) = \dfrac{1}{9}+\dfrac{2}{9}-\dfrac{5}{3}+9=\dfrac{23}{3}
-                                \]
+                                $$
                             </div>
                             <p>となります。筆算でも、確かに</p>
                             <figure>
@@ -431,76 +439,76 @@
                 <div>
                     <h3>第4問（チャレンジ問題。飛ばしてもいい）</h3>
                     <div class="Q">
-                         \(P(x)\) を \((x-1)\) で割ると \(5\) あまり、 \((x+7)\) で割ると \(-3\) あまるという。 \(P(x)\) を \((x-1)(x+7)\) で割ったあまりを求めよ。 
+                         $P(x)$ を $(x-1)$ で割ると $5$ あまり、 $(x+7)$ で割ると $-3$ あまるという。 $P(x)$ を $(x-1)(x+7)$ で割ったあまりを求めよ。 
                     </div>
                     <div class="quiz">
                         <input type="radio" name="q4" id="q4_a" class="a">
                         <input type="radio" name="q4" id="q4_w" class="w">
                         <div class="choice">
-                            <label for="q4_w" class="lw"> \(0\) </label>
-                            <label for="q4_w" class="lw"> \(-8\) </label>
-                            <label for="q4_a" class="la"> \(x+4\) </label>
-                            <label for="q4_w" class="lw"> \(2x-3\) </label>
+                            <label for="q4_w" class="lw"> $0$ </label>
+                            <label for="q4_w" class="lw"> $-8$ </label>
+                            <label for="q4_a" class="la"> $x+4$ </label>
+                            <label for="q4_w" class="lw"> $2x-3$ </label>
                         </div>
                         <div class="a_print">正解</div>
                         <div class="w_print">不正解</div>
                         <!-- <label for="hide1" class="close">閉じる</label> -->
                         <div class="expl">
                             <div>
-                                答え： \(x+4\) 
+                                答え： $x+4$ 
                             </div>
                             <p>ちょっと応用問題。</p>
                             <p>
-                                まず、あまりの次数を考えます。これまでは \((x-1)\) などの<strong>1次式</strong>で割っていたので、あまりは定数（ \(x\) を含まないただの数字）でした。しかし、今回は \((x-1)(x+7)\) という<strong>2次式</strong>で割っています。2次式で割るということは、<strong>あまりが \(\boldsymbol{x}\) についての1次式になる可能性がある</strong>ということです。
+                                まず、あまりの次数を考えます。これまでは $(x-1)$ などの<strong>1次式</strong>で割っていたので、あまりは定数（ $x$ を含まないただの数字）でした。しかし、今回は $(x-1)(x+7)$ という<strong>2次式</strong>で割っています。2次式で割るということは、<strong>あまりが $\bm{x}$ についての1次式になる可能性がある</strong>ということです。
                             </p>
                             <p>
-                                言葉で説明してもよくわからないと思うので、具体的に \(x^3+7x^2-3\) という式を、2次式 \((x^2+6x-7)\) で割ったあまりを筆算で求めてみましょう。
+                                言葉で説明してもよくわからないと思うので、具体的に $x^3+7x^2-3$ という式を、2次式 $(x^2+6x-7)$ で割ったあまりを筆算で求めてみましょう。
                             </p>
                             <figure>
                                 <img src="-img/hts1/q4_1.jpg" alt="">
                             </figure>
                             <p>
-                                2次式 \((x^2+6x-7)\) で割っているのですから、最後に余った \(x+4\) の \(x\) の項はどう頑張っても消せませんよね。
+                                2次式 $(x^2+6x-7)$ で割っているのですから、最後に余った $x+4$ の $x$ の項はどう頑張っても消せませんよね。
                             </p>
                             <p>
-                                このように \(P(x)\) を2次式 \((x-1)(x+7)\) で割ったあまりは、1次式になる可能性があることがわかりました。そこで、商はこれまで通り \(Q(x)\) とおき、あまりを \(\boldsymbol{ax+b}\) とおいてやります。
+                                このように $P(x)$ を2次式 $(x-1)(x+7)$ で割ったあまりは、1次式になる可能性があることがわかりました。そこで、商はこれまで通り $Q(x)$ とおき、あまりを $\bm{ax+b}$ とおいてやります。
                             </p>
                             <figure>
                                 <img src="-img/hts1/q4_2.jpg" alt="">
                             </figure>
                             <p>
-                                ここで、 \((x-1)(x+7)\) を0にするような \(x\) を代入してやれば、 余りの部分だけうまく取り出せますね。そのような \(x\) は \(x=1\) と  \(x=-7\) ですから、 \(P(1)\) と \(P(-7)\) の値がわかればよい、ということです。
+                                ここで、 $(x-1)(x+7)$ を0にするような $x$ を代入してやれば、 余りの部分だけうまく取り出せますね。そのような $x$ は $x=1$ と  $x=-7$ ですから、 $P(1)$ と $P(-7)$ の値がわかればよい、ということです。
                             </p>
                             <p>
-                                ところで問題文の記述には、「 \(P(x)\) を \((x-1)\) で割ると \(5\) あまり、 \((x+7)\) で割ると \(-3\) あまる」と書いてありますから、 \(\boldsymbol{P(1)=5,\quad P(-7)=-3}\) です。
+                                ところで問題文の記述には、「 $P(x)$ を $(x-1)$ で割ると $5$ あまり、 $(x+7)$ で割ると $-3$ あまる」と書いてありますから、 $\bm{P(1)=5,\quad P(-7)=-3}$ です。
                             </p>
                             <p>
-                                さて、必要なものは出揃いました。 \(P(x)\) に \(x=1\) と  \(x=-7\) を代入してやりましょう。
+                                さて、必要なものは出揃いました。 $P(x)$ に $x=1$ と  $x=-7$ を代入してやりましょう。
                             </p>
                             <figure>
                                 <img src="-img/hts1/q4_3.jpg" alt="">
                             </figure>
                             <p>
-                                すると、 \(a, b\) についての連立方程式
+                                すると、 $a, b$ についての連立方程式
                             </p>
                             <div class="eq">
-                                \[
+                                $$
                                     \left\{ \,
-                                        \begin{align}
+                                        \begin{aligned}
                                             a+b &= 5 \\
                                             -7a+b &= -3 \\
-                                        \end{align}
+                                        \end{aligned}
                                     \right.
-                                \]
+                                $$
                             </div>
                             <p>を得ます。</p>
                             <p>あとは、これを解いてあげれば</p>
                             <div class="eq">
-                                \[
+                                $$
                                     a=1, \quad b=4
-                                \]
+                                $$
                             </div>
-                            <p>となるので、求めるあまりは \(\boldsymbol{x+4}\) になります。</p>
+                            <p>となるので、求めるあまりは $\bm{x+4}$ になります。</p>
                         </div>
                     </div>
                 </div>
@@ -535,10 +543,10 @@
                 <div class="dasoku">
                     <span class="boxtitle">蛇足</span>
                     <p>
-                        気づいてほしいのは、\(\bigcirc\)や\(\big(\cdots\cdots\big)\)や\(\triangle\)のように書くのと、 \(\alpha,\;Q(x),\;r\) のように書くのでは、後者の方がいかにも数学っぽく感じられるかもしれないけれど、意味としては<strong>全く同じことを表している</strong>ということです。変数を表すのに \(\Box\) と書こうが \(x\) と書こうが何ら変わりはありません。中学校に入って \(x\) や \(y\) といった文字がでてきて戸惑う人は一定数いますが、小学校のときすでに「 \(\Box\) を使った計算」をやっているはずです。
+                        気づいてほしいのは、$\bigcirc$や$\big(\cdots\cdots\big)$や$\triangle$のように書くのと、 $\alpha,\;Q(x),\;r$ のように書くのでは、後者の方がいかにも数学っぽく感じられるかもしれないけれど、意味としては<strong>全く同じことを表している</strong>ということです。変数を表すのに $\Box$ と書こうが $x$ と書こうが何ら変わりはありません。中学校に入って $x$ や $y$ といった文字がでてきて戸惑う人は一定数いますが、小学校のときすでに「 $\Box$ を使った計算」をやっているはずです。
                     </p>
                     <p>
-                        文字がたくさん出てきて「うわっ」と思ったらそれを一回「 \(\Box\) 」などの簡単な記号に置き換えてみるか、文字をただの「図形」だと思ってみてみるといいです。<sup class="ref" id="ref1"><a href="rticle/hts/1.html#note2">[2]</a></sup> 慣れてくると文字を使う便利さがわかってきます
+                        文字がたくさん出てきて「うわっ」と思ったらそれを一回「 $\Box$ 」などの簡単な記号に置き換えてみるか、文字をただの「図形」だと思ってみてみるといいです。<sup class="ref" id="ref1"><a href="rticle/hts/1.html#note2">[2]</a></sup> 慣れてくると文字を使う便利さがわかってきます
                     </p>
                 </div>
             </section>
@@ -546,7 +554,7 @@
             <footer>
                 <div class="note" id="note1">
                     <a href="article/hts/1.html#ref1">[1]</a>こういうこと↓
-                    <div class="eq">
+                    <div class="eq">$$
                         \begin{array}{rrrrrr}
                             &x^3 &+x^2 &-5x &+2 &\\
                             \hline
@@ -564,8 +572,8 @@
                             \hline
                             & & & & &-4
                         \end{array}
-                    </div>
-                    筆者はこの流儀には反対で、 \(x^3,x^2,x,(\text{定数})\) の縦のラインを揃えたほうがいいと思う。だって普通の整数の割り算は 千の位 十の位 一の位 を揃えて書くでしょ？
+                    $$</div>
+                    筆者はこの流儀には反対で、 $x^3,x^2,x,(\text{定数})$ の縦のラインを揃えたほうがいいと思う。だって普通の整数の割り算は 千の位 十の位 一の位 を揃えて書くでしょ？
                 </div>
                 <p class="note" id="note2">
                     <a href="article/hts/1.html#ref2">[2]</a>

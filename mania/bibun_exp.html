@@ -11,9 +11,7 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet"> -->
         
         <!--MathJax-->
-        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-        </script>
-        <!-- <script async type="text/javascript" src="-js/math.js"></script> -->
+        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     </head>
     <body>
         <header>
@@ -76,26 +74,26 @@
                 <h2> \(\log x\) の微分</h2>
                 <p> \(e\) を底とする対数関数 \(\log_e x\) を、通常単に \(\log x\) と書く。 \(y=\log x\) の微分を求めよう</p>
                 <div class="eq">
-                    \begin{align*}
+                    \begin{align}
                         y &= \log x \\
                         x &= e^y \\
                         \text{両辺を微分して}\\
                         1 &= \dfrac{de^y}{dy}\dfrac{dy}{dx} = y'\cdot e^y = y'\cdot x \\
                         y' &= \dfrac{1}{x}
-                    \end{align*}
+                    \end{align}
                 </div>
             </section>
             <section>
                 <h2> \(a^x\) の微分ふたたび</h2>
                 <p> \(\log x\) の微分がわかると、 \(a^x\) の微分が行える</p>
                 <div class="eq">
-                    \begin{align*}
+                    \begin{align}
                         y &= a^x \\
                         \log y &= x \log a \\
                         \text{両辺を微分して}\\
                         \dfrac{1}{y}\cdot y' &= \log a \\
                         y' &= y\log a \\ &= a^x \log a
-                    \end{align*}
+                    \end{align}
                 </div>
             </section>
         </main>
