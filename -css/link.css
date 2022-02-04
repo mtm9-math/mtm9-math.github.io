@@ -93,3 +93,20 @@ a {
     transition-property: all;
     transition-duration: 500ms;
 }
+
+.arrow_articlelink {
+    margin-right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.arrow_articlelink>img {
+    /* width: 5rem; */
+    max-width: 5rem;
+    margin-right: 0.5rem;
+}
+.arrow_articlelink a {
+    max-width: 15rem;
+}
+.arrow_articlelink a>img {
+    width: 100%;
+}

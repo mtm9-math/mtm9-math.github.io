@@ -11,7 +11,14 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet"> -->
         
         <!--MathJax-->
-        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        <!-- <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script> -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js" integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous"></script>
+        <script>$(document).ready(function(){renderMathInElement(document.body,{delimiters: [{left: "$$", right: "$$", display: true},{left: "$", right: "$", display: false}]})});</script>
+
     </head>
     <body>
         <header>
@@ -23,7 +30,7 @@
                     <li><a href="index.html">TOP</a></li>
                     <li><a href="article/index.html">記事一覧</a></li>
                     <li><a href="tips/index.html">Tips</a></li>
-                    <li><a href="about/index.html">About \(i^i\) </a></li>
+                    <li><a href="about/index.html">About $i^i$ </a></li>
                     <li><a href="mania/index.html">暇人編</a></li>
                 </ul>
             </nav>
@@ -55,7 +62,7 @@
                 </p>
             </section>
             <ul class="arrowlink">
-                <li><a href="mania/i^i.html"> \(i^i\) の意味</a></li>
+                <li><a href="mania/i^i.html"> $i^i$ の意味</a></li>
                 <li><a href="mania/bibun_exp.html">指数函数の微分</a></li>
                 <li><a href="mania/lehman.html">リーマン予想入門</a></li>
             </ul>

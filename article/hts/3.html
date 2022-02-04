@@ -11,7 +11,14 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet"> -->
         
         <!--MathJax-->
-        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        <!-- <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script> -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js" integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous"></script>
+        <script>$(document).ready(function(){renderMathInElement(document.body,{delimiters: [{left: "$$", right: "$$", display: true},{left: "$", right: "$", display: false}]})});</script>
+
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="#3 高次方程式を解く" />
@@ -28,7 +35,7 @@
                     <li><a href="index.html">TOP</a></li>
                     <li><a href="article/index.html">記事一覧</a></li>
                     <li><a href="tips/index.html">Tips</a></li>
-                    <li><a href="about/index.html">About \(i^i\) </a></li>
+                    <li><a href="about/index.html">About $i^i$ </a></li>
                     <li><a href="mania/index.html">暇人編</a></li>
                 </ul>
             </nav>
@@ -71,10 +78,10 @@
                     2次方程式の解の公式は習いました。
                 </p>
                 <div class="eq">
-                    \(ax^2+bx+c=0\quad(a\neq 0)\) の解は、
-                    \[
+                    $ax^2+bx+c=0$ の解は、
+                    $$
                         x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}
-                    \]
+                    $$
                 </div>
                 <p>
                     これも最初は覚えるのに苦労したかもしれませんが、今ではちゃんと染み付いていると思います（そうだよね？）
@@ -86,20 +93,20 @@
                     <strong>え、あるの？</strong>　だったら早く教えてよ！　そんな声が聞こえてきますね（幻聴）。
                 </p>
                 <p>
-                    解の公式があるなら、わざわざ \(\pm\dfrac{\text{定数項の約数}}{\text{最高次係数の約数}}\) を調べなくてもいいじゃないですか。そんな便利なものを教えないとは、先生はなんてケチなんだ！
+                    解の公式があるなら、わざわざ $\pm\dfrac{\text{定数項の約数}}{\text{最高次係数の約数}}$ を調べなくてもいいじゃないですか。そんな便利なものを教えないとは、先生はなんてケチなんだ！
                 </p>
                 <p>
                     それでは、その「<strong>便利なもの</strong>」を今から皆さんにお見せしましょう。
                 </p>
                 <div style="height: 10rem;"></div>
                 <div class="eq">
-                    3次方程式 \(ax^3+bx^2+cx+d\) の3つの解は、
+                    3次方程式 $ax^3+bx^2+cx+d$ の3つの解は、
                     <figure class="bigfig">
                         <img src="-img/hts3/1.png" alt="">
                     </figure>
                     で表される。
                     <sup id="ref1" class="ref"><a href="article/hts/3.html#note1">[1]</a></sup>
-                    <!-- \[
+                    <!-- $$
                         \displaystyle \\ 
                         x=\left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\, 
                         a\,b\,c\right)\,d+4\,a\,c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^ 
@@ -109,8 +116,8 @@
                         \left(4\,b^3-18\,a\,b\,c\right)\,d+4\,a\,c^3-b^2\,c^2}}\over{2\,3^{ 
                         {{3}\over{2}}}\,a^2}}-{{27\,a^2\,d-9\,a\,b\,c+2\,b^3}\over{54\,a^3}} 
                         \right)^{{{1}\over{3}}}}}-{{b}\over{3\,a}} \\
-                    \] -->
-                    <!-- \[
+                    $$ -->
+                    <!-- $$
                     \displaystyle \\ 
                     x=\left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right) 
                     \,\left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\,a\,b\,c\right)\,d+4\,a 
@@ -122,8 +129,8 @@
                     \right)\,d+4\,a\,c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^2}}-{{ 
                     27\,a^2\,d-9\,a\,b\,c+2\,b^3}\over{54\,a^3}}\right)^{{{1}\over{3}}} 
                     }}-{{b}\over{3\,a}}
-                    \] -->
-                    <!-- \[
+                    $$ -->
+                    <!-- $$
                     \displaystyle \\ 
                     x=\left(-{{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)\, 
                     \left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\,a\,b\,c\right)\,d+4\,a\, 
@@ -135,14 +142,14 @@
                     +4\,a\,c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^2}}-{{27\,a^2\,d- 
                     9\,a\,b\,c+2\,b^3}\over{54\,a^3}}\right)^{{{1}\over{3}}}}}-{{b 
                     }\over{3\,a}}
-                    \] -->
+                    $$ -->
                 </div>
                 <div style="height: 10rem;"></div>
                 <p>
                     はい。そういうことです。
                 </p>
                 <p>
-                    こんなのを計算するくらいなら、 \(\pm\dfrac{\text{定数項の約数}}{\text{最高次係数の約数}}\) を一つ一つ代入して因数を見つけるほうがはるかにましです。しかも、何度も言うようですが、幸運なことに高校では「因数分解できる高次方程式」しか扱えません。
+                    こんなのを計算するくらいなら、 $\pm\dfrac{\text{定数項の約数}}{\text{最高次係数の約数}}$ を一つ一つ代入して因数を見つけるほうがはるかにましです。しかも、何度も言うようですが、幸運なことに高校では「因数分解できる高次方程式」しか扱えません。
                 </p>
                 <p>
                     広い世界では、<strong>方程式が因数分解できること自体が奇跡</strong>です。
@@ -162,21 +169,21 @@
                 </p>
                 <div class="Q">
                     <div class="boxtitle">例1</div>
-                    \(x^3-3x^2-16x+48=0\) を解け。
+                    $x^3-3x^2-16x+48=0$ を解け。
                 </div>
                 <p>
-                    左辺を \(P(x)\) とおくと、代入によって \(P(3)=0\) がわかりますから、前回のように因数分解して
-                    <div class="eq">\[
+                    左辺を $P(x)$ とおくと、代入によって $P(3)=0$ がわかりますから、前回のように因数分解して
+                    <div class="eq">$$
                         P(x)=(x-3)(x-4)(x+4)
-                    \]</div>
+                    $$</div>
                     したがって
-                    <div class="eq">\[
+                    <div class="eq">$$
                         x=-4,3,4
-                    \]</div>
+                    $$</div>
                     を得ます。
                 </p>
                 <p>
-                    ここで気づいてほしいのは、いま左辺を因数分解するために \(P(\alpha)=0\) となるような \(\alpha\) を探しましたが、これは3つある解のうちの1つですね。
+                    ここで気づいてほしいのは、いま左辺を因数分解するために $P(\alpha)=0$ となるような $\alpha$ を探しましたが、これは3つある解のうちの1つですね。
                 </p>
                 <p>
                     つまり、3次方程式の3つの解を求めたければ、<strong>1個の解は何とか自力で見つけないといけない</strong>ということです。
@@ -193,22 +200,22 @@
                 </p>
                 <div class="Q">
                     <div class="boxtitle">例2</div>
-                    <div class="eq">\[
+                    <div class="eq">$$
                         x^3-3x^2+4=0
-                    \]</div>
+                    $$</div>
                 </div>
                 <p>
-                    一つの解 \(x=-1\) を見つけて、左辺を因数分解すると
-                    <div class="eq">\[
+                    一つの解 $x=-1$ を見つけて、左辺を因数分解すると
+                    <div class="eq">$$
                         (x+1)(x+2)^2 = 0
-                    \]</div>
+                    $$</div>
                     ですから、解は
-                    <div class="eq">\[
+                    <div class="eq">$$
                         x=-2, -1
-                    \]</div>
+                    $$</div>
                 </p>
                 <p>
-                    この場合の解 \(x=-2\) を「<strong>2重解</strong>」と呼びます。これは \((x+2)^2=0\) を解いて出てきたものでした。
+                    この場合の解 $x=-2$ を「<strong>2重解</strong>」と呼びます。これは $(x+2)^2=0$ を解いて出てきたものでした。
                 </p>
 
                 <p>
@@ -216,25 +223,25 @@
                 </p>
                 <div class="Q">
                     <div class="boxtitle">例3</div>
-                    <div class="eq">\[
+                    <div class="eq">$$
                         x^3-3x+3x-1 = 0
-                    \]</div>
+                    $$</div>
                 </div>
                 <p>
                     3乗の展開公式から、一発で
-                    <div class="eq">\[
+                    <div class="eq">$$
                         x^3-3x+3x-1 = (x-1)^3
-                    \]</div>
-                    を見抜きたいところですが、覚えていなかった場合にも、 \(x=1\) が解の一つであることに気づけば
-                    <div class="eq">\begin{align}
+                    $$</div>
+                    を見抜きたいところですが、覚えていなかった場合にも、 $x=1$ が解の一つであることに気づけば
+                    <div class="eq">$$\begin{aligned}
                         (x-1)(x^2-2x+1) &= 0 \\
                         (x-1)(x-1)^2 &= 0 \\
                         (x-1)^3 &= 0
-                    \end{align}</div>
+                    \end{aligned}$$</div>
                     となるので、解は
-                    <div class="eq">\[
+                    <div class="eq">$$
                         x=1
-                    \]</div>
+                    $$</div>
                     だけでした。
                 </p>
                 <p>
@@ -245,35 +252,35 @@
                 <p>虚数解が出る場合も見ておきましょう</p>
                 <div class="Q">
                     <div class="boxtitle">例4</div>
-                    <div class="eq">\[
+                    <div class="eq">$$
                         x^4-x^3-2x^2+6x-4 = 0
-                    \]</div>
+                    $$</div>
                 </div>
                 <p>
-                    \(x=1\) はこの解ですから、左辺を \((x-1)\) で割ります。これはおとなしく割り算しましょう。
+                    $x=1$ はこの解ですから、左辺を $(x-1)$ で割ります。これはおとなしく割り算しましょう。
                 </p>
                 <figure>
                     <img src="-img/hts3/2.png" alt="">
                 </figure>
                 <p>
-                    他の解は、 \(x^3-2x+4\) を解けば求められることがわかりました。まだ3次式なので、もっと因数分解できるはずです。試してみると \(x=-2\) が見つかりますから、
-                    <div class="eq">\begin{align}
+                    他の解は、 $x^3-2x+4$ を解けば求められることがわかりました。まだ3次式なので、もっと因数分解できるはずです。試してみると $x=-2$ が見つかりますから、
+                    <div class="eq">$$\begin{aligned}
                         x^3-2x+4 &= 0 \\
                         (x+2)(x^2-2x+2) &= 0 \\
-                    \end{align}</div>
+                    \end{aligned}$$</div>
                 </p>
                 <p>
-                    あと2つの解は、2次方程式 \(x^2-2x+2=0\) を解いて、
-                    <div class="eq">\[
+                    あと2つの解は、2次方程式 $x^2-2x+2=0$ を解いて、
+                    <div class="eq">$$
                         x=1\pm i
-                    \]</div>
+                    $$</div>
                     です。
                 </p>
                 <p>
                     まとめると、解は
-                    <div class="eq">\[\boldsymbol{
+                    <div class="eq">$$\boldsymbol{
                         x = -2, 1, 1\pm i
-                    }\]</div>
+                    }$$</div>
                     となります。
                 </p>
             </section>
@@ -284,8 +291,8 @@
                     <ul>
                         <li>高校では因数分解できる高次方程式しか扱わないが、実際にはそうではない。</li>
                         <li>高次方程式は、<strong>2次以下の式に因数分解する</strong>ことで解けることがある。</li>
-                        <li>因数分解して \(\left(x-\bigcirc\right)^2\) という形が出てくるとき、 \(x=\bigcirc\) を<strong>2重解</strong>という。</li>
-                        <li>同様に、 \(\left(x-\bigcirc\right)^3\) から得られる解を<strong>3重解</strong>と呼ぶ。</li>
+                        <li>因数分解して $\left(x-\bigcirc\right)^2$ という形が出てくるとき、 $x=\bigcirc$ を<strong>2重解</strong>という。</li>
+                        <li>同様に、 $\left(x-\bigcirc\right)^3$ から得られる解を<strong>3重解</strong>と呼ぶ。</li>
                     </ul>
                 </div>
             </section>

@@ -11,7 +11,14 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet"> -->
         
         <!--MathJax-->
-        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        <!-- <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script> -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js" integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous"></script>
+        <script>$(document).ready(function(){renderMathInElement(document.body,{delimiters: [{left: "$$", right: "$$", display: true},{left: "$", right: "$", display: false}]})});</script>
+
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="あの伝説のMTestが帰ってくる！" />
@@ -29,7 +36,7 @@
                     <li><a href="index.html">TOP</a></li>
                     <li><a href="article/index.html">記事一覧</a></li>
                     <li><a href="tips/index.html">Tips</a></li>
-                    <li><a href="about/index.html">About \(i^i\) </a></li>
+                    <li><a href="about/index.html">About $i^i$ </a></li>
                     <li><a href="mania/index.html">暇人編</a></li>
                 </ul>
             </nav>
@@ -43,15 +50,62 @@
                         <li><a href="article/22_02.html">2月MTest</a></li>
                     </ul>
                 </nav>
-                <!-- <span class="subtitle">あの伝説の"MathTest"が帰ってくる!!</span> -->
                 <h1>2月MTest</h1>
                 <div class="thumb">
                     <img src="-img/MTest.png" alt="">
                 </div>
             </header>
             
-            <p>関連ページをチェック!!</p>
+            <!-- <p>関連ページをチェック!!</p> -->
+            <p>分からないor不安な問題があれば関連記事をチェック！</p>
+
             <h3>高次方程式入門</h3>
+
+            <div class="Q">
+                <div class="boxtitle">Q1</div>
+                $P(x)=x^3-2x^2+x+4$ を $(x-3)$ で割ったあまりを求めよ
+            </div>
+            <div class="arrow_articlelink">
+                <img src="-img/harrow.svg" alt="">
+                <a href="article/hts/1.html">
+                    <img src="-img/hts1.png" alt="">
+                </a>
+            </div>
+
+            <div class="Q">
+                <div class="boxtitle">Q2</div>
+                $P(x)=x^3-3x^2-16x+48$ を有理数の範囲で因数分解せよ
+            </div>
+            <div class="arrow_articlelink">
+                <img src="-img/harrow.svg" alt="">
+                <a href="article/hts/2.html">
+                    <img src="-img/hts2.png" alt="">
+                </a>
+            </div>
+
+            <div class="Q">
+                <div class="boxtitle">Q3</div>
+                 $x^4-x^3-2x^2+6x-4 = 0$ を解け
+            </div>
+            <div class="arrow_articlelink">
+                <img src="-img/harrow.svg" alt="">
+                <a href="article/hts/3.html">
+                    <img src="-img/hts3.png" alt="">
+                </a>
+            </div>
+
+            <div class="Q">
+                <div class="boxtitle">Q4</div>
+                 $\omega$ を1の3乗根のうち虚数であるものの一つとして、 $\omega^2$ も1の3乗根であることを示せ。
+            </div>
+            <div class="arrow_articlelink">
+                <img src="-img/harrow.svg" alt="">
+                <a href="article/hts/4.html">
+                    <img src="-img/hts4.png" alt="">
+                </a>
+            </div>
+
+
             <div class="articlelink2">
                 <article>
                     <a href="article/hts/1.html">
@@ -79,7 +133,15 @@
                 </article>
             </div>
             <h3>整数の性質</h3>
-            <p>（執筆中）</p>
+            <div class="articlelink2">
+                <article>
+                    <a href="article/seisu/S.html">
+                        <img src="-img/seisuS.png" alt="">
+                        <div class="articlename">#S 応用編</div>
+                    </a>
+                </article>
+            </div>
+
             
             <h2>試験情報</h2>
             <div class="dasoku">

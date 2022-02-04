@@ -11,7 +11,14 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet"> -->
         
         <!--MathJax-->
-        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        <!-- <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script> -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js" integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous"></script>
+        <script>$(document).ready(function(){renderMathInElement(document.body,{delimiters: [{left: "$$", right: "$$", display: true},{left: "$", right: "$", display: false}]})});</script>
+
     </head>
     <body>
         <header>
@@ -23,7 +30,7 @@
                     <li><a href="index.html">TOP</a></li>
                     <li><a href="article/index.html">記事一覧</a></li>
                     <li><a href="tips/index.html">Tips</a></li>
-                    <li><a href="about/index.html">About \(i^i\) </a></li>
+                    <li><a href="about/index.html">About $i^i$ </a></li>
                     <li><a href="mania/index.html">暇人編</a></li>
                 </ul>
             </nav>
@@ -32,10 +39,10 @@
             <nav id="pankuzu">
                 <ul>
                     <li><a href="index.html">TOP</a></li>
-                    <li><a href="about/index.html">About \(i^i\) </a></li>
+                    <li><a href="about/index.html">About $i^i$ </a></li>
                 </ul>
             </nav>
-            <h1>About \(i^i\) ─ \(i\) を紡ぐ</h1>
+            <h1>About $i^i$ ─ $i$ を紡ぐ</h1>
             <p>
                 <span class="arrowlink"><a href="about/author.html">執筆者についてはこちら</a></span>
             </p>
@@ -49,7 +56,7 @@
                 ・・・図で描けばこんなに簡単なことなのに、教科書はとにかく数式で押し切ろうとします。そして<strong>一度その教科書に洗脳された頭は、図形で考えることを受け付けません。</strong>とにかく無思考・無批判にうろ覚えの公式に代入し、ミスをしてしまいます。
             </p>
             <p>
-                もしあなたが今、 \(\sin,\;\cos,\;\tan\) や虚数単位 \(i\) の意味もわからずにただ公式に当てはめるような解き方をしていて、計算ミスのせいでなかなか点数に繋がっていなかったとしても決して落ち込むことはありません。それはあなたの数学力が足りないせいではなく、「解き方の押し付け」──それも「効率の悪い」解き方──を無反省に続けてきた<strong>日本数学教育の敗北</strong>の結果です。見たこともないような関数が十分な説明もなしに突然登場し、それによって数学の成績・単位・そして進級できるかどうかまで左右される。そんな理不尽なことはないですよね。
+                もしあなたが今、 $\sin,\;\cos,\;\tan$ や虚数単位 $i$ の意味もわからずにただ公式に当てはめるような解き方をしていて、計算ミスのせいでなかなか点数に繋がっていなかったとしても決して落ち込むことはありません。それはあなたの数学力が足りないせいではなく、「解き方の押し付け」──それも「効率の悪い」解き方──を無反省に続けてきた<strong>日本数学教育の敗北</strong>の結果です。見たこともないような関数が十分な説明もなしに突然登場し、それによって数学の成績・単位・そして進級できるかどうかまで左右される。そんな理不尽なことはないですよね。
             </p>
             <p>
                 断っておきますが、これは決して先生たちの教え方が悪いとかそういうレベルの話ではありません。教科書だけの問題でもなく、戦後から無批判に受け継いできた日本の教育課程そのものに問題があります。教科書や先生はやっぱりその既定路線に従わざるを得ないのです。授業数も圧倒的に足りないですし。日本の数学教育の問題点についてはいつかまた改めて論じるつもりですが、とりあえず<strong>数学がわからないのは皆さんのせいじゃありません。</strong>それを決して忘れないでください。

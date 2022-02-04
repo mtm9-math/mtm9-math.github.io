@@ -11,7 +11,14 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet"> -->
         
         <!--MathJax-->
-        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        <!-- <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script> -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js" integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous"></script>
+        <script>$(document).ready(function(){renderMathInElement(document.body,{delimiters: [{left: "$$", right: "$$", display: true},{left: "$", right: "$", display: false}]})});</script>
+
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="#2 因数定理" />
@@ -28,7 +35,7 @@
                     <li><a href="index.html">TOP</a></li>
                     <li><a href="article/index.html">記事一覧</a></li>
                     <li><a href="tips/index.html">Tips</a></li>
-                    <li><a href="about/index.html">About \(i^i\) </a></li>
+                    <li><a href="about/index.html">About $i^i$ </a></li>
                     <li><a href="mania/index.html">暇人編</a></li>
                 </ul>
             </nav>
@@ -59,11 +66,11 @@
                 <div class="Q">
                     <div class="boxtitle">剰余の定理</div>
                     <div class="center">
-                        \(P(x)\) を \((x-\alpha)\) で割ったあまりは、 \(\boldsymbol{P(\alpha)}\) に等しい。
+                        $P(x)$ を $(x-\alpha)$ で割ったあまりは、 $\boldsymbol{P(\alpha)}$ に等しい。
                     </div>
                 </div>
                 <p>
-                    剰余の定理を用いれば、実際に割り算を行うことなくあまりを求めることが可能だということです。例として、 \(P(x)=x^4-6x^2+7x-6\) を \((x-1),(x-2),(x-3)\) で割ったあまりはそれぞれ \(-4, \quad 0, \quad 42\) でしたが、これはそれぞれ \(P(1), P(2), P(3)\) の値と全く同じでした。
+                    剰余の定理を用いれば、実際に割り算を行うことなくあまりを求めることが可能だということです。例として、 $P(x)=x^4-6x^2+7x-6$ を $(x-1),(x-2),(x-3)$ で割ったあまりはそれぞれ $-4, \quad 0, \quad 42$ でしたが、これはそれぞれ $P(1), P(2), P(3)$ の値と全く同じでした。
                 </p>
             </section>
             <section>
@@ -72,14 +79,14 @@
                     であれば、その特殊な場合として「あまりが0になる」場合を考えるのは自然ですよね。
                 </p>
                 <p>
-                    例えば、 \(P(x)=x^4-6x^2+7x-6\) を \((x-2)\) で割ったあまりは、 \(P(2)=16-24+14-6=0\) より \(0\) になります。「あまりが0」である、を言い換えるとどういうことですか？
+                    例えば、 $P(x)=x^4-6x^2+7x-6$ を $(x-2)$ で割ったあまりは、 $P(2)=16-24+14-6=0$ より $0$ になります。「あまりが0」である、を言い換えるとどういうことですか？
                 </p>
                 <p>
-                    そう、<strong> \(\boldsymbol{P(x)}\) が \(\boldsymbol{(x-2)}\) で割り切れる</strong>ということです。このことを
+                    そう、<strong> $\boldsymbol{P(x)}$ が $\boldsymbol{(x-2)}$ で割り切れる</strong>ということです。このことを
                     <div class="eq">
-                        <strong>「 \(\boldsymbol{P(x)}\) は \(\boldsymbol{(x-2)}\) を因数にもつ」</strong>
+                        <strong>「 $\boldsymbol{P(x)}$ は $\boldsymbol{(x-2)}$ を因数にもつ」</strong>
                     </div>
-                    と言います。「因数にもつ」とは、「因数分解したときに \((x-2)\) の項が出てくる」ということです。
+                    と言います。「因数にもつ」とは、「因数分解したときに $(x-2)$ の項が出てくる」ということです。
                 </p>
             </section>
             <section>
@@ -88,7 +95,7 @@
                 <div class="Q">
                     <div class="boxtitle">因数定理</div>
                     <div class="center">
-                        \(P(x)\) が \((x-\alpha)\) で割り切れる \(\boldsymbol{\Leftrightarrow P(\alpha)=0}\) 
+                        $P(x)$ が $(x-\alpha)$ で割り切れる $\boldsymbol{\Leftrightarrow P(\alpha)=0}$ 
                     </div>
                 </div>
             </section>
@@ -96,13 +103,13 @@
                 <h2>ものすごく面倒な因数分解</h2>
                 <p>因数定理を使うと、3次式以上の式が因数分解できるようになることがあります。</p>
                 <div class="Q">
-                    \(P(x)=x^3-2x^2+2x+5\) を因数分解する。
+                    $P(x)=x^3-2x^2+2x+5$ を因数分解する。
                 </div>
                 <p>
-                    \(P(x)=0\) となるような \(x\) を探します。探し方は…とにかく<strong>当てずっぽう</strong>です。
+                    $P(x)=0$ となるような $x$ を探します。探し方は…とにかく<strong>当てずっぽう</strong>です。
                 </p>
                 <p>
-                    とりあえず \(x=1,3,5\) を試してみましょう。
+                    とりあえず $x=1,3,5$ を試してみましょう。
                 </p>
                 <figure>
                     <img src="-img/hts2/1.jpg" alt="">
@@ -112,7 +119,7 @@
                     <img src="-img/hts2/2.jpg" alt="">
                 </figure>
                 <p>
-                    見つかりました！　\(x=-1\) のとき \(P(-1)=0\) です。このことから \(P(x)\) は \((x+1)\) を因数にもつことがわかります。
+                    見つかりました！　$x=-1$ のとき $P(-1)=0$ です。このことから $P(x)$ は $(x+1)$ を因数にもつことがわかります。
                 </p>
                 <p>
                     因数の一つがわかったので割り算しましょう。
@@ -121,16 +128,16 @@
                     <img src="-img/hts2/3.jpg" alt="">
                 </figure>
                 <p>
-                    商は \(x^2-3x+5\) となり、あまりはちゃんと0になりました。したがって
+                    商は $x^2-3x+5$ となり、あまりはちゃんと0になりました。したがって
                     <div class="eq">
-                        \begin{align}
+                        $$\begin{aligned}
                             P(x) &= x^3-2x^2+2x+5 \\
                                  &= (x+1)(x^2-3x+5) \\
-                        \end{align}
+                        \end{aligned}$$
                     </div>
                 </p>
                 <p>
-                    \((x^2-3x+5)\) はこれ以上因数分解できないのでこれが答えになる、のですが……ちょっと<strong>めんどくさい作業が多すぎませんか？</strong>
+                    $(x^2-3x+5)$ はこれ以上因数分解できないのでこれが答えになる、のですが……ちょっと<strong>めんどくさい作業が多すぎませんか？</strong>
                 </p>
             </section>
             <section>
@@ -139,16 +146,16 @@
                     まず、先ほどの方法の面倒な点を整理します。
                 </p>
                 <ol>
-                    <li>当てずっぽう。 \(P(x)=0\) となる \(x\) が見つかるまで永遠に試さないといけない。</li>
+                    <li>当てずっぽう。 $P(x)=0$ となる $x$ が見つかるまで永遠に試さないといけない。</li>
                     <li>因数がわかったあとの割り算がだるい。</li>
                 </ol>
                 <p>
-                    2.はまだしも、1.については致命的な問題です。限られた時間の中で、無限にある \(x\) の値を全て試している暇はありません。
+                    2.はまだしも、1.については致命的な問題です。限られた時間の中で、無限にある $x$ の値を全て試している暇はありません。
                 </p>
 
                 <h3>候補を絞る</h3>
                 <p>
-                    実は、 \(P(x)=0\) となるような \(x\) の候補は限られています。先ほどの当てずっぽうを振り返ってみましょう。
+                    実は、 $P(x)=0$ となるような $x$ の候補は限られています。先ほどの当てずっぽうを振り返ってみましょう。
                 </p>
                 <figure>
                     <img src="-img/hts2/4.jpg" alt="">
@@ -157,36 +164,36 @@
                     この4つの代入して調べる作業の中に<strong>無駄なもの</strong>が1つあります。どれでしょうか。
                 </p>
                 <p>
-                    \(P(3\) の値を調べるのは無駄です。どうしてでしょうか。もし \(P(3)=0\) であれば、 \(P(x)\) は \((x-3)\) を因数にもちます。すると、
+                    $P(3$ の値を調べるのは無駄です。どうしてでしょうか。もし $P(3)=0$ であれば、 $P(x)$ は $(x-3)$ を因数にもちます。すると、
                     <div class="eq">
-                        \[
+                        $$
                             P(x)=(x-3)\left(x^2+\cdots\right)
-                        \]
+                        $$
                     </div>
-                    のように書けます。ここで、 \(P(x)\) の定数項は \(5\) ですから、\(\big(x^2+\cdots\big)\) の定数項の部分は \(-\dfrac{5}{3}\) になるはずですよね。
+                    のように書けます。ここで、 $P(x)$ の定数項は $5$ ですから、$\big(x^2+\cdots\big)$ の定数項の部分は $-\dfrac{5}{3}$ になるはずですよね。
                 </p>
                 <div class="eq">
-                    \[
+                    $$
                         P(x)=(x-3)\left( x^2+\cdots\boldsymbol{-\dfrac{5}{3}} \right)
-                    \]
+                    $$
                 </div>
                 <p>
-                    しかし、これだとおかしなことになります。ややこしくなるので証明はしませんが、係数が全て整数の \(P(x)\) を因数分解しても、分数は出てくるはずがないのです。
+                    しかし、これだとおかしなことになります。ややこしくなるので証明はしませんが、係数が全て整数の $P(x)$ を因数分解しても、分数は出てくるはずがないのです。
                 </p>
                 <div class="dasoku">
                     気になる人のための厳密な証明は、ちょっと待ってください。私自身がまだちゃんと理解できていないので…。
                 </div>
                 <p>
-                    このようなことが起こった原因は、代入した \(3\) が、 \(P(x)\) の定数項である \(5\) で割り切れないことにあります。
+                    このようなことが起こった原因は、代入した $3$ が、 $P(x)$ の定数項である $5$ で割り切れないことにあります。
                 </p>
 
-                <h3> \(\alpha\) の候補</h3>
+                <h3> $\alpha$ の候補</h3>
                 <p>
-                    一般に、 \(P(\alpha)=0\) となるような \(\alpha\) の候補は、
+                    一般に、 $P(\alpha)=0$ となるような $\alpha$ の候補は、
                     <div class="Q">
-                        \[\boldsymbol{
+                        $$\boldsymbol{
                             \pm\dfrac{|\bf{定数項}|\bf{の約数}}{|\bf{最高次係数}|\bf{の約数}}
-                        }\]
+                        }$$
                     </div>
                     という形をしています。
                 </p>
@@ -194,11 +201,11 @@
                     これも文字で書かれるとよくわからないので具体的に考えていきましょう。
                 </p>
                 <p>
-                    \(P(x)=x^3-2x^2+2x+5\) という式であれば、定数項は \(5\) 、最高次係数は \(1\) ですから、 \(\alpha\) の候補は
+                    $P(x)=x^3-2x^2+2x+5$ という式であれば、定数項は $5$ 、最高次係数は $1$ ですから、 $\alpha$ の候補は
                     <div class="eq">
-                        \[
+                        $$
                             \pm 1, \pm 5
-                        \]
+                        $$
                     </div>
                     の高々4つしかありません。
                 </p>
@@ -206,16 +213,16 @@
                     もう一つ例をあげましょう。
                 </p>
                 <div class="eq">
-                    \[
+                    $$
                         P(x)=4x^4-7x^3+18x^2-5x+3
-                    \]
+                    $$
                 </div>
                 <p>
-                    定数項は \(3\) 、最高次係数は今度は \(4\) です。 \(3\) の約数は \(1\) と \(3\) 、 \(4\) の約数は \(1\)  と \(2\) と \(4\) ですから、 \(P(\alpha)=0\) となるような \(\alpha\) が存在すれば、それは
+                    定数項は $3$ 、最高次係数は今度は $4$ です。 $3$ の約数は $1$ と $3$ 、 $4$ の約数は $1$  と $2$ と $4$ ですから、 $P(\alpha)=0$ となるような $\alpha$ が存在すれば、それは
                     <div class="eq">
-                        \[
+                        $$
                             \pm 1, \pm 3, \pm \dfrac{1}{2}, \pm \dfrac{3}{2}, \pm \dfrac{1}{4}, \pm \dfrac{3}{4}
-                        \]
+                        $$
                     </div>
                     いずれかでしかありません。
                 </p>
@@ -223,10 +230,10 @@
             <section>
                 <h2>割り算は筆算をしないでもできる</h2>
                 <p>
-                    \(\alpha\) の候補の絞り方はわかりました。因数がわかった後の筆算もなんとかしたいものです。
+                    $\alpha$ の候補の絞り方はわかりました。因数がわかった後の筆算もなんとかしたいものです。
                 </p>
                 <p>
-                    <a href="sorry.html">組み立て除法</a>を使う方法もありますが、慣れないうちに使うのは危険です。そういったテクニックにたよらず、もう少し自然な方法を探しましょう。
+                    <a href="404.html">組み立て除法</a>を使う方法もありますが、慣れないうちに使うのは危険です。そういったテクニックにたよらず、もう少し自然な方法を探しましょう。
                 </p>
                 <div class="dasoku">
                     今から説明する方法が有効なのは3次式までです。4次式であればおとなしく割り算するか組立除法を使った方がよいです。が、3次式の因数分解の問題は多いので身につけておいて損はありません。
@@ -238,24 +245,24 @@
                     <img src="-img/hts2/5.jpg" alt="">
                 </figure>
                 <p>
-                    \(x^3\) の係数が \(1\) 、定数項が \(5\) になるためには、 \(\boldsymbol{(x+1)\left(x^2+\bigcirc x+5\right)}\) という形にならないといけません。
+                    $x^3$ の係数が $1$ 、定数項が $5$ になるためには、 $\boldsymbol{(x+1)\left(x^2+\bigcirc x+5\right)}$ という形にならないといけません。
                 </p>
                 <p>
-                    わかっていないのは \(x\) の係数です。これを元の式の係数から求めます。今回は \(-2x^2\) から求めます。
+                    わかっていないのは $x$ の係数です。これを元の式の係数から求めます。今回は $-2x^2$ から求めます。
                 </p>
 
                 <h3>係数を調整する</h3>
                 <p>
-                    どのようにすれば \(x^2\) の係数が \(-2\) になるでしょうか。
+                    どのようにすれば $x^2$ の係数が $-2$ になるでしょうか。
                 </p>
                 <figure>
                     <img src="-img/hts2/6.jpg" alt="">
                 </figure>
                 <p>
-                    \((x+1)\) の \(1\) と \(\left(x^2+\bigcirc x+5\right)\) の \(x^2\) をかけ合わせると \(x^2\) になりますから、最終的に \(-2x^2\) にするには、これに<strong> \(\boldsymbol{-3x^2}\) が加わればよい</strong>ということになります。
+                    $(x+1)$ の $1$ と $\left(x^2+\bigcirc x+5\right)$ の $x^2$ をかけ合わせると $x^2$ になりますから、最終的に $-2x^2$ にするには、これに<strong> $\boldsymbol{-3x^2}$ が加わればよい</strong>ということになります。
                 </p>
                 <p>
-                    それでは、 \((x+1)\) の \(x\) に何を掛け合わせれば \(-3x^2\) になるか。 \(-3x\) ですね。
+                    それでは、 $(x+1)$ の $x$ に何を掛け合わせれば $-3x^2$ になるか。 $-3x$ ですね。
                 </p>
                 <figure>
                     <img src="-img/hts2/7.jpg" alt="">
@@ -263,20 +270,20 @@
                 <p>
                     したがって、因数分解した結果は
                     <div class="eq">
-                        \begin{align}
+                        $$\begin{aligned}
                             P(x) &= x^3-2x^2+2x+5 \\
                                  &= (x+1)(x^2-3x+5) \\
-                        \end{align}
+                        \end{aligned}$$
                     </div>
                     最初に筆算で解いた時と同じ結果を得ました。
                 </p>
 
                 <h3>検算</h3>
                 <p>
-                    いま、 \(x^2\) の係数が \(-2\) になるように調整して因数分解を求めました。そこで、これが正しいことを検算しましょう。といっても展開するのではありません。元の式には \(2x\) という項があります。これを利用します。
+                    いま、 $x^2$ の係数が $-2$ になるように調整して因数分解を求めました。そこで、これが正しいことを検算しましょう。といっても展開するのではありません。元の式には $2x$ という項があります。これを利用します。
                 </p>
                 <p>
-                    \((x+1)(x^2-3x+5)\) を展開したときの \(x\) の係数は、
+                    $(x+1)(x^2-3x+5)$ を展開したときの $x$ の係数は、
                     <figure>
                         <img src="-img/hts2/7.jpg" alt="">
                     </figure>
@@ -291,17 +298,17 @@
                 <div class="Q">
                     <div class="boxtitle">因数定理</div>
                     <div class="center">
-                        \(P(x)\) が \((x-\alpha)\) で割り切れる \(\boldsymbol{\Leftrightarrow P(\alpha)=0}\) 
+                        $P(x)$ が $(x-\alpha)$ で割り切れる $\boldsymbol{\Leftrightarrow P(\alpha)=0}$ 
                     </div>
                 </div>
 
 
-                <h3> \(\alpha\) の候補</h3>
+                <h3> $\alpha$ の候補</h3>
                 <div class="Q">
-                    \(P(\alpha)=0\) となるような \(\alpha\) の候補は、
-                    \[\boldsymbol{
+                    $P(\alpha)=0$ となるような $\alpha$ の候補は、
+                    $$\boldsymbol{
                         \pm\dfrac{|\bf{定数項}|\bf{の約数}}{|\bf{最高次係数}|\bf{の約数}}
-                    }\]
+                    }$$
                     という形をしている。
                 </div>
 
@@ -324,55 +331,55 @@
                 <div>
                     <h3>第1問</h3>
                     <div class="Q">
-                         \(P(x)=x^3-3x^2+4\) を有理数の範囲で因数分解せよ
+                         $P(x)=x^3-3x^2+4$ を有理数の範囲で因数分解せよ
                     </div>
                     <div class="quiz">
                         <input type="radio" name="q1" id="q1_a" class="a">
                         <input type="radio" name="q1" id="q1_w" class="w">
                         <div class="choice">
-                            <label for="q1_w" class="lw"> \((x+1)(x^2-4x+4)\) </label>
-                            <label for="q1_w" class="lw"> \((x+1)(x^2-3x+4)\) </label>
-                            <label for="q1_a" class="la"> \((x+1)(x-2)^2\) </label>
-                            <label for="q1_w" class="lw"> \((x-1)(x+1)(x+3)\) </label>
+                            <label for="q1_w" class="lw"> $(x+1)(x^2-4x+4)$ </label>
+                            <label for="q1_w" class="lw"> $(x+1)(x^2-3x+4)$ </label>
+                            <label for="q1_a" class="la"> $(x+1)(x-2)^2$ </label>
+                            <label for="q1_w" class="lw"> $(x-1)(x+1)(x+3)$ </label>
                         </div>
                         <div class="a_print">正解</div>
                         <div class="w_print">不正解</div>
                         <div class="expl">
                             <p>
-                                答え： \((x+1)(x+2)^2\) 
+                                答え： $(x+1)(x+2)^2$ 
                             </p>
                             <p>
-                                最高次の係数は1、定数項は4ですから、 \(P(\alpha)=0\) となるような \(\alpha\) の候補は \(\pm 1, \pm 2, \pm 4\) です。これらを代入して \(0\) になるかどうか調べていきます。
+                                最高次の係数は1、定数項は4ですから、 $P(\alpha)=0$ となるような $\alpha$ の候補は $\pm 1, \pm 2, \pm 4$ です。これらを代入して $0$ になるかどうか調べていきます。
                             </p>
                             <p>
-                                絶対値が小さい方から調べたほうが楽なので、まず \(1\) を代入してみましょう。
+                                絶対値が小さい方から調べたほうが楽なので、まず $1$ を代入してみましょう。
                             </p>
-                            <div class="eq">\begin{align}
+                            <div class="eq">$$\begin{aligned}
                                 P(1) &= 1-3+4 = 2 \\
                                 P(-1) &= -1-3+4 = 0
-                            \end{align}</div>
+                            \end{aligned}$$</div>
                             <p>
-                                \(P(-1)=0\) となりましたから、 \((x+1)\) で割り算をします。
-                                <div class="eq">\begin{align}
+                                $P(-1)=0$ となりましたから、 $(x+1)$ で割り算をします。
+                                <div class="eq">$$\begin{aligned}
                                     P(x)
                                         &= x^3-3x^2+4 \\
                                         &= (x+1)(x^2 + \bigcirc x +4) \\
                                         &\quad \text{↑とりあえず書く}
-                                \end{align}</div>
+                                \end{aligned}$$</div>
                             </p>
                             <p>
-                                ここで、元の式の \(x\) の係数が0であることに注意すると、 \(\bigcirc\) の部分は \(-4\) であればよいことがわかります。
+                                ここで、元の式の $x$ の係数が0であることに注意すると、 $\bigcirc$ の部分は $-4$ であればよいことがわかります。
                             </p>
-                            <div class="eq">\begin{align}
+                            <div class="eq">$$\begin{aligned}
                                 P(x)
                                     &= x^3-3x^2+4 \\
                                     &= (x+1)(x^2-4x+4)
-                            \end{align}</div>
+                            \end{aligned}$$</div>
                             <p>
-                                ここで満足してはいけません。 \((x^2-4x+4)\) は \((x-2)^2\) と表せますから、
-                                <div class="eq">\[\boldsymbol{
+                                ここで満足してはいけません。 $(x^2-4x+4)$ は $(x-2)^2$ と表せますから、
+                                <div class="eq">$$\boldsymbol{
                                     P(x) = (x+1)(x-2)^2
-                                }\]</div>
+                                }$$</div>
                             </p>
                         </div>
                     </div>
@@ -380,46 +387,46 @@
                 <div>
                     <h3>第2問</h3>
                     <div class="Q">
-                         \(P(x)=x^3-3x^2-16x+48\) を有理数の範囲で因数分解せよ
+                         $P(x)=x^3-3x^2-16x+48$ を有理数の範囲で因数分解せよ
                     </div>
                     <div class="quiz">
                         <input type="radio" name="q2" id="q2_a" class="a">
                         <input type="radio" name="q2" id="q2_w" class="w">
                         <div class="choice">
-                            <label for="q2_w" class="lw"> \((x^2-16)(x+1)\) </label>
-                            <label for="q2_a" class="la"> \((x-3)(x-4)(x+4))\) </label>
-                            <label for="q2_w" class="lw"> \((x-6)(x-4)(x+2)\) </label>
-                            <label for="q2_w" class="lw"> \((x+8)(x^2-3x+6)\) </label>
+                            <label for="q2_w" class="lw"> $(x^2-16)(x+1)$ </label>
+                            <label for="q2_a" class="la"> $(x-3)(x-4)(x+4))$ </label>
+                            <label for="q2_w" class="lw"> $(x-6)(x-4)(x+2)$ </label>
+                            <label for="q2_w" class="lw"> $(x+8)(x^2-3x+6)$ </label>
                         </div>
                         <div class="a_print">正解</div>
                         <div class="w_print">不正解</div>
                         <div class="expl">
                             <p>
-                                答え：  \((x-3)(x-4)(x+4)\) 
+                                答え：  $(x-3)(x-4)(x+4)$ 
                             </p>
                             <p>
                                 最高次の係数は1、定数項は48です。48の約数はたくさんあるので不安ですが、とりあえず小さい方から。
                             </p>
-                            <div class="eq">\begin{align}
+                            <div class="eq">$$\begin{aligned}
                                 P(1)  &= 1-3-16+48 = 30 \\
                                 P(-1) &= -1-3+16+48 = 60 \\
                                 P(2)  &= 8-12-32+48 = 12 \\
                                 P(-2) &= -8-12+32+48 = 60 \\
                                 P(3)  &= 27-27-48+48 = 0
-                            \end{align}</div>
+                            \end{aligned}$$</div>
                             <p>
-                                やっと見つかりました。 \((x-3)\) で割り算しましょう。
+                                やっと見つかりました。 $(x-3)$ で割り算しましょう。
                             </p>
-                            <div>\begin{align}
+                            <div>$$\begin{aligned}
                                 P(x)
                                     &= x^3-3x^2-16x+48 \\
                                     &= (x-3)(x^2-16)
-                            \end{align}</div>
+                            \end{aligned}$$</div>
                             <p>
-                                ここで満足してはいけません。 \(x^2-16=(x-4)(x+4)\) ですから、
-                                <div class="eq">\[\boldsymbol{
+                                ここで満足してはいけません。 $x^2-16=(x-4)(x+4)$ ですから、
+                                <div class="eq">$$\boldsymbol{
                                     P(x)=(x-3)(x-4)(x+4)
-                                }\]</div>
+                                }$$</div>
                             </p>
                         </div>
                     </div>
@@ -427,75 +434,75 @@
                 <div>
                     <h3>第3問（最後）</h3>
                     <div class="Q">
-                         \(P(x)=8x^3-12x^2-2x+3\) を有理数の範囲で因数分解せよ
+                         $P(x)=8x^3-12x^2-2x+3$ を有理数の範囲で因数分解せよ
                     </div>
                     <div class="quiz">
                         <input type="radio" name="q3" id="q3_a" class="a">
                         <input type="radio" name="q3" id="q3_w" class="w">
                         <div class="choice">
-                            <label for="q3_w" class="lw"> \((4x-3)(x-1)(2x+1)\) </label>
-                            <label for="q3_w" class="lw"> \((x-3)(x-1)(8x+1)\) </label>
-                            <label for="q3_w" class="lw"> \((2x-1)(2x-1)(2x+3)\) </label>
-                            <label for="q3_a" class="la"> \((2x-3)(2x-1)(2x+1)\) </label>
+                            <label for="q3_w" class="lw"> $(4x-3)(x-1)(2x+1)$ </label>
+                            <label for="q3_w" class="lw"> $(x-3)(x-1)(8x+1)$ </label>
+                            <label for="q3_w" class="lw"> $(2x-1)(2x-1)(2x+3)$ </label>
+                            <label for="q3_a" class="la"> $(2x-3)(2x-1)(2x+1)$ </label>
                         </div>
                         <div class="a_print">正解</div>
                         <div class="w_print">不正解</div>
                         <div class="expl">
                             <p>
-                                答え： \((2x-3)(2x-1)(2x+1)\) 
+                                答え： $(2x-3)(2x-1)(2x+1)$ 
                             </p>
                             <p>
                                 今度は最高次係数が1じゃないパターンです。最高次係数は8、定数項は3ですから、
-                                <div class="eq">\[
+                                <div class="eq">$$
                                     \pm \dfrac{3\text{の約数}}{8\text{の約数}}
-                                \]</div>
+                                $$</div>
                                 を調べればよいことがわかります。
                             </p>
                             <p>
                                 とりあえず分母が1のときから始めましょうか。
                             </p>
-                            <div class="eq">\begin{align}
+                            <div class="eq">$$\begin{aligned}
                                 P(1)  &= -3 \\
                                 P(-1) &= -15 \\
                                 P(3)  &= 105 \\
                                 P(-3) &= -315
-                            \end{align}</div>
+                            \end{aligned}$$</div>
                             <p>
                                 だめでした。分母が2ではどうでしょうか。
                             </p>
-                            <div class="eq">\[
+                            <div class="eq">$$
                                 P\left(\dfrac{1}{2}\right) = 1-3-1+3 = 0
-                            \]</div>
+                            $$</div>
                             <p>
-                                今度はうまくいきました。 \(\left(x-\dfrac{1}{2}\right)\) で割ってもいいのですが、これを2倍した \(\boldsymbol{\left(2x-1\right)}\) で割ることができます。
+                                今度はうまくいきました。 $\left(x-\dfrac{1}{2}\right)$ で割ってもいいのですが、これを2倍した $\boldsymbol{\left(2x-1\right)}$ で割ることができます。
                             </p>
                             <div class="dasoku">
                                 そうしてよいことはここでは説明しませんが保証されます。
                             </div>
                             <p>そうすると、</p>
-                            <div>\begin{align}
+                            <div>$$\begin{aligned}
                                 P(x)
                                     &= 8x^3-12x^2-2x+3 \\
                                     &= (2x-1)(4x^2 + \bigcirc x - 3)
-                            \end{align}</div>
+                            \end{aligned}$$</div>
                             <p>
-                                これまでと同じように考えます。 \((2x-1)(4x^2 + \bigcirc x - 3)\) を展開したときの \(x\) の係数が \(-2\) になるように \(\bigcirc\) を調整すると、
+                                これまでと同じように考えます。 $(2x-1)(4x^2 + \bigcirc x - 3)$ を展開したときの $x$ の係数が $-2$ になるように $\bigcirc$ を調整すると、
                             </p>
-                            <div>\begin{align}
+                            <div>$$\begin{aligned}
                                 P(x)
                                     &= 8x^3-12x^2-2x+3 \\
                                     &= (2x-1)(4x^2 -4x - 3)
-                            \end{align}</div>
+                            \end{aligned}$$</div>
                             <p>
-                                \((4x^2 -4x - 3)\) はさらに因数分解できて、最終的に
-                                <div class="eq">\[\boldsymbol{
+                                $(4x^2 -4x - 3)$ はさらに因数分解できて、最終的に
+                                <div class="eq">$$\boldsymbol{
                                     P(x) = (2x-3)(2x-1)(2x+1)
-                                }\]</div>
+                                }$$</div>
                                 を得ます。
                             </p>
 
                             <div class="dasoku">
-                                 \(X=2x\) とおく別解もある。
+                                 $X=2x$ とおく別解もある。
                                  <sup id="ref1" class="ref"><a href="article/hts/2.html#note1">[1]</a></sup>
                             </div>
                         </div>
@@ -539,26 +546,26 @@
                     <a href="article/hts/2.html#ref1">[1]</a>
                         <p>
                         <div class="eq">
-                            \(P(x)=8x^3-12x^2-2x+3\)
+                            $P(x)=8x^3-12x^2-2x+3$
                         </div>
-                        この式をよく見ると、 \(x^3\) の係数8は \(2^3\) で割り切れ、 \(-12\) は \(2^2\) で割り切れ、 \(-2\) は2で割り切れることに気付きますから、 \(X=2x\) とおくと、
-                        <div class="eq">\[
+                        この式をよく見ると、 $x^3$ の係数8は $2^3$ で割り切れ、 $-12$ は $2^2$ で割り切れ、 $-2$ は2で割り切れることに気付きますから、 $X=2x$ とおくと、
+                        <div class="eq">$$
                             P(x) = X^3 -3X^2 -X +3
-                        \]</div>
+                        $$</div>
                     </p>
                     <p>
-                        \(X=1\) のとき0になりますから、これは \((X-1)\) を因数に持っていて、
-                        <div class="eq">\begin{align}
+                        $X=1$ のとき0になりますから、これは $(X-1)$ を因数に持っていて、
+                        <div class="eq">$$\begin{aligned}
                             P(x)
                                 &= (X-1)(X^2-2X-3) \\
                                 &= (X-1)(X+1)(X-3) \\
-                        \end{align}</div>
+                        \end{aligned}$$</div>
                     </p>
                     <p>
-                        \(X=2x\) でしたから、
-                        <div class="eq">\[
+                        $X=2x$ でしたから、
+                        <div class="eq">$$
                             P(x) = (2x-1)(2x+1)(2x-3)
-                        \]</div>
+                        $$</div>
                     </p>
                 </div>
                 <p class="note" id="note2">
