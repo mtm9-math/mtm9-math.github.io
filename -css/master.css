@@ -12,8 +12,8 @@
     --arrow: " ＞";
     --font_r: "TsukuBRdGothic-Regular", "Hiragino Sans W1", "Hiragino Sans W3", "Hiragino Maru Gothic ProN", "YuGothic Medium", sans-serif;
     --font_b: "TsukuBRdGothic-Bold", "Hiragino Sans W3", "YuGothic Medium", sans-serif;
-    --font_sans: "Sawarabi Gothic", sans-serif;
-    --font_serif: "Sawarabi Mincho", serif;
+    --font_sans: sans-serif;
+    --font_serif: serif;
 }
 
 html {
