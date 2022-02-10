@@ -246,6 +246,7 @@ figure.bigfig img {
 
 /* 囲みボックス */
 .box {
+    margin: 1rem;
     padding: 0 1rem;
     border: 0.3rem solid powderblue;
 }
