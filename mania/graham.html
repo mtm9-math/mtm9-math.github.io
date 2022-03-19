@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>巨大数入門〜グラハム数を理解する〜｜iを紡ぐ</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="../">
+        <link rel="stylesheet" href="-css/master.css">
+        
+        <script>
+            MathJax = {
+              chtml: {
+                matchFontHeight: false
+              },
+              tex: {
+                inlineMath: [['$', '$']]
+              }
+            };
+        </script>
+        <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js" integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous"></script>
+        <script>$(document).ready(function(){renderMathInElement(document.body,{delimiters: [{left: "$$", right: "$$", display: true},{left: "$", right: "$", display: false}]})});</script> -->
+
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+            </div>
+            <nav id="gbnav">
+                <ul>
+                    <li><a href="index.html">TOP</a></li>
+                    <li><a href="article/index.html">記事一覧</a></li>
+                    <li><a href="tips/index.html">Tips</a></li>
+                    <li><a href="about/index.html">About $i^i$ </a></li>
+                    <li><a href="mania/index.html">暇人編</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <noscript>
+                <strong>Javascriptが無効です。数式を表示するためにJavascriptを有効にしてください。</strong>
+            </noscript>
+            <nav id="pankuzu">
+                <ul>
+                    <li><a href="index.html">TOP</a></li>
+                    <li><a href="mania/index.html">暇人編</a></li>
+                    <li><a href="mania/i^i.html">巨大数入門〜グラハム数を理解する〜</a></li>
+                </ul>
+            </nav>
+            <h1>巨大数入門　〜グラハム数を理解する〜</h1>
+            <div class="info">執筆者：kou</div>
+            <div class="info">最終更新日：22.3.19</div>
+
+            <p>
+                皆さんは、グラハム数という数を知っているだろうか。数学や雑学が好きな人なら知っているかもしれないが、グラハム数は<strong>数学の問題の証明に使われたことがある数の中で最大の数</strong>である。だが、グラハム数を知っている人でも、それがどのような数なのかを知っている人は少ないだろう。この記事では、巨大数に関する議論の最初のほんの一部である、グラハム数について理解できるくらいの内容を取り上げる。
+            </p>
+            
+            <h2>指数タワー</h2>
+            <p>
+                数学における巨大数の分野では我々にとっては途方もないような数が研究されている。もちろん、それらの中にも比較的小さい巨大数から、巨大数の中でも上位に位置するような極めて大きなものまでさまざまな大きさの数がある。そして、巨大数について知るのであれば、やはり比較的小さめの巨大数から始め、そのあとにより大きな巨大数について考えた方がわかりやすいだろう。
+            </p>
+            <p>
+                ということで、ここでは巨大数の中でも最弱の指数タワーについて説明する。名前からなんとなく意味を理解できた人も多いだろうが、指数タワーはその名の通り指数を何重にも重ねた数である。例えば、下のような数が挙げられる。
+            </p>
+            <div class="eq">$$\huge
+                9^{9^9}
+            $$</div>
+            <p>
+                もちろん、タワーの高さは指定されていないから、 $ 9 $ を $ 100 $ 個でも $ 200 $ 個でも、 $ 9^{9^9} $ 個でも肩に乗せてよいのである。
+            </p>
+            <p>
+                ここで、この表記方法で最も効率的に大きな数を表す方法は何だろうか。巨大数において、この問題は非常に重要な意味を持つ。数を大きくするのに一番重要な部分だけを考えることで議論を単純化できるからだ。
+            </p>
+            <p>
+                まず、次のような指数タワーを考える。
+            </p>
+            <p>
+                <div class="EQ">$$\large
+                    3^3
+                $$</div>
+            </p>
+            <p>
+                タワーというか、二段なのでタワーとは呼べないような数だが、これを実際に計算すると $ 27 $ となる。さて、この数に何らかの変化を加えて数を大きくしたい。どうすれば最も効率的に数を大きくできるだろうか。まずは次の二つについて考えてほしい。
+            </p>
+            <div class="eq">$$\large
+                3^5\quad\quad5^3
+            $$</div>
+            <p>
+                元の $ 3^3 $ のうち、片方の数を $ 5 $ に変えたものだ。これを計算すると、左が $ 243 $ で、右が $ 125 $ である。どちらも元の数よりは大きくなっているのだが、上げ幅を見てみると左の方が大きくなっている。このことから、 $ a^b $ という数について、これを大きくしたいならば、 $ a $ よりも $ b $ を大きくすることの方が重要であると考えられる。また、同じように考えれば、どんな高さのタワーでも、数字を大きくするなら<strong>タワーの高い部分の数字を大きく</strong>した方が効率的に数を大きくすることができるとわかるだろう。しかし、これ以外にも数字を大きくする方法がある。それは、<strong>肩にさらに数字を増やす</strong>というものである。例えば、下のような数を考える。
+            </p>
+            <div class="eq">$$\large
+                3^{3^2}
+            $$</div>
+            <p>
+                これを計算すると $ 3^9=19683$ となる。先ほどの左の数字は $ 243 $ なので、それと比べるとはるかに大きくなったのがわかるだろう。もちろん、数字を大きくする際、 $ 3^5 $ ではなく、 $ 3^{100} $ にすれば $ 19683 $ なんて容易に超えることができる。しかし、そうするくらいだったら $ 3^{3^{100}} $ にすることでさらに大きい数を作ることができる。このことから、肩に数字を増やすことは元の数を変化させるよりも効率的に数を大きくできるといえるだろう。
+            </p>
+            <p>
+                これまでのことをまとめると、指数タワーにおいては、数を大きくする方法の優劣は以下のように言える。
+            </p>
+            <div class="Q">
+                <strong>タワーを高くする ≫ タワーの上の方の数を大きくする ＞ タワーの下の方の数を大きくする</strong>
+            </div>
+            
+            <h2>テトレーション</h2>
+            <p>
+                さて、巨大数界最弱の指数タワーをマスターしたところで、次は巨大数界で2番目に弱いテトレーションについて考えていこう。先の議論で、指数タワーを使って数を効率的に大きくするためにはタワーを高くすることが最もよいとわかった。ということは、タワーを効率的に高くすることができればさらに大きい数を作ることができるのではないか、という考えで作られたのがテトレーションである。テトレーションの定義は以下のようなものである。
+            </p>
+            <div class="Q">
+                <span class="boxtitle">テトレーション</span>
+                <p>
+                    $ a $ テトレーション $ b $ とは、 $ a $ を $ b $ 個使ってタワーを作ったもの。
+                    $\huge\boldsymbol{ {}^b a }$  と表す。
+                </p>
+            </div>
+            
+            <p>
+                定義は単純だが、念のため実際に数を代入して計算をしてみよう。 $ 3 $ テトレーション $ 3 $ を計算してみる。
+            </p>
+            <div class="eq">\begin{align}
+                {}^3 3
+                &=3^{3^3} \\
+                &=3^{27} \\
+                &=7625597484987 \\
+            \end{align}</div>
+            <p>
+                 $ 3 $ という数字を2個しか使っていないのにものすごく大きい数になった。
+            </p>
+
+            <p>
+                テトレーションではどうすれば効率的に数を大きくできるだろうか。なんとなく察している人もいるだろうが、テトレーションであっても指数タワーの時と考え方は同じである。タワーを高くすることが数字を大きくする最も効率が良い方法であり、もともとの数字を大きくするならできるだけ高いところにある数字を大きくする方がよい。
+            </p>
+            
+            <h2>ハイパー演算</h2>
+            <p>
+                次は巨大数界で3番目に弱い表記方法について･･･とはいかない。これまでの考えを一般化してみよう。数学における一般化の重要性は言うまでもないが、実はこれまでの議論を一般化した<strong>ハイパー演算</strong>というものがある。
+            </p>
+            <p>
+                これまでの流れをおさらいすると、ある数を何回掛け算したかを累乗で表し、ある数を何回累乗したかをテトレーションで表した。ということは、テトレーションを何回重ね合わせたかを表す演算があってもいいはずである。もちろんそれは存在し、ペンテーションと呼ばれる。ということは、ペンテーションを何回重ね合わせたかを表す演算があってもいいはずである。それも存在し、ヘキセーションと呼ばれる。ここから先は言うまでもないだろう。
+            </p>
+            <p>
+                このように、ある演算を複数繰り返すことを一般化したもの、言い換えると、和・積・累乗を一般化させたものがハイパー演算である。ハイパー演算は次のような階層になっている。
+            </p>
+            <div class="eq">\begin{align}
+                a \; \underbrace{ +1+1+1+\cdots+1 }_{b\text{個}}
+                    &= \large\boldsymbol{ a+b } \\
+                \underbrace{ a+a+a+a+\cdots+a }_{b\text{個}}
+                    &= \large\boldsymbol{ a \times b } \\
+                \underbrace{ a \times a \times a \times a \times \cdots \times a }_{b\text{個}}
+                    &= \large\boldsymbol{ a^b } \\
+                \underbrace{ {\huge a}^{{\huge a}^{{\huge a}^{\cdot^{\cdot^{\cdot^{\huge a}}}}}}}_{b\text{個}}
+                    &= \large\boldsymbol{ {}^b a }
+            \end{align}</div>
+            
+            <div class="dasoku">
+                監修者注）お気づきだろうが、ふだん私たちの使っている「 $ a+b $ 」「 $ a\times b $ 」「 $ a^b $ 」という演算は、前に定義した演算を複数回行うことを表す、<strong>ハイパー演算の一種だった</strong>のである。
+            </div>
+            <p>
+                テトレーションの「テトラ」は「4」の意味だが、上のように考えると確かにテトレーションが4番目のハイパー演算であることが見てとれる。
+            </p>
+            
+            <h2>クヌースの矢印表記</h2>
+            <p>
+                さて、グラハム数はまだかという声もちらほらと聞こえてきそうになってきたが、ここで紹介するクヌースの矢印表記こそが、グラハム数を理解するのに必要な演算である。ここを理解すればグラハム数は目前なので頑張ってほしい。
+            </p>
+            
+            <p>クヌースの矢印表記はその名の通り矢印 $ \uparrow $ を使って表される演算である。この演算の定義は以下のようなものである。</p>
+            <div class="Q">\begin{align}
+                \large\boldsymbol{a \uparrow b}
+                &= \large{a^b}\\\\
+
+                \large\boldsymbol{a \uparrow\uparrow b}
+                &=
+                \underbrace{
+                    a \uparrow a \uparrow \cdots \uparrow a \uparrow a
+                }_{b\text{個}}  \\
+                &=
+                \underbrace{
+                    {\large a}^{{\large a}^{{\large a}^{\cdot^{\cdot^{\cdot^{\large a}}}}}}
+                }_{b\text{個}}
+                \quad = \large{{}^b a} \\\\
+
+                \large\boldsymbol{a \uparrow\uparrow\uparrow b}
+                &=
+                \underbrace{
+                    a \uparrow\uparrow a \uparrow\uparrow \cdots \uparrow\uparrow a \uparrow\uparrow a
+                }
+                _{b\text{個}}  \\\\
+
+                \large\vdots\\\\
+
+                \large\boldsymbol{
+                    a
+                    \underbrace{
+                        \uparrow\uparrow\cdots\uparrow
+                    }_{n\text{個}}
+                    b
+                }
+                &=
+                \underbrace{
+                    a
+                    \underbrace{
+                        \uparrow\cdots\uparrow
+                    }_{n-1\text{個}}
+                    a
+                    \underbrace{
+                        \uparrow\cdots\uparrow
+                    }_{n-1\text{個}}
+                    a
+                    \underbrace{
+                        \uparrow\cdots\uparrow
+                    }_{n-1\text{個}}
+                    \cdots
+                    \underbrace{
+                        \uparrow\cdots\uparrow
+                    }_{n-1\text{個}}
+                    a
+                }_{b\text{個}}
+                \\\\
+            \end{align}</div>
+
+            <p>
+                このように $ \uparrow $ をたくさん並べた演算を考えるので、$ \uparrow $ を $ 2 $ 個並べた $ \uparrow\uparrow $ は $ \uparrow^2 $、$ \uparrow $ を $ 3 $ 個並べた $ \uparrow\uparrow\uparrow $ は $ \uparrow^3 $ と表したい。
+            </p>
+            <p>$ a $ と $ b $ の間に $ \uparrow $ を $ n $ 個並べたものとして、 $ a \uparrow^n b $ を次のように定義する。</p>
+            <div class="Q">$$
+                a \uparrow^n b =
+                \underbrace{
+                    a \uparrow^{n-1} a \uparrow^{n-1}  a \uparrow^{n-1} \cdots \uparrow^{n-1} a \uparrow^{n-1} a
+                }_{b\text{個}}
+            $$</div>
+            <div class="dasoku">再帰的定義。あるいは漸化式に似たものを感じる</div>
+            <p>
+                演算 $ \uparrow $ は右結合である。右側から計算する。つまり、
+            </p>
+            <div class="Q">$$
+                a \uparrow^n b =
+                \underbrace{
+                    a \uparrow^{n-1} \bigg( a \uparrow^{n-1} \big( a \uparrow^{n-1} ( \cdots ( a \uparrow^{n-1} a )\cdots)\big)\bigg)
+                }_{b\text{個}}
+            $$</div>
+            <p>
+                である。
+            </p>
+            
+            <p>
+                さて、今回はやや定義が複雑なので実際にいくつか計算してみよう。
+            </p>
+            <div class="eq">\begin{align}
+                3\uparrow3
+                &=3^3\\
+                &=27\\\\
+
+                3\uparrow\uparrow3
+                &={}^3 3\\
+                &=7625597484987\\\\
+
+                3\uparrow\uparrow\uparrow3
+                &=3\uparrow\uparrow3\uparrow\uparrow3\\
+                &=3\uparrow\uparrow7625597484987\\
+                &=7625597484987_3
+            \end{align}</div>
+            <p>となり、3が7625597484987段ある指数タワーとなる。</p>
+            
+            <p>ここまでくればグラハム数を理解するのにあと一歩のところであるが、ここで恒例の、どうすれば効率的に数を大きくできるか問題に挑戦しよう。選択肢は3つ。矢印の前の数字を大きくする、矢印の後の数字を大きくする、矢印の数を増やすである。とはいえ、上の計算を見るとどれが一番かはなんとなくわかるだろう。正解は、</p>
+            <p>矢印の数を増やす>>矢印の後の数字を増やす>矢印の前の数字を増やす</p>
+            <p>である。</p>
+            
+            <h2>関数の埋め込み</h2>
+            <p>この部分は合成関数について知っている人は飛ばして読んでいただいて構わない。ここでは、関数を別の関数に埋め込むということについて説明する。例えば、次のような二つの関数があったとする。</p>
+            f(x) = x+1
+            g(x) = x^2
+            <p>ここで、f(g(x))という関数を考える。これは、f(x)のxにg(x)という関数自体を代入するという意味である。f(x) = x+1 であるため、f(g(x)) = x^2+1　である。また、g(f(x))について考えると、(x+1)^2　となる。ここで、同じ関数を埋め込むことを考えてみる。例えば、f(f(x)) = ( x + 1 ) + 1 = x + 2である。これを、f^2(x)のように表す。同様に考えると、例えばg^3(x) = x^6　である。</p>
+            
+            <h2>グラハム数</h2>
+            <p>グラハム数とは、グラハム問題を成立させる解の上限として発表された数であり、数学の証明において用いられた数の中で最大の数である。それは、以下のような数である。</p>
+            
+            G(n) = 3 \uparrow^n 3　としたときの、　G^64(4)
+            
+            <p>これで理解が出来たら素晴らしいが、なんとなくぴんと来ない感じがする。そこで、以下のように考えてみよう。</p>
+            
+            G(4) = 3\uparrow\uparrow\uparrow\uparrow3
+            G^2(4) = 3\uparrow\uparrow･･･\uparrow\uparrow3　(\uparrowが3\uparrow\uparrow\uparrow\uparrow3個)
+            G^3(4) =3\uparrow\uparrow･････････\uparrow\uparrow3　(\uparrowがG^2(4)個)
+            ・・・・・・・・・・・・・・・・・・
+            G^(k+1)(4) =3\uparrow\uparrow･･････････････････\uparrow\uparrow3　(\uparrowがG^k(4)個)
+            ・・・・・・・・・・・・・・・・・・
+            G^64(4) =グラハム数
+            
+            <p>こう考えると途方もない数である。ということで、今回の記事でやりたいことは大体終わった。いかにグラハム数が大きい数かわかってもらえたことだろう。少なくとも指数表記やテトレーションなんかでは宇宙の全てを使っても表現できないほどの大きさである。</p>
+            
+            <h2>その先へ</h2>
+            <p>さて、グラハム数についての説明が終わったが、グラハム数は巨大数の世界ではどのくらいの大きさなのかについて話しておこう。実は、グラハム数はあんなにも大きい数なのに巨大数の世界では最弱クラスの数なのだ。グラハム数の定義を見直すと、一つの関数を64回も関数に埋め込んでいる。しかし、巨大数の世界では、そんなことをしなくても容易にグラハム数を超える数がたくさん存在するのだ。例えば、コンウェイのチェーン表記という表記方法を使えば、3→3→65→2はグラハム数よりも大きくなる。また、多変数アッカーマン関数という関数を使えば、A(1,1,65)はグラハム数よりも大きくなる。さらに言えば、TREE数列という数列では、TREE(3)の時点でグラハム数よりもはるかに大きくなる。関数の埋め込みも使わず、こんなにコンパクトに超えられてしまうのだ。</p>
+            <p>とはいえ、大きいことには変わりない。例えば、グラハム数の桁数について考えてみよう。いやいや、あんな複雑な数の桁数なんて計算できるのかと思った人もいるかもしれない。しかし、実際のところ計算なんてしなくてもよいのである。なぜか。桁数は〖log〗_10を考えればよいからだ。ある数が10^nだった場合、その数はn+1桁である。しかし、グラハム数ほどの数になると、　グラハム数≒〖log〗_10グラハム数　となる。累乗はハイパー演算の3番目だが、グラハム数はハイパー演算の G^63(4)+2 番目を使っているからだ。全く格が違う。</p>
+            
+            <h2>おまけ</h2>
+            <p>こんな記事を最後まで読んでくれたあなたのために、一つ問題を用意した。すでに習った数学とこの記事の情報だけで解くことができるから、時間があったら挑戦してみてほしい。ネットにはこの問題の答えがあるので、どうしてもわからなかったら見てみると良い。</p>
+            
+            問題　グラハム数を十進数で表すとその一桁目の数字はいくつ？
+            
+
+        </main>
+        <footer>
+            <p id="copyright">&copy; 2021 Ruri</p>
+        </footer>
+    </body>
+</html>
