@@ -122,12 +122,12 @@
             <p>
                 定義は単純だが、念のため実際に数を代入して計算をしてみよう。 $ 3 $ テトレーション $ 3 $ を計算してみる。
             </p>
-            <div class="eq">\begin{align}
+            <div class="eq">\begin{aligned}
                 {}^3 3
                 &=3^{3^3} \\
                 &=3^{27} \\
                 &=7625597484987 \\
-            \end{align}</div>
+            \end{aligned}</div>
             <p>
                  $ 3 $ という数字を2個しか使っていないのにものすごく大きい数になった。
             </p>
@@ -146,7 +146,7 @@
             <p>
                 このように、ある演算を複数繰り返すことを一般化したもの、言い換えると、和・積・累乗を一般化させたものがハイパー演算である。ハイパー演算は次のような階層になっている。
             </p>
-            <div class="eq">\begin{align}
+            <div class="eq">\begin{aligned}
                 a \; \underbrace{ +1+1+1+\cdots+1 }_{b\text{個}}
                     &= \large\boldsymbol{ a+b } \\
                 \underbrace{ a+a+a+a+\cdots+a }_{b\text{個}}
@@ -155,7 +155,7 @@
                     &= \large\boldsymbol{ a^b } \\
                 \underbrace{ {\huge a}^{{\huge a}^{{\huge a}^{\cdot^{\cdot^{\cdot^{\huge a}}}}}}}_{b\text{個}}
                     &= \large\boldsymbol{ {}^b a }
-            \end{align}</div>
+            \end{aligned}</div>
             
             <div class="dasoku">
                 監修者注）お気づきだろうが、ふだん私たちの使っている「 $ a+b $ 」「 $ a\times b $ 」「 $ a^b $ 」という演算は、前に定義した演算を複数回行うことを表す、<strong>ハイパー演算の一種だった</strong>のである。
@@ -170,7 +170,7 @@
             </p>
             
             <p>クヌースの矢印表記はその名の通り矢印 $ \uparrow $ を使って表される演算である。この演算の定義は以下のようなものである。</p>
-            <div class="Q">\begin{align}
+            <div class="Q">\begin{aligned}
                 \large\boldsymbol{a \uparrow b}
                 &= \large{a^b}\\\\
 
@@ -222,7 +222,7 @@
                     a
                 }_{b\text{個}}
                 \\\\
-            \end{align}</div>
+            \end{aligned}</div>
 
             <p>
                 このように $ \uparrow $ をたくさん並べた演算を考えるので、$ \uparrow $ を $ 2 $ 個並べた $ \uparrow\uparrow $ は $ \uparrow^2 $、$ \uparrow $ を $ 3 $ 個並べた $ \uparrow\uparrow\uparrow $ は $ \uparrow^3 $ と表したい。
@@ -251,7 +251,7 @@
             <p>
                 さて、今回はやや定義が複雑なので実際にいくつか計算してみよう。
             </p>
-            <div class="eq">\begin{align}
+            <div class="eq">\begin{aligned}
                 3\uparrow3
                 &=3^3\\
                 &=27\\\\
@@ -264,7 +264,7 @@
                 &=3\uparrow\uparrow3\uparrow\uparrow3\\
                 &=3\uparrow\uparrow7625597484987\\
                 &=7625597484987_3
-            \end{align}</div>
+            \end{aligned}</div>
             <p>となり、3が7625597484987段ある指数タワーとなる。</p>
             
             <p>ここまでくればグラハム数を理解するのにあと一歩のところであるが、ここで恒例の、どうすれば効率的に数を大きくできるか問題に挑戦しよう。選択肢は3つ。矢印の前の数字を大きくする、矢印の後の数字を大きくする、矢印の数を増やすである。とはいえ、上の計算を見るとどれが一番かはなんとなくわかるだろう。正解は、</p>
