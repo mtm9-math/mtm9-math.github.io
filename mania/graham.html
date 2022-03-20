@@ -19,12 +19,6 @@
             };
         </script>
         <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-        
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
-        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
-        <script async src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js" integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous"></script>
-        <script>$(document).ready(function(){renderMathInElement(document.body,{delimiters: [{left: "$$", right: "$$", display: true},{left: "$", right: "$", display: false}]})});</script> -->
 
     </head>
     <body>
@@ -169,6 +163,7 @@
                 さて、グラハム数はまだかという声もちらほらと聞こえてきそうになってきたが、ここで紹介するクヌースの矢印表記こそが、グラハム数を理解するのに必要な演算である。ここを理解すればグラハム数は目前なので頑張ってほしい。
             </p>
             
+            <h3>定義</h3>
             <p>クヌースの矢印表記はその名の通り矢印 $ \uparrow $ を使って表される演算である。この演算の定義は以下のようなものである。</p>
             <div class="Q">\begin{aligned}
                 \large\boldsymbol{a \uparrow b}
@@ -223,31 +218,60 @@
                 }_{b\text{個}}
                 \\\\
             \end{aligned}</div>
-
             <p>
-                このように $ \uparrow $ をたくさん並べた演算を考えるので、$ \uparrow $ を $ 2 $ 個並べた $ \uparrow\uparrow $ は $ \uparrow^2 $、$ \uparrow $ を $ 3 $ 個並べた $ \uparrow\uparrow\uparrow $ は $ \uparrow^3 $ と表したい。
+                演算 $ \uparrow $ は右結合である。右側から計算する。たとえば
             </p>
-            <p>$ a $ と $ b $ の間に $ \uparrow $ を $ n $ 個並べたものとして、 $ a \uparrow^n b $ を次のように定義する。</p>
+            <div class="eq">$$
+                a \uparrow a \uparrow a
+                = a \uparrow \left( a \uparrow a \right)
+            $$</div>
+            <p>
+                であり、
+            </p>
+            <div class="eq">$$
+                a \uparrow a \uparrow a \uparrow a
+                = a \uparrow \left( a \uparrow \left( a \uparrow a \right)\right)
+            $$</div>
+            <p>
+                である。
+            </p>
+            <p>
+                いちいち、
+                $
+                    a
+                    \underbrace{
+                        \uparrow\uparrow\cdots\uparrow
+                    }_{n\text{個}}
+                    b
+                $
+                と書くのは煩雑なので、 $ \uparrow $ を $ n $ 個並べたものを $ a \uparrow^n b $ で表す。
+            </p>
+            <div class="Q">$$
+                a \uparrow^n b = 
+                a
+                \underbrace{
+                    \uparrow\uparrow\cdots\uparrow
+                }_{n\text{個}}
+                b
+            $$</div>
+            <p>
+                たとえば $ \uparrow\uparrow $ は $ \uparrow^2 $、 $ \uparrow\uparrow\uparrow $ は $ \uparrow^3 $ である。
+            </p>
+            <p>
+                この記法によると、 $ a \uparrow^n b $ は、
+            </p>
             <div class="Q">$$
                 a \uparrow^n b =
                 \underbrace{
                     a \uparrow^{n-1} a \uparrow^{n-1}  a \uparrow^{n-1} \cdots \uparrow^{n-1} a \uparrow^{n-1} a
                 }_{b\text{個}}
             $$</div>
+            <p>
+                と定義できる。
+            </p>
             <div class="dasoku">再帰的定義。あるいは漸化式に似たものを感じる</div>
-            <p>
-                演算 $ \uparrow $ は右結合である。右側から計算する。つまり、
-            </p>
-            <div class="Q">$$
-                a \uparrow^n b =
-                \underbrace{
-                    a \uparrow^{n-1} \bigg( a \uparrow^{n-1} \big( a \uparrow^{n-1} ( \cdots ( a \uparrow^{n-1} a )\cdots)\big)\bigg)
-                }_{b\text{個}}
-            $$</div>
-            <p>
-                である。
-            </p>
-            
+
+            <h3>練習</h3>
             <p>
                 さて、今回はやや定義が複雑なので実際にいくつか計算してみよう。
             </p>
@@ -263,47 +287,204 @@
                 3\uparrow\uparrow\uparrow3
                 &=3\uparrow\uparrow3\uparrow\uparrow3\\
                 &=3\uparrow\uparrow7625597484987\\
-                &=7625597484987_3
+                &={}^{7625597484987}3
             \end{aligned}</div>
-            <p>となり、3が7625597484987段ある指数タワーとなる。</p>
-            
-            <p>ここまでくればグラハム数を理解するのにあと一歩のところであるが、ここで恒例の、どうすれば効率的に数を大きくできるか問題に挑戦しよう。選択肢は3つ。矢印の前の数字を大きくする、矢印の後の数字を大きくする、矢印の数を増やすである。とはいえ、上の計算を見るとどれが一番かはなんとなくわかるだろう。正解は、</p>
-            <p>矢印の数を増やす>>矢印の後の数字を増やす>矢印の前の数字を増やす</p>
+            <p>
+                となり、 $ 3 $ が $ 7625597484987 $ 段ある指数タワーとなる。
+            </p>
+            <p>
+                ここまでくればグラハム数を理解するのにあと一歩のところであるが、ここで恒例の、どうすれば効率的に数を大きくできるか問題に挑戦しよう。選択肢は3つ。
+                <ul>
+                    <li>矢印の前の数字を大きくする</li>
+                    <li>矢印の後の数字を大きくする</li>
+                    <li>矢印の数を増やす</li>
+                </ul>
+                である。とはいえ、上の計算を見るとどれが一番よいかはなんとなくわかるだろう。正解は、
+            </p>
+            <div class="Q"><strong>矢印の数を増やす ≫ 矢印の後の数字を増やす ＞ 矢印の前の数字を増やす</strong></div>
             <p>である。</p>
             
+
             <h2>関数の埋め込み</h2>
-            <p>この部分は合成関数について知っている人は飛ばして読んでいただいて構わない。ここでは、関数を別の関数に埋め込むということについて説明する。例えば、次のような二つの関数があったとする。</p>
-            f(x) = x+1
-            g(x) = x^2
-            <p>ここで、f(g(x))という関数を考える。これは、f(x)のxにg(x)という関数自体を代入するという意味である。f(x) = x+1 であるため、f(g(x)) = x^2+1　である。また、g(f(x))について考えると、(x+1)^2　となる。ここで、同じ関数を埋め込むことを考えてみる。例えば、f(f(x)) = ( x + 1 ) + 1 = x + 2である。これを、f^2(x)のように表す。同様に考えると、例えばg^3(x) = x^6　である。</p>
+            <p>
+                この部分は合成関数について知っている人は飛ばして読んでいただいて構わない。ここでは、関数を別の関数に埋め込むということについて説明する。例えば、次のような二つの関数があったとする。
+            </p>
+            <div class="eq">\begin{align}
+                f(x) &= x+1\\
+                g(x) &= x^2
+            \end{align}</div>
+            <p>
+                ここで、 $ f\left(g(x)\right) $ という関数を考える。これは、関数 $ f(\;) $ の変数に $ g(x) $ という別の関数を代入するという意味である。
+            </p>
+            <div class="eq">\begin{align}
+                f(g(x))
+                &= g(x) + 1 \\
+                &= x^2 + 1.
+            \end{align}</div>
+            <p>
+                同様にして、 $ g(f(x)) $ について考えると、
+                <div class="eq">\begin{align}
+                    g(f(x))
+                    &= \left\{f(x) \right\} ^2 \\
+                    &= (x+1)^2
+                \end{align}</div>
+                となる。
+            </p>
+            <p>
+                埋め込む関数が自分と同じ関数でも構わない。例えば、
+                <div class="eq">\begin{align}
+                    f(f(x))
+                    &= f(x)+1 \\
+                    &= (x+1)+1 \\
+                    &= x+2 \\\\
+
+                    g(g(x))
+                    &= \left\{g(x) \right\} ^2 \\
+                    &= (x^2)^2\\
+                    &= x^4
+                \end{align}</div>
+                である。
+            </p>
+            <p>
+                埋め込みは複数回行える。たとえば、
+                <div class="eq">\begin{align}
+                    f(f(f(x)))
+                    &= f(f(x))+1 \\
+                    &= (f(x)+1)+1 \\
+                    &= ((x+1)+1)+1 \\
+                    &= x+3
+                \end{align}</div>
+            </p>
+            <p>
+                ここで、 $ f(f(x)) $ を
+                <div class="eq">$$
+                    \large
+                    f^2(x)
+                $$</div>
+                で表す。同じように、 $ f(f(f(x))) $ を $ f^3(x) $ で表す。
+            </p>
+            <div class="Q">
+                <div class="eq">$$
+                    \large
+                    f^n(x)=
+                    \underbrace{
+                        f(f(\cdots f(f(x))\cdots))
+                    }_{n\text{個}}
+                $$</div>
+            </div>
             
             <h2>グラハム数</h2>
-            <p>グラハム数とは、グラハム問題を成立させる解の上限として発表された数であり、数学の証明において用いられた数の中で最大の数である。それは、以下のような数である。</p>
+            <p>
+                ついにグラハム数を紹介できる時がきた。
+            </p>
+            <p>
+                グラハム数とは、<strong>グラハム問題</strong>という問題を成立させる解の上限として発表された数であり、数学の証明において用いられた数の中で最大の数である。それは、以下のような数である。
+            </p>
+            <div class="Q center">
+                <strong>$\boldsymbol{G(n)=3\uparrow^n3 }$ として、 $\boldsymbol{ G^{64}(4) }. $ </strong>
+            </div>
             
-            G(n) = 3 \uparrow^n 3　としたときの、　G^64(4)
+            <p>これで理解できたら素晴らしいが、なんとなくぴんと来ない感じがする。そこで、以下のように考えてみよう。</p>
             
-            <p>これで理解が出来たら素晴らしいが、なんとなくぴんと来ない感じがする。そこで、以下のように考えてみよう。</p>
+            <div class="eq">\begin{align}
+                G(4) &= 3\uparrow\uparrow\uparrow\uparrow3 \\\\
+
+                G^2(4)
+                &=
+                3\uparrow^{G(4)}3\\
+                &=
+                3\;
+                \underbrace{
+                    \uparrow\uparrow\cdots\uparrow\uparrow
+                }_{
+                    G(4)=3\uparrow\uparrow\uparrow\uparrow3
+                    \text{個}
+                }
+                \;3 \\\\
+
+                G^2(4) &=
+                3\;
+                \underbrace{
+                    \uparrow\uparrow\cdots\cdots\uparrow\uparrow
+                }_{ G(4) \text{個} }
+                \;3 \\\\
+
+                \cdots&\cdots\cdots\cdots\cdots\cdots\\\\
+
+                G^{k+1}(4) &=
+                3\;
+                \underbrace{
+                    \uparrow\uparrow\cdots\cdots\cdots\uparrow\uparrow
+                }_{ G^k(4) \text{個} }
+                \;3 \\\\
+
+                \cdots&\cdots\cdots\cdots\cdots\cdots\\\\
+
+                G^{64}(4) &=
+                3\;
+                \underbrace{
+                    \uparrow\uparrow\cdots\cdots\cdots\cdots\uparrow\uparrow
+                }_{ G^{63}(4) \text{個} }
+                \;3 \\
+                &=\textbf{グラハム数}
+            \end{align}</div>
             
-            G(4) = 3\uparrow\uparrow\uparrow\uparrow3
-            G^2(4) = 3\uparrow\uparrow･･･\uparrow\uparrow3　(\uparrowが3\uparrow\uparrow\uparrow\uparrow3個)
-            G^3(4) =3\uparrow\uparrow･････････\uparrow\uparrow3　(\uparrowがG^2(4)個)
-            ・・・・・・・・・・・・・・・・・・
-            G^(k+1)(4) =3\uparrow\uparrow･･････････････････\uparrow\uparrow3　(\uparrowがG^k(4)個)
-            ・・・・・・・・・・・・・・・・・・
-            G^64(4) =グラハム数
-            
-            <p>こう考えると途方もない数である。ということで、今回の記事でやりたいことは大体終わった。いかにグラハム数が大きい数かわかってもらえたことだろう。少なくとも指数表記やテトレーションなんかでは宇宙の全てを使っても表現できないほどの大きさである。</p>
-            
+            <p>
+                こう考えると途方もない数である。
+            </p>
+            <p>
+                ということで、今回の記事でやりたいことは大体終わった。いかにグラハム数が大きい数かわかってもらえたことだろう。少なくとも指数表記やテトレーションなんかでは宇宙の全てを使っても表現できないほどの大きさである。
+            </p>
+
             <h2>その先へ</h2>
-            <p>さて、グラハム数についての説明が終わったが、グラハム数は巨大数の世界ではどのくらいの大きさなのかについて話しておこう。実は、グラハム数はあんなにも大きい数なのに巨大数の世界では最弱クラスの数なのだ。グラハム数の定義を見直すと、一つの関数を64回も関数に埋め込んでいる。しかし、巨大数の世界では、そんなことをしなくても容易にグラハム数を超える数がたくさん存在するのだ。例えば、コンウェイのチェーン表記という表記方法を使えば、3→3→65→2はグラハム数よりも大きくなる。また、多変数アッカーマン関数という関数を使えば、A(1,1,65)はグラハム数よりも大きくなる。さらに言えば、TREE数列という数列では、TREE(3)の時点でグラハム数よりもはるかに大きくなる。関数の埋め込みも使わず、こんなにコンパクトに超えられてしまうのだ。</p>
-            <p>とはいえ、大きいことには変わりない。例えば、グラハム数の桁数について考えてみよう。いやいや、あんな複雑な数の桁数なんて計算できるのかと思った人もいるかもしれない。しかし、実際のところ計算なんてしなくてもよいのである。なぜか。桁数は〖log〗_10を考えればよいからだ。ある数が10^nだった場合、その数はn+1桁である。しかし、グラハム数ほどの数になると、　グラハム数≒〖log〗_10グラハム数　となる。累乗はハイパー演算の3番目だが、グラハム数はハイパー演算の G^63(4)+2 番目を使っているからだ。全く格が違う。</p>
+            <p>
+                さて、グラハム数についての説明が終わったが、グラハム数は巨大数の世界ではどのくらいの大きさなのかについて話しておこう。実は、グラハム数はあんなにも大きい数なのに巨大数の世界では最弱クラスの数なのだ。グラハム数の定義を見直すと、一つの関数を64回も関数に埋め込んでいる。しかし、巨大数の世界では、そんなことをしなくても容易にグラハム数を超える数がたくさん存在するのだ。例えば、コンウェイのチェーン表記という表記方法を使えば、
+            </p>
+            <div class="eq">$$
+                3\rightarrow3\rightarrow65\rightarrow2
+            $$</div>
+            <p>
+                という数はグラハム数よりも大きくなる。また、多変数アッカーマン関数という関数を使えば、$ A(1,1,65) $ という数はグラハム数よりも大きくなる。さらに言えば、 $ \text{TREE} $ 数列という数列では、 $ \text{TREE}(3) $ の時点でグラハム数よりもはるかに大きくなる。関数の埋め込みも使わず、こんなにコンパクトに超えられてしまうのだ。
+            </p>
+            <p>
+                とはいえ、大きいことには変わりない。例えば、グラハム数の桁数について考えてみよう。いやいや、あんな複雑な数の桁数なんて計算できるのかと思った人もいるかもしれない。しかし、実際のところ計算なんてしなくてもよいのである。ある数 $ A $ の桁数を知りたければ、その常用対数 $ \log_{10} A $ を考えればよい。ところで、グラハム数ほどの数になると、なんと
+            </p>
+            <div class="eq">$$
+                \boldsymbol{
+                    \textbf{グラハム数} \risingdotseq \log_{10} \textbf{グラハム数}
+                }
+            $$</div>
+            <p>という驚くべき近似式が成立する。桁数はもはや自分自身の数の大きさとさして変わらないのだ。累乗はハイパー演算の3番目であるが、グラハム数の用いる演算はハイパー演算の $ G^{63}(4)+2 $ 番目である。全く格が違う。
+            </p>
             
             <h2>おまけ</h2>
-            <p>こんな記事を最後まで読んでくれたあなたのために、一つ問題を用意した。すでに習った数学とこの記事の情報だけで解くことができるから、時間があったら挑戦してみてほしい。ネットにはこの問題の答えがあるので、どうしてもわからなかったら見てみると良い。</p>
-            
-            問題　グラハム数を十進数で表すとその一桁目の数字はいくつ？
+            <p>
+                こんな記事を最後まで読んでくれたあなたのために、一つ問題を用意した。すでに習った数学とこの記事の情報だけで解くことができるから、時間があったら挑戦してみてほしい。ネットにはこの問題の答えがあるので、どうしてもわからなかったら見てみると良い。
+            </p>
+            <div class="Q">
+                <span class="boxtitle">問題</span>
+                グラハム数を十進数で表すとその一桁目の数字はいくつ？
+            </div>
             
 
+            <footer>
+                <p>関数の埋め込み</p>
+                <p>
+                    わかりにくければ、 $ f(\;) $ の変数を $ t $ に変えて
+                    <div class="eq">\begin{align}
+                        f(t) &= t+1 \\
+                        g(x) &= x^2
+                    \end{align}</div>
+                        として、関数 $ f(t) $ に $ t=g(x) $ を代入すれば、
+                    <div class="eq">\begin{align}
+                        f\left(g(x)\right)
+                        &= f(t)\\
+                        &= t+1\\
+                        &= g(x)+1\\
+                        &= x^2+1\\
+                    \end{align}</div>
+                </p>
+            </footer>
         </main>
         <footer>
             <p id="copyright">&copy; 2021 Ruri</p>

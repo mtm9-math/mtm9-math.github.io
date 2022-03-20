@@ -199,9 +199,10 @@ p {
     padding: 0.5rem 1rem;
     max-width: 100%;
     overflow-wrap: break-word;
+    overflow-x: auto;
 }
 .Q {
-    background-color: lightblue;
+    background-color: rgb(192, 232, 246);
 }
 .A {
     background-color: lightpink;
