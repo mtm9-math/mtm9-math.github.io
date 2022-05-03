@@ -1,10 +1,13 @@
 @charset "utf-8";
 
 body > header {
+
+    border-radius: 0.5rem;
+
     margin-bottom: 1rem;
     padding: 0.5rem;
 
-    background-color: #ffd7dc;
+    background-color: #ffdddf;
     text-align: center;
 }
 

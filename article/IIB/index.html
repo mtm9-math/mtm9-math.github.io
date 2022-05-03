@@ -6,7 +6,7 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <base href="../../">
-        <link rel="stylesheet" href="-css/master2.css">
+        <link rel="stylesheet" href="-css/master.css">
         
         <script>
             MathJax = {
@@ -56,21 +56,27 @@
             </header>
         
             <section>
-                <div class="tilelink">
-                    <a href="article/IIB/index.html#dif">
-                        <img src="article/IIB/dif.png" alt="">
-                    </a>
-                    <a href="article/IIB/index.html#int">
-                        <img src="article/IIB/int.png" alt="">
-                    </a>
-                    <a href="article/IIB/index.html#seq">
-                        <img src="article/IIB/seq.png" alt="">
-                    </a>
+                <div class="articlecard">
+                    <article class="articlecard__item">
+                        <a href="article/IIB/index.html#dif">
+                            <img src="article/IIB/dif.png" alt="">
+                        </a>
+                    </article>
+                    <article class="articlecard__item">
+                        <a href="article/IIB/index.html#int">
+                            <img src="article/IIB/int.png" alt="">
+                        </a>
+                    </article>
+                    <article class="articlecard__item">
+                        <a href="article/IIB/index.html#seq">
+                            <img src="article/IIB/seq.png" alt="">
+                        </a>
+                    </article>
                 </div>
             </section>
             
-            <section id="exp">
-                <h2 class="h2">指数・対数</h2>
+            <article class="article" id="exp">
+                <h2 class="article__title">指数・対数</h2>
                 <p>
                     私たちはこれまで「 $ a $ の $ n $ 乗」を「<strong> $\boldsymbol a $ を $\boldsymbol n $ 回掛け合わせたもの</strong>」、つまり
                     <div class="eq">$$
@@ -97,19 +103,51 @@
                 <p>
                     今までの定義では、「<strong> $\boldsymbol 2 $ を $\boldsymbol \pi $ 回掛け合わせた数</strong>」など想像できません。果たしてどのように定義するのでしょうか？
                 </p>
-            </section>
-            <section id="dif">
-                <h2>微分</h2>
-                <p>微分は〜</p>
-            </section>
-            <section id="int">
-                <h2>積分</h2>
-                <p>積分は〜</p>
-            </section>
-            <section id="seq">
-                <h2>数列</h2>
-                <p>数列は〜</p>
-            </section>
+            </article>
+
+            <article class="article" id="dif">
+                <h2 class="article__title">微分</h2>
+                <p>
+                    微分は、一言で言ってしまえば「曲線を無限に拡大したときに現れる直線の傾きを調べる」ことです。
+                </p>
+            </article>
+
+            <article class="article" id="int">
+                <h2 class="article__title">積分</h2>
+                <p>
+                    三角形の面積は次のようにして求められます。
+                </p>
+                <p>
+                    これは次のようにして説明できます。
+                </p>
+                <p>
+                    半径 $ r $ の円の面積は $ \pi r^2 $ です。
+                </p>
+            </article>
+
+            <article class="article" id="seq">
+                <h2 class="article__title">数列</h2>
+                <div class="saying">
+                    <div class="saying__text">
+                        等差数列、小学校で一度習ったら次に出てくるのは高2の数B
+                    </div>
+                    <div class="saying__source">
+                        テライム
+                    </div>
+                </div>
+            </article>
+
+            <article class="article" id="integer">
+                <h2 class="article__title">整数</h2>
+                <div class="saying">
+                    <div class="saying__text">
+                        神は整数を創った。それ以外の数は人間が作り出したものだ。
+                    </div>
+                    <div class="saying__source">
+                        クロネッカー
+                    </div>
+                </div>
+            </article>
 
             <section class="tweet">
                 <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a>

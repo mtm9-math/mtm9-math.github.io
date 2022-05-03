@@ -68,23 +68,33 @@ a {
 }
 
 
-.tilelink {
+
+
+
+
+.articlecard {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
 }
-.tilelink > a {
+.articlecard__item {
     max-width: 15rem;
     margin: 0.5rem;
 }
-.tilelink > a > img {
+.articlecard__item img {
     width: 100%;
+    border-radius: 1rem;
 }
-.tilelink > a :hover{
-    opacity: 0.5;
-    transition-property: all;
-    transition-duration: 500ms;
+.articlecard__item a:hover {
+    /* opacity: 0.5; */
+    transition: 0.5s all;
 }
+.articlecard__item a:hover img{
+    transform: scale(1.1, 1.1);
+}
+
+
 
 
 

@@ -17,27 +17,31 @@
 }
 
 html {
-    font-size: 62.5％;
+    font-size: 62.5%;
     font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 body {
-    background-color: lightgoldenrodyellow;
-    margin: auto;
-    font-family: var(--font_sans);
-    color: black;
-}
-body > main {
     max-width: 1000px;
     margin: auto;
     padding: 1rem;
-    background-color:lightgoldenrodyellow;
+
+    background-color: rgb(242, 241, 241);
+    color: black;
+    font-family: var(--font_sans);
+}
+main {
+    margin: auto;
+    padding: 2rem;
+
+    border-radius: 0.5rem;
+    background-color: rgb(255, 252, 249);
 }
 main > footer {
-    max-width: 1000px;
     margin: auto;
     margin-top: 3rem;
-    border-top: 0.1rem solid gray;
     padding-top: 1rem;
+
+    border-top: 0.1rem solid gray;
     font-size: 0.9rem;
     line-height: 1rem;
 }
@@ -62,6 +66,7 @@ main > footer .eq {
 }
 
 body > footer {
+    border-radius: 0.5rem;
     padding: 0;
     background-color: lightgray;
     color: gray;
@@ -107,12 +112,14 @@ body > footer {
 .kind {
     width: fit-content;
     padding: 0rem 0.3rem;
+
     background-color:crimson;
+    color: white;
     font-size: 1.2rem;
     font-weight: bolder;
-    color: white;
     border-radius: 0.3rem;
 }
+
 h1 {
     margin-top: 0;
     border-bottom: 0.3rem solid skyblue;
@@ -163,7 +170,6 @@ h1 {
 
 
 
-
 h2 {
     margin-top: 3rem;
     border-left: 0.3rem solid rgb(255, 168, 188);
@@ -176,6 +182,8 @@ h2 {
     font-weight: normal;
     font-size: 1.3rem;
 }
+
+
 h3 {
     margin-left: 0.5rem;
     margin-bottom: 0;
@@ -203,6 +211,47 @@ p {
 
 
 /* ブロックレベル */
+
+
+.article {
+    margin: 1rem 0;
+    padding: 1rem;
+
+    border-radius: 0.5rem;
+    background-color: rgb(255, 244, 219);
+}
+.article__title {
+    width: fit-content;
+    margin: 0;
+    padding: 0.5rem 1rem;
+
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(201, 235, 247);
+
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+.article__title::before {
+    color: rgb(130, 180, 255);
+    content: "●　";
+}
+
+
+.saying {
+    font-family: serif;
+    font-weight: bolder;
+}
+.saying__text {
+
+}
+.saying__source {
+    text-align: right;
+}
+.saying__source::before {
+    content: "──";
+}
+
 .Q,.A {
     margin: 1rem;
     padding: 0.5rem 1rem;
@@ -292,12 +341,5 @@ strong {
 } strong::before {
     content: " ";
 } strong::after {
-    content: " ";
-}
-code {
-    font-family: "Courier", sans-serif;
-} code::before {
-    content: " ";
-} code::after {
     content: " ";
 }
