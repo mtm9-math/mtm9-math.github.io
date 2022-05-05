@@ -242,13 +242,12 @@ p {
     font-family: serif;
     font-weight: bolder;
 }
-.saying__text {
-
-}
-.saying__source {
+.saying cite {
+    display: block;
     text-align: right;
+    font-style: normal;
 }
-.saying__source::before {
+.saying cite::before {
     content: "──";
 }
 
