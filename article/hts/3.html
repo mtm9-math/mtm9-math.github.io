@@ -1,345 +1,345 @@
 <!doctype html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>方程式を解く - 高次方程式#3｜iを紡ぐ</title>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <base href="../../">
-        <link rel="stylesheet" href="-css/master.css">
-        
-        <script>
-            MathJax = {
-              chtml: {
-                matchFontHeight: false
-              },
-              tex: {
-                inlineMath: [['$', '$']]
-              }
-            };
-        </script>
-        <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <title>方程式を解く - 高次方程式#3｜iを紡ぐ</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../../">
+    <link rel="stylesheet" href="-css/master.css">
+    
+    <script>
+      MathJax = {
+        chtml: {
+        matchFontHeight: false
+        },
+        tex: {
+        inlineMath: [['$', '$']]
+        }
+      };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="#3 高次方程式を解く" />
-        <meta name="twitter:description" content="高次方程式入門｜iを紡ぐ" />
-        <meta name="twitter:image" content="https://mtm9-math.github.io/-img/-thumb/hts3.png" />
-    </head>
-    <body>
-        <header>
-            <div id="logo">
-                <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
-            </div>
-            <nav id="gbnav">
-                <ul>
-                    <li><a href="index.html">TOP</a></li>
-                    <li><a href="article/index.html">記事一覧</a></li>
-                    <li><a href="tips/index.html">Tips</a></li>
-                    <li><a href="about/index.html">About $i^i$ </a></li>
-                    <li><a href="mania/index.html">暇人編</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <header>
-                <nav id="pankuzu">
-                    <ul>
-                        <li><a href="index.html">TOP</a></li>
-                        <li><a href="article/index.html">記事一覧</a></li>
-                        <li><a href="article/hts/1.html">高次方程式入門</a></li>
-                    </ul>
-                </nav>
-                <span class="subtitle">高次方程式入門 #3</span>
-                <h1>方程式を解く</h1>
-                <div id="p_and_n">
-                    <a href="article/hts/2.html" id="previous">#2 因数定理</a>
-                    <a href="article/hts/4.html" id="next">#4 ω 〜1の3乗根〜</a>
-                </div>
-                <div class="info">最終更新日：22.2.1</div>
-                <div class="thumb">
-                    <img src="-img/-thumb/hts3.png" alt="">
-                </div>
-            </header>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="#3 高次方程式を解く" />
+    <meta name="twitter:description" content="高次方程式入門｜iを紡ぐ" />
+    <meta name="twitter:image" content="https://mtm9-math.github.io/-img/-thumb/hts3.png" />
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+      </div>
+      <nav id="gbnav">
+        <ul>
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="article/index.html">記事一覧</a></li>
+          <li><a href="tips/index.html">Tips</a></li>
+          <li><a href="about/index.html">About $i^i$ </a></li>
+          <li><a href="mania/index.html">暇人編</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <header>
+        <nav id="pankuzu">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+            <li><a href="article/hts/1.html">高次方程式入門</a></li>
+          </ul>
+        </nav>
+        <span class="subtitle">高次方程式入門 #3</span>
+        <h1>方程式を解く</h1>
+        <div id="p_and_n">
+          <a href="article/hts/2.html" id="previous">#2 因数定理</a>
+          <a href="article/hts/4.html" id="next">#4 ω 〜1の3乗根〜</a>
+        </div>
+        <div class="info">最終更新日：22.2.1</div>
+        <div class="thumb">
+          <img src="-img/-thumb/hts3.png" alt="">
+        </div>
+      </header>
 
-            <section>
-                <h2>はじめに</h2>
-                <p>
-                    高次方程式の話をするにあたって、最初にどうしても皆さんに伝えなければいけないことがあります。
-                </p>
-                <p>
-                    それは、私たちが高校で扱うのは<strong>解ける方程式</strong>、それも、運よく2次以下に因数分解できる、ものすごく恵まれた、レアな方程式であるということです。
-                </p>
-                <p>
-                    これから高次方程式の解き方をみていきますが、要は因数定理を使って因数分解して、あとは場合によっては2次方程式の解の公式を使うだけの単純な作業です。
-                </p>
+      <section>
+        <h2>はじめに</h2>
+        <p>
+          高次方程式の話をするにあたって、最初にどうしても皆さんに伝えなければいけないことがあります。
+        </p>
+        <p>
+          それは、私たちが高校で扱うのは<strong>解ける方程式</strong>、それも、運よく2次以下に因数分解できる、ものすごく恵まれた、レアな方程式であるということです。
+        </p>
+        <p>
+          これから高次方程式の解き方をみていきますが、要は因数定理を使って因数分解して、あとは場合によっては2次方程式の解の公式を使うだけの単純な作業です。
+        </p>
 
-                <h3>解の公式</h3>
-                <p>
-                    2次方程式の解の公式は習いました。
-                </p>
-                <div class="eq">
-                    $ax^2+bx+c=0$ の解は、
-                    $$
-                        x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}
-                    $$
-                </div>
-                <p>
-                    これも最初は覚えるのに苦労したかもしれませんが、今ではちゃんと染み付いていると思います（そうだよね？）
-                </p>
-                <p>
-                    実は、3次方程式にも解の公式が存在します。
-                </p>
-                <p>
-                    <strong>え、あるの？</strong>　だったら早く教えてよ！　そんな声が聞こえてきますね（幻聴）。
-                </p>
-                <p>
-                    解の公式があるなら、わざわざ $\pm\dfrac{\text{定数項の約数}}{\text{最高次係数の約数}}$ を調べなくてもいいじゃないですか。そんな便利なものを教えないとは、先生はなんてケチなんだ！
-                </p>
-                <p>
-                    それでは、その「<strong>便利なもの</strong>」を今から皆さんにお見せしましょう。
-                </p>
-                <div style="height: 10rem;"></div>
-                <div class="eq">
-                    3次方程式 $ax^3+bx^2+cx+d$ の3つの解は、
-                    <figure class="bigfig">
-                        <img src="-img/hts3/1.png" alt="">
-                    </figure>
-                    で表される。
-                    <sup id="ref1" class="ref"><a href="article/hts/3.html#note1">[1]</a></sup>
-                    <!-- $$
-                        \displaystyle \\ 
-                        x=\left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\, 
-                        a\,b\,c\right)\,d+4\,a\,c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^ 
-                        2}}-{{27\,a^2\,d-9\,a\,b\,c+2\,b^3}\over{54\,a^3}}\right)^{{{1 
-                        }\over{3}}}\\ 
-                        -{{3\,a\,c-b^2}\over{9\,a^2\,\left({{\sqrt{27\,a^2\,d^2+ 
-                        \left(4\,b^3-18\,a\,b\,c\right)\,d+4\,a\,c^3-b^2\,c^2}}\over{2\,3^{ 
-                        {{3}\over{2}}}\,a^2}}-{{27\,a^2\,d-9\,a\,b\,c+2\,b^3}\over{54\,a^3}} 
-                        \right)^{{{1}\over{3}}}}}-{{b}\over{3\,a}} \\
-                    $$ -->
-                    <!-- $$
-                    \displaystyle \\ 
-                    x=\left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right) 
-                    \,\left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\,a\,b\,c\right)\,d+4\,a 
-                    \,c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^2}}-{{27\,a^2\,d-9\,a 
-                    \,b\,c+2\,b^3}\over{54\,a^3}}\right)^{{{1}\over{3}}}\\ 
-                    -{{\left(-{{ 
-                    \sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)\,\left(3\,a\,c-b^2\right) 
-                    }\over{9\,a^2\,\left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\,a\,b\,c 
-                    \right)\,d+4\,a\,c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^2}}-{{ 
-                    27\,a^2\,d-9\,a\,b\,c+2\,b^3}\over{54\,a^3}}\right)^{{{1}\over{3}}} 
-                    }}-{{b}\over{3\,a}}
-                    $$ -->
-                    <!-- $$
-                    \displaystyle \\ 
-                    x=\left(-{{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)\, 
-                    \left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\,a\,b\,c\right)\,d+4\,a\, 
-                    c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^2}}-{{27\,a^2\,d-9\,a\,b 
-                    \,c+2\,b^3}\over{54\,a^3}}\right)^{{{1}\over{3}}}\\ 
-                    -{{\left({{\sqrt{3} 
-                    \,i}\over{2}}-{{1}\over{2}}\right)\,\left(3\,a\,c-b^2\right)}\over{9 
-                    \,a^2\,\left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\,a\,b\,c\right)\,d 
-                    +4\,a\,c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^2}}-{{27\,a^2\,d- 
-                    9\,a\,b\,c+2\,b^3}\over{54\,a^3}}\right)^{{{1}\over{3}}}}}-{{b 
-                    }\over{3\,a}}
-                    $$ -->
-                </div>
-                <div style="height: 10rem;"></div>
-                <p>
-                    はい。そういうことです。
-                </p>
-                <p>
-                    こんなのを計算するくらいなら、 $\pm\dfrac{\text{定数項の約数}}{\text{最高次係数の約数}}$ を一つ一つ代入して因数を見つけるほうがはるかにましです。しかも、何度も言うようですが、幸運なことに高校では「因数分解できる高次方程式」しか扱えません。
-                </p>
-                <p>
-                    広い世界では、<strong>方程式が因数分解できること自体が奇跡</strong>です。
-                </p>
-                <p>
-                    そのことを心に留め、私たちの扱う方程式が因数分解できることに感謝しつつ、気負わずにいきましょう。
-                </p>
-                <div class="dasoku">
-                    あえて数学嫌いが進行するようなものを見せたのは、これに比べれば高校の高次方程式なんぞ大したことはないと気づいてほしかったからです。
-                </div>
-            </section>
+        <h3>解の公式</h3>
+        <p>
+          2次方程式の解の公式は習いました。
+        </p>
+        <div class="eq">
+          $ax^2+bx+c=0$ の解は、
+          $$
+            x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}
+          $$
+        </div>
+        <p>
+          これも最初は覚えるのに苦労したかもしれませんが、今ではちゃんと染み付いていると思います（そうだよね？）
+        </p>
+        <p>
+          実は、3次方程式にも解の公式が存在します。
+        </p>
+        <p>
+          <strong>え、あるの？</strong>　だったら早く教えてよ！　そんな声が聞こえてきますね（幻聴）。
+        </p>
+        <p>
+          解の公式があるなら、わざわざ $\pm\dfrac{\text{定数項の約数}}{\text{最高次係数の約数}}$ を調べなくてもいいじゃないですか。そんな便利なものを教えないとは、先生はなんてケチなんだ！
+        </p>
+        <p>
+          それでは、その「<strong>便利なもの</strong>」を今から皆さんにお見せしましょう。
+        </p>
+        <div style="height: 10rem;"></div>
+        <div class="eq">
+          3次方程式 $ax^3+bx^2+cx+d$ の3つの解は、
+          <figure class="bigfig">
+            <img src="-img/hts3/1.png" alt="">
+          </figure>
+          で表される。
+          <sup id="ref1" class="ref"><a href="article/hts/3.html#note1">[1]</a></sup>
+          <!-- $$
+            \displaystyle \\ 
+            x=\left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\, 
+            a\,b\,c\right)\,d+4\,a\,c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^ 
+            2}}-{{27\,a^2\,d-9\,a\,b\,c+2\,b^3}\over{54\,a^3}}\right)^{{{1 
+            }\over{3}}}\\ 
+            -{{3\,a\,c-b^2}\over{9\,a^2\,\left({{\sqrt{27\,a^2\,d^2+ 
+            \left(4\,b^3-18\,a\,b\,c\right)\,d+4\,a\,c^3-b^2\,c^2}}\over{2\,3^{ 
+            {{3}\over{2}}}\,a^2}}-{{27\,a^2\,d-9\,a\,b\,c+2\,b^3}\over{54\,a^3}} 
+            \right)^{{{1}\over{3}}}}}-{{b}\over{3\,a}} \\
+          $$ -->
+          <!-- $$
+          \displaystyle \\ 
+          x=\left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right) 
+          \,\left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\,a\,b\,c\right)\,d+4\,a 
+          \,c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^2}}-{{27\,a^2\,d-9\,a 
+          \,b\,c+2\,b^3}\over{54\,a^3}}\right)^{{{1}\over{3}}}\\ 
+          -{{\left(-{{ 
+          \sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)\,\left(3\,a\,c-b^2\right) 
+          }\over{9\,a^2\,\left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\,a\,b\,c 
+          \right)\,d+4\,a\,c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^2}}-{{ 
+          27\,a^2\,d-9\,a\,b\,c+2\,b^3}\over{54\,a^3}}\right)^{{{1}\over{3}}} 
+          }}-{{b}\over{3\,a}}
+          $$ -->
+          <!-- $$
+          \displaystyle \\ 
+          x=\left(-{{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)\, 
+          \left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\,a\,b\,c\right)\,d+4\,a\, 
+          c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^2}}-{{27\,a^2\,d-9\,a\,b 
+          \,c+2\,b^3}\over{54\,a^3}}\right)^{{{1}\over{3}}}\\ 
+          -{{\left({{\sqrt{3} 
+          \,i}\over{2}}-{{1}\over{2}}\right)\,\left(3\,a\,c-b^2\right)}\over{9 
+          \,a^2\,\left({{\sqrt{27\,a^2\,d^2+\left(4\,b^3-18\,a\,b\,c\right)\,d 
+          +4\,a\,c^3-b^2\,c^2}}\over{2\,3^{{{3}\over{2}}}\,a^2}}-{{27\,a^2\,d- 
+          9\,a\,b\,c+2\,b^3}\over{54\,a^3}}\right)^{{{1}\over{3}}}}}-{{b 
+          }\over{3\,a}}
+          $$ -->
+        </div>
+        <div style="height: 10rem;"></div>
+        <p>
+          はい。そういうことです。
+        </p>
+        <p>
+          こんなのを計算するくらいなら、 $\pm\dfrac{\text{定数項の約数}}{\text{最高次係数の約数}}$ を一つ一つ代入して因数を見つけるほうがはるかにましです。しかも、何度も言うようですが、幸運なことに高校では「因数分解できる高次方程式」しか扱えません。
+        </p>
+        <p>
+          広い世界では、<strong>方程式が因数分解できること自体が奇跡</strong>です。
+        </p>
+        <p>
+          そのことを心に留め、私たちの扱う方程式が因数分解できることに感謝しつつ、気負わずにいきましょう。
+        </p>
+        <div class="dasoku">
+          あえて数学嫌いが進行するようなものを見せたのは、これに比べれば高校の高次方程式なんぞ大したことはないと気づいてほしかったからです。
+        </div>
+      </section>
 
-            <section>
-                <h2>高次方程式を因数分解で解く</h2>
-                <p>
-                    やることは簡単です。3次以上の方程式が与えられたら、左辺を因数分解して2次以下の形にするだけです。
-                </p>
-                <div class="Q">
-                    <div class="boxtitle">例1</div>
-                    $x^3-3x^2-16x+48=0$ を解け。
-                </div>
-                <p>
-                    左辺を $P(x)$ とおくと、代入によって $P(3)=0$ がわかりますから、前回のように因数分解して
-                    <div class="eq">$$
-                        P(x)=(x-3)(x-4)(x+4)
-                    $$</div>
-                    したがって
-                    <div class="eq">$$
-                        x=-4,3,4
-                    $$</div>
-                    を得ます。
-                </p>
-                <p>
-                    ここで気づいてほしいのは、いま左辺を因数分解するために $P(\alpha)=0$ となるような $\alpha$ を探しましたが、これは3つある解のうちの1つですね。
-                </p>
-                <p>
-                    つまり、3次方程式の3つの解を求めたければ、<strong>1個の解は何とか自力で見つけないといけない</strong>ということです。
-                    <sup id="ref2" class="ref"><a href="article/hts/3.html#note2">[2]</a></sup>
-                    逆に言えば1つ見つけてしまえば残り2つは必ず求められます。方程式の解と因数分解は切っても切れない関係にあるのですね。
-                </p>
-                <div class="dasoku">
-                    どっかの本でこのことを「ニワトリとタマゴの関係」と言っているのを見た。
-                </div>
+      <section>
+        <h2>高次方程式を因数分解で解く</h2>
+        <p>
+          やることは簡単です。3次以上の方程式が与えられたら、左辺を因数分解して2次以下の形にするだけです。
+        </p>
+        <div class="Q">
+          <div class="boxtitle">例1</div>
+          $x^3-3x^2-16x+48=0$ を解け。
+        </div>
+        <p>
+          左辺を $P(x)$ とおくと、代入によって $P(3)=0$ がわかりますから、前回のように因数分解して
+          <div class="eq">$$
+            P(x)=(x-3)(x-4)(x+4)
+          $$</div>
+          したがって
+          <div class="eq">$$
+            x=-4,3,4
+          $$</div>
+          を得ます。
+        </p>
+        <p>
+          ここで気づいてほしいのは、いま左辺を因数分解するために $P(\alpha)=0$ となるような $\alpha$ を探しましたが、これは3つある解のうちの1つですね。
+        </p>
+        <p>
+          つまり、3次方程式の3つの解を求めたければ、<strong>1個の解は何とか自力で見つけないといけない</strong>ということです。
+          <sup id="ref2" class="ref"><a href="article/hts/3.html#note2">[2]</a></sup>
+          逆に言えば1つ見つけてしまえば残り2つは必ず求められます。方程式の解と因数分解は切っても切れない関係にあるのですね。
+        </p>
+        <div class="dasoku">
+          どっかの本でこのことを「ニワトリとタマゴの関係」と言っているのを見た。
+        </div>
 
-                <h3>2重解と3重解</h3>
-                <p>
-                    もう一つ例を見ましょう。
-                </p>
-                <div class="Q">
-                    <div class="boxtitle">例2</div>
-                    <div class="eq">$$
-                        x^3-3x^2+4=0
-                    $$</div>
-                </div>
-                <p>
-                    一つの解 $x=-1$ を見つけて、左辺を因数分解すると
-                    <div class="eq">$$
-                        (x+1)(x+2)^2 = 0
-                    $$</div>
-                    ですから、解は
-                    <div class="eq">$$
-                        x=-2, -1
-                    $$</div>
-                </p>
-                <p>
-                    この場合の解 $x=-2$ を「<strong>2重解</strong>」と呼びます。これは $(x+2)^2=0$ を解いて出てきたものでした。
-                </p>
+        <h3>2重解と3重解</h3>
+        <p>
+          もう一つ例を見ましょう。
+        </p>
+        <div class="Q">
+          <div class="boxtitle">例2</div>
+          <div class="eq">$$
+            x^3-3x^2+4=0
+          $$</div>
+        </div>
+        <p>
+          一つの解 $x=-1$ を見つけて、左辺を因数分解すると
+          <div class="eq">$$
+            (x+1)(x+2)^2 = 0
+          $$</div>
+          ですから、解は
+          <div class="eq">$$
+            x=-2, -1
+          $$</div>
+        </p>
+        <p>
+          この場合の解 $x=-2$ を「<strong>2重解</strong>」と呼びます。これは $(x+2)^2=0$ を解いて出てきたものでした。
+        </p>
 
-                <p>
-                    2重解があれば3重解というのもありそうですね。
-                </p>
-                <div class="Q">
-                    <div class="boxtitle">例3</div>
-                    <div class="eq">$$
-                        x^3-3x+3x-1 = 0
-                    $$</div>
-                </div>
-                <p>
-                    3乗の展開公式から、一発で
-                    <div class="eq">$$
-                        x^3-3x+3x-1 = (x-1)^3
-                    $$</div>
-                    を見抜きたいところですが、覚えていなかった場合にも、 $x=1$ が解の一つであることに気づけば
-                    <div class="eq">$$\begin{aligned}
-                        (x-1)(x^2-2x+1) &= 0 \\
-                        (x-1)(x-1)^2 &= 0 \\
-                        (x-1)^3 &= 0
-                    \end{aligned}$$</div>
-                    となるので、解は
-                    <div class="eq">$$
-                        x=1
-                    $$</div>
-                    だけでした。
-                </p>
-                <p>
-                    これを<strong>3重解</strong>と呼ぶのは言うまでもありません。
-                </p>
+        <p>
+          2重解があれば3重解というのもありそうですね。
+        </p>
+        <div class="Q">
+          <div class="boxtitle">例3</div>
+          <div class="eq">$$
+            x^3-3x+3x-1 = 0
+          $$</div>
+        </div>
+        <p>
+          3乗の展開公式から、一発で
+          <div class="eq">$$
+            x^3-3x+3x-1 = (x-1)^3
+          $$</div>
+          を見抜きたいところですが、覚えていなかった場合にも、 $x=1$ が解の一つであることに気づけば
+          <div class="eq">$$\begin{aligned}
+            (x-1)(x^2-2x+1) &= 0 \\
+            (x-1)(x-1)^2 &= 0 \\
+            (x-1)^3 &= 0
+          \end{aligned}$$</div>
+          となるので、解は
+          <div class="eq">$$
+            x=1
+          $$</div>
+          だけでした。
+        </p>
+        <p>
+          これを<strong>3重解</strong>と呼ぶのは言うまでもありません。
+        </p>
 
-                <h3>虚数解の場合</h3>
-                <p>虚数解が出る場合も見ておきましょう</p>
-                <div class="Q">
-                    <div class="boxtitle">例4</div>
-                    <div class="eq">$$
-                        x^4-x^3-2x^2+6x-4 = 0
-                    $$</div>
-                </div>
-                <p>
-                    $x=1$ はこの解ですから、左辺を $(x-1)$ で割ります。これはおとなしく割り算しましょう。
-                </p>
-                <figure>
-                    <img src="-img/hts3/2.png" alt="">
-                </figure>
-                <p>
-                    他の解は、 $x^3-2x+4$ を解けば求められることがわかりました。まだ3次式なので、もっと因数分解できるはずです。試してみると $x=-2$ が見つかりますから、
-                    <div class="eq">$$\begin{aligned}
-                        x^3-2x+4 &= 0 \\
-                        (x+2)(x^2-2x+2) &= 0 \\
-                    \end{aligned}$$</div>
-                </p>
-                <p>
-                    あと2つの解は、2次方程式 $x^2-2x+2=0$ を解いて、
-                    <div class="eq">$$
-                        x=1\pm i
-                    $$</div>
-                    です。
-                </p>
-                <p>
-                    まとめると、解は
-                    <div class="eq">$$\boldsymbol{
-                        x = -2, 1, 1\pm i
-                    }$$</div>
-                    となります。
-                </p>
-            </section>
+        <h3>虚数解の場合</h3>
+        <p>虚数解が出る場合も見ておきましょう</p>
+        <div class="Q">
+          <div class="boxtitle">例4</div>
+          <div class="eq">$$
+            x^4-x^3-2x^2+6x-4 = 0
+          $$</div>
+        </div>
+        <p>
+          $x=1$ はこの解ですから、左辺を $(x-1)$ で割ります。これはおとなしく割り算しましょう。
+        </p>
+        <figure>
+          <img src="-img/hts3/2.png" alt="">
+        </figure>
+        <p>
+          他の解は、 $x^3-2x+4$ を解けば求められることがわかりました。まだ3次式なので、もっと因数分解できるはずです。試してみると $x=-2$ が見つかりますから、
+          <div class="eq">$$\begin{aligned}
+            x^3-2x+4 &= 0 \\
+            (x+2)(x^2-2x+2) &= 0 \\
+          \end{aligned}$$</div>
+        </p>
+        <p>
+          あと2つの解は、2次方程式 $x^2-2x+2=0$ を解いて、
+          <div class="eq">$$
+            x=1\pm i
+          $$</div>
+          です。
+        </p>
+        <p>
+          まとめると、解は
+          <div class="eq">$$\boldsymbol{
+            x = -2, 1, 1\pm i
+          }$$</div>
+          となります。
+        </p>
+      </section>
 
-            <section id="matome">
-                <h2>まとめ</h2>
-                <div class="box">
-                    <ul>
-                        <li>高校では因数分解できる高次方程式しか扱わないが、実際にはそうではない。</li>
-                        <li>高次方程式は、<strong>2次以下の式に因数分解する</strong>ことで解けることがある。</li>
-                        <li>因数分解して $\left(x-\bigcirc\right)^2$ という形が出てくるとき、 $x=\bigcirc$ を<strong>2重解</strong>という。</li>
-                        <li>同様に、 $\left(x-\bigcirc\right)^3$ から得られる解を<strong>3重解</strong>と呼ぶ。</li>
-                    </ul>
-                </div>
-            </section>
+      <section id="matome">
+        <h2>まとめ</h2>
+        <div class="box">
+          <ul>
+            <li>高校では因数分解できる高次方程式しか扱わないが、実際にはそうではない。</li>
+            <li>高次方程式は、<strong>2次以下の式に因数分解する</strong>ことで解けることがある。</li>
+            <li>因数分解して $\left(x-\bigcirc\right)^2$ という形が出てくるとき、 $x=\bigcirc$ を<strong>2重解</strong>という。</li>
+            <li>同様に、 $\left(x-\bigcirc\right)^3$ から得られる解を<strong>3重解</strong>と呼ぶ。</li>
+          </ul>
+        </div>
+      </section>
 
-            <section id="quiz">
-                <h2>確認問題</h2>
-                <p>準備中。体系問題集の152〜154を、＊だけと言わず全部やるとよい。</p>
-            </section>
+      <section id="quiz">
+        <h2>確認問題</h2>
+        <p>準備中。体系問題集の152〜154を、＊だけと言わず全部やるとよい。</p>
+      </section>
 
-            <section>
-                <h2>次回予告</h2>
-                <p>ちょっと冒頭私の趣味が出てしまいましたが、広い世界では「方程式がいつもうまく解けるわけではない」ことが伝わったと思います。次回は「1の3乗根」の興味深い（しかし、実は当たり前の）性質を追っていきます。</p>
-                <div class="articlelink">
-                    <article>
-                        <a href="article/hts/4.html">
-                            <img src="-img/-thumb/hts4.png" alt="">
-                            <div class="articlename">#4 ω 〜1の3乗根〜</div>
-                        </a>
-                    </article>
-                </div>
-            </section>
+      <section>
+        <h2>次回予告</h2>
+        <p>ちょっと冒頭私の趣味が出てしまいましたが、広い世界では「方程式がいつもうまく解けるわけではない」ことが伝わったと思います。次回は「1の3乗根」の興味深い（しかし、実は当たり前の）性質を追っていきます。</p>
+        <div class="articlelink">
+          <article>
+            <a href="article/hts/4.html">
+              <img src="-img/-thumb/hts4.png" alt="">
+              <div class="articlename">#4 ω 〜1の3乗根〜</div>
+            </a>
+          </article>
+        </div>
+      </section>
 
-            <section class="tweet">
-                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </section>
+      <section class="tweet">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </section>
 
-            <section class="form">
-                <h2>アンケート</h2>
-                <p>全て任意回答です。一つだけでも答えてくれると嬉しい</p>
-                <iframe width="100%" height= "480px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__R751CxUMzZDMUUwOEUwTTJWN0ZFMlczWkxVQ0MzRi4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-            </section>
+      <section class="form">
+        <h2>アンケート</h2>
+        <p>全て任意回答です。一つだけでも答えてくれると嬉しい</p>
+        <iframe width="100%" height= "480px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__R751CxUMzZDMUUwOEUwTTJWN0ZFMlczWkxVQ0MzRi4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+      </section>
 
-            <footer>
-                <div class="note" id="note1">
-                    <a href="article/hts/3.html#ref1">[1]</a>
-                    引用：
-                    <a href="https://www.wolframalpha.com/input/?i=ax%5E3%2Bbx%5E2%2Bcx%2Bd%3D0">https://www.wolframalpha.com/input/?i=ax%5E3%2Bbx%5E2%2Bcx%2Bd%3D0</a>
-                </div>
-                <p class="note" id="note2">
-                    <a href="article/hts/3.html#ref2">[2]</a>
-                    「もし解が3つとも虚数だったらどうするんだ！」と不安に思うかもしれませんが大丈夫。そんなことはありません。実数係数の3次方程式は少なくとも1つの実数解を持つことが保証されます。（これは「高校で扱わない」のではなく、本当にいつもそうなのです。）
-                </p>
-            </footer>
-        </main>
-        <footer>
-            <p id="copyright">&copy; 2022 Ruri</p>
-        </footer>
-    </body>
+      <footer>
+        <div class="note" id="note1">
+          <a href="article/hts/3.html#ref1">[1]</a>
+          引用：
+          <a href="https://www.wolframalpha.com/input/?i=ax%5E3%2Bbx%5E2%2Bcx%2Bd%3D0">https://www.wolframalpha.com/input/?i=ax%5E3%2Bbx%5E2%2Bcx%2Bd%3D0</a>
+        </div>
+        <p class="note" id="note2">
+          <a href="article/hts/3.html#ref2">[2]</a>
+          「もし解が3つとも虚数だったらどうするんだ！」と不安に思うかもしれませんが大丈夫。そんなことはありません。実数係数の3次方程式は少なくとも1つの実数解を持つことが保証されます。（これは「高校で扱わない」のではなく、本当にいつもそうなのです。）
+        </p>
+      </footer>
+    </main>
+    <footer>
+      <p id="copyright">&copy; 2022 Ruri</p>
+    </footer>
+  </body>
 </html>

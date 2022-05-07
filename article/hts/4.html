@@ -1,345 +1,345 @@
 <!doctype html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>ω 〜1の3乗根〜 - 高次方程式#4｜iを紡ぐ</title>
+  <head>
+    <meta charset="utf-8">
+    <title>ω 〜1の3乗根〜 - 高次方程式#4｜iを紡ぐ</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../../">
+    <link rel="stylesheet" href="-css/master.css">
+    
+    <script>
+      MathJax = {
+        chtml: {
+        matchFontHeight: false
+        },
+        tex: {
+        inlineMath: [['$', '$']]
+        }
+      };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="#4 ω 〜1の3乗根〜" />
+    <meta name="twitter:description" content="高次方程式入門｜iを紡ぐ" />
+    <meta name="twitter:image" content="https://mtm9-math.github.io/-img/-thumb/hts4.png" />
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+      </div>
+      <nav id="gbnav">
+        <ul>
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="article/index.html">記事一覧</a></li>
+          <li><a href="tips/index.html">Tips</a></li>
+          <li><a href="about/index.html">About $i^i$ </a></li>
+          <li><a href="mania/index.html">暇人編</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <header>
+        <nav id="pankuzu">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+            <li><a href="article/hts/1.html">高次方程式入門</a></li>
+          </ul>
+        </nav>
+        <span class="subtitle">高次方程式入門 #4</span>
+        <h1>ω 〜1の3乗根〜</h1>
+        <div id="p_and_n">
+          <a href="article/hts/3.html" id="previous">#3 方程式を解く</a>
+          <!-- <a href="article/hts/5.html" id="next">#5 因数分解</a> -->
+        </div>
+        <div class="info">最終更新日：22.2.1</div>
+        <div class="thumb">
+          <img src="-img/-thumb/hts4.png" alt="">
+        </div>
+      </header>
+
+      <section>
+        <h2>はじめに</h2>
+        <div class="center">
+          <strong>3乗して1になる数はなんですか？</strong>
+        </div>
+        <p>今までであれば、迷わず「1だけ」と答えていたことでしょう。</p>
+        <figure class="bigfig">
+          <img src="-img/hts4/1.jpg" alt="">
+        </figure>
+        <p>
+          しかし、高次方程式を学んだ今では、他にもそのような数があることが容易に想像されます。求めてみましょう。
+        </p>
+        <p>
+          3乗して1になる数は、3次方程式 $x^3=1$ の解です。移項して
+          <div class="eq">$$
+            x^3-1=0
+          $$</div>
+        </p>
+        <p>
+          $x=1$ はこの解の一つですから、左辺は $(x-1)$ を因数に持っていて、
+          <div class="eq">$$
+            (x-1)(x^2+x+1) = 0
+          $$</div>
+        </p>
+        <p>
+          $x=1$ 以外の解は、2次方程式 $x^2+x+1$ を解いて、
+          <div class="eq">$$
+            x = \dfrac{-1\pm\sqrt{3}i}{2}
+          $$</div>
+        </p>
+        <p>
+          …なんだかすごく気持ち悪い数が出てきました。 $i$ が含まれているのでこれは虚数ですね。本当にこんな数を3乗して1になるのでしょうか。百聞は一見にしかず。実際に3乗して確かめましょう。
+        </p>
+        <div class="dasoku">
+          時間があるならスクロールする前に手計算。とにかく「自分で確かめる」ことが不可欠です！
+        </div>
+        <div class="eq">$$\begin{aligned}
+          \left( \dfrac{-1\pm\sqrt{3}i}{2} \right)^3
+            &= \left(-\dfrac{1}{2}\right)^3 \left(1\pm\sqrt{3}i\right)^3 \\
+            &= -\dfrac{1}{8} \left\{ 1 \pm 3\cdot\sqrt{3}i + 3\cdot\left(\sqrt{3}i\right)^2 \pm \left(\sqrt{3}i\right)^3 \right\} \\
+            &= -\dfrac{1}{8} \left( 1 \pm 3\sqrt{3}i -9 \mp 3\sqrt{3} \right) \\
+            &= -\dfrac{1}{8} \cdot\left(-8\right) \\
+            &= 1
+        \end{aligned}$$</div>
+        <p>
+          確かに1になりました。皆さんは今 $1$ の3乗根が3つあり、そのうち2つは虚数であることを知ったのです。
+        </p>
+        <figure class="bigfig">
+          <img src="-img/hts4/2.jpg" alt="">
+        </figure>
+        <p>
+          一度まとめます。
+        </p>
+        <div class="Q">
+          3乗して $1$ になる数は、
+          $$
+            1, \quad \dfrac{-1-\sqrt{3}i}{2}, \quad \dfrac{-1+\sqrt{3}i}{2}
+          $$
+          の3つである。
+        </div>
+      </section>
+      <section>
+        <h2>^ ω ^</h2>
+        <p>
+          はい。顔文字でおなじみωの登場です。「草」を表す「w（ダブリュー）」ではありませんよ。ちゃんと「オメガ」と読んでください。
+        </p>
+        <div class="dasoku">
+          かくいう私も心の中では「ダブリュー」って読んでる。人前でやると恥をかく
+        </div>
+        <div class="dasoku">
+          手書きでの $w$ と $\omega$ 、 $r$ と $\gamma$ の区別。
+          <sup class="ref" id="ref1"><a href="article/hts/4.html#note1">[1]</a></sup>
+          <figure>
+            <img src="-img/hts4/d1.jpg" alt="">
+          </figure>
+        </div>
+        <p>
+          閑話休題。たいていωは次のように説明されています。
+        </p>
+        <div class="Q center">
+          3乗して1になる虚数の<strong>1つ</strong>をωとおく。
+        </div>
+        <p>
+          「1つ」というのがいかにも思わせぶりですね。3乗して1になる虚数は2つあるのに「どちらか1つ」というのはなんだか適当な感じがします。
+        </p>
+        <p>
+          教科書は次のように続きます。
+        </p>
+        <div class="eq">
+          $\omega$ が1の3乗根であるとき、 $\omega ^2$ も1の3乗根である。
+        </div>
+        <p>
+          <strong>え、そうなの？</strong>
+        </p>
+        <p>
+          書いてあることを鵜呑みにするわけにはいきません。確かめてみましょう。
+        </p>
+        <p>
+          $\omega = \dfrac{-1-\sqrt{3}i}{2}$
+          であれば、
+          <div class="eq">$$\begin{aligned}
+            \omega ^2
+              &= \left(\dfrac{-1-\sqrt{3}i}{2}\right)^2 \\
+              &= \dfrac{1+2\sqrt{3}i+3i^2}{4} \\
+              &= \dfrac{-2+2\sqrt{3}i}{4} \\
+              &= \dfrac{-1+\sqrt{3}i}{2} \\
+          \end{aligned}$$</div>
+        </p>
+        <p>
+          なんと、もう一つの1の3乗根が出てきました。
+        </p>
+        <p>
+          一方
+          $\omega = \dfrac{-1+\sqrt{3}i}{2}$
+          であれば、
+          <div class="eq">$$\begin{aligned}
+            \omega ^2
+              &= \left(\dfrac{-1+\sqrt{3}i}{2}\right)^2 \\
+              &= \cdots \\
+              &= \dfrac{-1-\sqrt{3}i}{2} \\
+          \end{aligned}$$</div>
+        </p>
+        <p>
+          やっぱりもう一つの1の3乗根が出てきました。
+        </p>
+        <p>
+          ωとして $\dfrac{-1+\sqrt{3}i}{2}$ と $\dfrac{-1+\sqrt{3}i}{2}$ のどちらを選んでも、確かに $\omega^2$ が1の3乗根になっています。
+          <strong>なんという偶然でしょう！</strong>
+        </p>
         
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <base href="../../">
-        <link rel="stylesheet" href="-css/master.css">
-        
-        <script>
-            MathJax = {
-              chtml: {
-                matchFontHeight: false
-              },
-              tex: {
-                inlineMath: [['$', '$']]
-              }
-            };
-        </script>
-        <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        <h3>種明かし（？）</h3>
+        <p>
+          …ここで気づいてほしいのですが、これは偶然でもなんでもありません。
+        </p>
+        <p>
+          $\omega$ は1の3乗根でした。3乗して1になる数でした。つまり $\omega^3 = 1$ です。ですから、 $\omega^2$ を3乗した数というのは、
+          <div class="eq">$$
+            \left(\omega^2\right)^3 = \omega^6 = \left(\omega^3\right)^2 = 1^2 = 1
+          $$</div>
+          であり、当然1になるに決まっていたのです。
+        </p>
+        <p>
+          ついさっき $\omega = \dfrac{-1-\sqrt{3}i}{2}$ の場合と $\omega = \dfrac{-1+\sqrt{3}i}{2}$ にわけてそれぞれ2乗して計算していたのが阿呆らしく思えてきますね。
+          $\omega, \omega^2$ という記号は見掛け倒しに過ぎなかったのです。
+          <sup class="ref" id="ref2"><a href="article/hts/4.html#note2">[2]</a></sup>
+        </p>
+      </section>
+      <section>
+        <h2> $\omega^2+\omega+1 = 0$ </h2>
+        <p>
+          ωの性質はまだまだあります。どうやら $\omega^2+\omega+1 = 0$ になるらしいです。早速これも確かめてみましょう。
+        </p>
+        <p>
+          先ほどみたように $\omega, \omega^2$ はいずれも1の3乗根のうち虚数のものでしたから、
+          <div class="eq">$$\begin{aligned}
+            &\;\;\;\;\;\dfrac{-1-\sqrt{3}i}{2} + \dfrac{-1+\sqrt{3}i}{2} + 1 \\
+            &=\dfrac{-1-\sqrt{3}i-1+\sqrt{3}i}{2} + 1 \\
+            &=-\dfrac{2}{2}+1 \\
+            &=0
+          \end{aligned}$$
+          </div>
+          となって、確かに0になりました。
+        </p>
+        <p>
+          …ですがここまでみてきた皆さんであれば、もうこれも当然の結果であることがわかるでしょう。
+        </p>
+        <p>
+          1の3乗根を求める過程を思い出してください。そもそも虚数解ωというのはどうやって出てきたものでしたか？　2次方程式 $x^2+x+1=0$ を解いて出てきたものでしたよね。この式を成り立たせるような値が $\omega$ なのですから、 $\omega^2+\omega+1 = 0$ であるに決まっているのです。当然というか、「そもそもそれが定義じゃないか」って感じです。
+        </p>
+        <p>
+          なんだか当たり前のことに無駄に時間を使った感じですが、<strong>当たり前のことは、当たり前であるがゆえに失念してしまう</strong>ことがよくあります。例えば
+          <div class="eq">$$
+            1+\omega+\omega^2+\cdots+\omega^{100}
+          $$</div>
+          の値を求めよ、なんてときに $\omega^3=1$ であることや $\omega^2+\omega+1 = 0$ であることを忘れていると戸惑ってしまいます。
+        </p>
+      </section>
+      
+      <section id="matome">
+        <h2>まとめ</h2>
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="#4 ω 〜1の3乗根〜" />
-        <meta name="twitter:description" content="高次方程式入門｜iを紡ぐ" />
-        <meta name="twitter:image" content="https://mtm9-math.github.io/-img/-thumb/hts4.png" />
-    </head>
-    <body>
-        <header>
-            <div id="logo">
-                <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
-            </div>
-            <nav id="gbnav">
-                <ul>
-                    <li><a href="index.html">TOP</a></li>
-                    <li><a href="article/index.html">記事一覧</a></li>
-                    <li><a href="tips/index.html">Tips</a></li>
-                    <li><a href="about/index.html">About $i^i$ </a></li>
-                    <li><a href="mania/index.html">暇人編</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <header>
-                <nav id="pankuzu">
-                    <ul>
-                        <li><a href="index.html">TOP</a></li>
-                        <li><a href="article/index.html">記事一覧</a></li>
-                        <li><a href="article/hts/1.html">高次方程式入門</a></li>
-                    </ul>
-                </nav>
-                <span class="subtitle">高次方程式入門 #4</span>
-                <h1>ω 〜1の3乗根〜</h1>
-                <div id="p_and_n">
-                    <a href="article/hts/3.html" id="previous">#3 方程式を解く</a>
-                    <!-- <a href="article/hts/5.html" id="next">#5 因数分解</a> -->
-                </div>
-                <div class="info">最終更新日：22.2.1</div>
-                <div class="thumb">
-                    <img src="-img/-thumb/hts4.png" alt="">
-                </div>
-            </header>
+        <div class="box">
+          <ul>
+            <li>
+              1の3乗根は、
+              <div class="eq">
+                $$
+                  1, \quad \dfrac{-1-\sqrt{3}i}{2}, \quad \dfrac{-1+\sqrt{3}i}{2}
+                $$
+              </div>
+              の3つ。
+            </li>
+            <li>
+              虚数であるものを $\boldsymbol \omega$ と表すことがある。2つある虚数のどちらをωとしてもよい。
+            </li>
+            <li>
+              $\boldsymbol{\omega^2}$ も1の3乗根。
+            </li>
+            <li>
+              $\boldsymbol{\omega^3 = 1}$ 
+            </li>
+            <li>
+              $\boldsymbol{\omega^2 + \omega + 1 = 0}$ 
+            </li>
+          </ul>
+        </div>
+      </section>
 
-            <section>
-                <h2>はじめに</h2>
-                <div class="center">
-                    <strong>3乗して1になる数はなんですか？</strong>
-                </div>
-                <p>今までであれば、迷わず「1だけ」と答えていたことでしょう。</p>
-                <figure class="bigfig">
-                    <img src="-img/hts4/1.jpg" alt="">
-                </figure>
-                <p>
-                    しかし、高次方程式を学んだ今では、他にもそのような数があることが容易に想像されます。求めてみましょう。
-                </p>
-                <p>
-                    3乗して1になる数は、3次方程式 $x^3=1$ の解です。移項して
-                    <div class="eq">$$
-                        x^3-1=0
-                    $$</div>
-                </p>
-                <p>
-                    $x=1$ はこの解の一つですから、左辺は $(x-1)$ を因数に持っていて、
-                    <div class="eq">$$
-                        (x-1)(x^2+x+1) = 0
-                    $$</div>
-                </p>
-                <p>
-                    $x=1$ 以外の解は、2次方程式 $x^2+x+1$ を解いて、
-                    <div class="eq">$$
-                        x = \dfrac{-1\pm\sqrt{3}i}{2}
-                    $$</div>
-                </p>
-                <p>
-                    …なんだかすごく気持ち悪い数が出てきました。 $i$ が含まれているのでこれは虚数ですね。本当にこんな数を3乗して1になるのでしょうか。百聞は一見にしかず。実際に3乗して確かめましょう。
-                </p>
-                <div class="dasoku">
-                    時間があるならスクロールする前に手計算。とにかく「自分で確かめる」ことが不可欠です！
-                </div>
-                <div class="eq">$$\begin{aligned}
-                    \left( \dfrac{-1\pm\sqrt{3}i}{2} \right)^3
-                        &= \left(-\dfrac{1}{2}\right)^3 \left(1\pm\sqrt{3}i\right)^3 \\
-                        &= -\dfrac{1}{8} \left\{ 1 \pm 3\cdot\sqrt{3}i + 3\cdot\left(\sqrt{3}i\right)^2 \pm \left(\sqrt{3}i\right)^3 \right\} \\
-                        &= -\dfrac{1}{8} \left( 1 \pm 3\sqrt{3}i -9 \mp 3\sqrt{3} \right) \\
-                        &= -\dfrac{1}{8} \cdot\left(-8\right) \\
-                        &= 1
-                \end{aligned}$$</div>
-                <p>
-                    確かに1になりました。皆さんは今 $1$ の3乗根が3つあり、そのうち2つは虚数であることを知ったのです。
-                </p>
-                <figure class="bigfig">
-                    <img src="-img/hts4/2.jpg" alt="">
-                </figure>
-                <p>
-                    一度まとめます。
-                </p>
-                <div class="Q">
-                    3乗して $1$ になる数は、
-                    $$
-                        1, \quad \dfrac{-1-\sqrt{3}i}{2}, \quad \dfrac{-1+\sqrt{3}i}{2}
-                    $$
-                    の3つである。
-                </div>
-            </section>
-            <section>
-                <h2>^ ω ^</h2>
-                <p>
-                    はい。顔文字でおなじみωの登場です。「草」を表す「w（ダブリュー）」ではありませんよ。ちゃんと「オメガ」と読んでください。
-                </p>
-                <div class="dasoku">
-                    かくいう私も心の中では「ダブリュー」って読んでる。人前でやると恥をかく
-                </div>
-                <div class="dasoku">
-                    手書きでの $w$ と $\omega$ 、 $r$ と $\gamma$ の区別。
-                    <sup class="ref" id="ref1"><a href="article/hts/4.html#note1">[1]</a></sup>
-                    <figure>
-                        <img src="-img/hts4/d1.jpg" alt="">
-                    </figure>
-                </div>
-                <p>
-                    閑話休題。たいていωは次のように説明されています。
-                </p>
-                <div class="Q center">
-                    3乗して1になる虚数の<strong>1つ</strong>をωとおく。
-                </div>
-                <p>
-                    「1つ」というのがいかにも思わせぶりですね。3乗して1になる虚数は2つあるのに「どちらか1つ」というのはなんだか適当な感じがします。
-                </p>
-                <p>
-                    教科書は次のように続きます。
-                </p>
-                <div class="eq">
-                    $\omega$ が1の3乗根であるとき、 $\omega ^2$ も1の3乗根である。
-                </div>
-                <p>
-                    <strong>え、そうなの？</strong>
-                </p>
-                <p>
-                    書いてあることを鵜呑みにするわけにはいきません。確かめてみましょう。
-                </p>
-                <p>
-                    $\omega = \dfrac{-1-\sqrt{3}i}{2}$
-                    であれば、
-                    <div class="eq">$$\begin{aligned}
-                        \omega ^2
-                            &= \left(\dfrac{-1-\sqrt{3}i}{2}\right)^2 \\
-                            &= \dfrac{1+2\sqrt{3}i+3i^2}{4} \\
-                            &= \dfrac{-2+2\sqrt{3}i}{4} \\
-                            &= \dfrac{-1+\sqrt{3}i}{2} \\
-                    \end{aligned}$$</div>
-                </p>
-                <p>
-                    なんと、もう一つの1の3乗根が出てきました。
-                </p>
-                <p>
-                    一方
-                    $\omega = \dfrac{-1+\sqrt{3}i}{2}$
-                    であれば、
-                    <div class="eq">$$\begin{aligned}
-                        \omega ^2
-                            &= \left(\dfrac{-1+\sqrt{3}i}{2}\right)^2 \\
-                            &= \cdots \\
-                            &= \dfrac{-1-\sqrt{3}i}{2} \\
-                    \end{aligned}$$</div>
-                </p>
-                <p>
-                    やっぱりもう一つの1の3乗根が出てきました。
-                </p>
-                <p>
-                    ωとして $\dfrac{-1+\sqrt{3}i}{2}$ と $\dfrac{-1+\sqrt{3}i}{2}$ のどちらを選んでも、確かに $\omega^2$ が1の3乗根になっています。
-                    <strong>なんという偶然でしょう！</strong>
-                </p>
-                
-                <h3>種明かし（？）</h3>
-                <p>
-                    …ここで気づいてほしいのですが、これは偶然でもなんでもありません。
-                </p>
-                <p>
-                    $\omega$ は1の3乗根でした。3乗して1になる数でした。つまり $\omega^3 = 1$ です。ですから、 $\omega^2$ を3乗した数というのは、
-                    <div class="eq">$$
-                        \left(\omega^2\right)^3 = \omega^6 = \left(\omega^3\right)^2 = 1^2 = 1
-                    $$</div>
-                    であり、当然1になるに決まっていたのです。
-                </p>
-                <p>
-                    ついさっき $\omega = \dfrac{-1-\sqrt{3}i}{2}$ の場合と $\omega = \dfrac{-1+\sqrt{3}i}{2}$ にわけてそれぞれ2乗して計算していたのが阿呆らしく思えてきますね。
-                    $\omega, \omega^2$ という記号は見掛け倒しに過ぎなかったのです。
-                    <sup class="ref" id="ref2"><a href="article/hts/4.html#note2">[2]</a></sup>
-                </p>
-            </section>
-            <section>
-                <h2> $\omega^2+\omega+1 = 0$ </h2>
-                <p>
-                    ωの性質はまだまだあります。どうやら $\omega^2+\omega+1 = 0$ になるらしいです。早速これも確かめてみましょう。
-                </p>
-                <p>
-                    先ほどみたように $\omega, \omega^2$ はいずれも1の3乗根のうち虚数のものでしたから、
-                    <div class="eq">$$\begin{aligned}
-                        &\;\;\;\;\;\dfrac{-1-\sqrt{3}i}{2} + \dfrac{-1+\sqrt{3}i}{2} + 1 \\
-                        &=\dfrac{-1-\sqrt{3}i-1+\sqrt{3}i}{2} + 1 \\
-                        &=-\dfrac{2}{2}+1 \\
-                        &=0
-                    \end{aligned}$$
-                    </div>
-                    となって、確かに0になりました。
-                </p>
-                <p>
-                    …ですがここまでみてきた皆さんであれば、もうこれも当然の結果であることがわかるでしょう。
-                </p>
-                <p>
-                    1の3乗根を求める過程を思い出してください。そもそも虚数解ωというのはどうやって出てきたものでしたか？　2次方程式 $x^2+x+1=0$ を解いて出てきたものでしたよね。この式を成り立たせるような値が $\omega$ なのですから、 $\omega^2+\omega+1 = 0$ であるに決まっているのです。当然というか、「そもそもそれが定義じゃないか」って感じです。
-                </p>
-                <p>
-                    なんだか当たり前のことに無駄に時間を使った感じですが、<strong>当たり前のことは、当たり前であるがゆえに失念してしまう</strong>ことがよくあります。例えば
-                    <div class="eq">$$
-                        1+\omega+\omega^2+\cdots+\omega^{100}
-                    $$</div>
-                    の値を求めよ、なんてときに $\omega^3=1$ であることや $\omega^2+\omega+1 = 0$ であることを忘れていると戸惑ってしまいます。
-                </p>
-            </section>
-            
-            <section id="matome">
-                <h2>まとめ</h2>
+      <section id="quiz">
+        <h2>確認問題</h2>
+        <p>準備中。体系問題集の156をやるとよい。</p>
+      </section>
 
-                <div class="box">
-                    <ul>
-                        <li>
-                            1の3乗根は、
-                            <div class="eq">
-                                $$
-                                    1, \quad \dfrac{-1-\sqrt{3}i}{2}, \quad \dfrac{-1+\sqrt{3}i}{2}
-                                $$
-                            </div>
-                            の3つ。
-                        </li>
-                        <li>
-                            虚数であるものを $\boldsymbol \omega$ と表すことがある。2つある虚数のどちらをωとしてもよい。
-                        </li>
-                        <li>
-                            $\boldsymbol{\omega^2}$ も1の3乗根。
-                        </li>
-                        <li>
-                            $\boldsymbol{\omega^3 = 1}$ 
-                        </li>
-                        <li>
-                            $\boldsymbol{\omega^2 + \omega + 1 = 0}$ 
-                        </li>
-                    </ul>
-                </div>
-            </section>
+      <section>
+        <h2>次回予告</h2>
+        <p>因数分解再び「複素数の範囲で因数分解」</p>
+        <p>準備中です。もう少しお待ちください。</p>
+        <!-- <div class="articlelink">
+          <article>
+            <a href="article/hts/5.html">
+              <img src="-img/-thumb/hts5.png" alt="">
+              <div class="articlename">#5 因数分解</div>
+            </a>
+          </article>
+        </div> -->
+      </section>
 
-            <section id="quiz">
-                <h2>確認問題</h2>
-                <p>準備中。体系問題集の156をやるとよい。</p>
-            </section>
+      <section class="tweet">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </section>
 
-            <section>
-                <h2>次回予告</h2>
-                <p>因数分解再び「複素数の範囲で因数分解」</p>
-                <p>準備中です。もう少しお待ちください。</p>
-                <!-- <div class="articlelink">
-                    <article>
-                        <a href="article/hts/5.html">
-                            <img src="-img/-thumb/hts5.png" alt="">
-                            <div class="articlename">#5 因数分解</div>
-                        </a>
-                    </article>
-                </div> -->
-            </section>
+      <section class="form">
+        <h2>アンケート</h2>
+        <p>全て任意回答です。一つだけでも答えてくれると嬉しい</p>
+        <iframe width="100%" height= "480px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__R751CxUQzZQUFM4WUYwODZFUFk4WUlESVpHUThRRS4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+      </section>
 
-            <section class="tweet">
-                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </section>
-
-            <section class="form">
-                <h2>アンケート</h2>
-                <p>全て任意回答です。一つだけでも答えてくれると嬉しい</p>
-                <iframe width="100%" height= "480px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__R751CxUQzZQUFM4WUYwODZFUFk4WUlESVpHUThRRS4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-            </section>
-
-            <footer>
-                <div class="note" id="note1">
-                    <a href="article/hts/4.html#ref1">[1]</a>
-                    紛らわしいのは他にもいっぱい
-                    <figure>
-                        <img src="-img/hts4/n1.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="note" id="note2">
-                    <a href="article/hts/4.html#ref2">[2]</a>
-                    形式的な記号ですが、これを使うと結構便利なことがあります。実数 $a$ の3乗根のうち実数のもの
-                    <sup class="ref" id="ref3"><a href="article/hts/4.html#note3">[3]</a></sup>
-                    を、 $\sqrt[3]{a}$ と表せば
-                    <sup class="ref" id="ref4"><a href="article/hts/4.html#note4">[4]</a></sup>
-                    $a$ の3つの3乗根は、 $\omega$ を用いて
-                    <div class="eq">$$
-                        \sqrt[3]{a}, \quad
-                        \sqrt[3]{a}\omega, \quad
-                        \sqrt[3]{a}\omega^2
-                    $$</div>
-                    と表せます。これを $\omega$ を用いずに表すと、
-                    <div class="eq">$$
-                        \sqrt[3]{a}, \quad
-                        \sqrt[3]{a} \cdot \dfrac{-1+\sqrt{3}i}{2}, \quad
-                        \sqrt[3]{a} \cdot \dfrac{-1-\sqrt{3}i}{2}
-                    $$</div>
-                    となります。どちらがわかりやすいかは一目瞭然ですね。
-                    こんな便利な書き方ですが、試験で使うと×になります。ちゃんと計算しましょう（ただし $\sqrt[3]{a}$ はまだ習ってないので出てきません。大丈夫）
-                </div>
-                <div class="note" id="note3">
-                    <a href="article/hts/4.html#ref3">[3]</a>
-                    これはただ1つ存在します。 $y=x^3$ のグラフを描けば明らか
-                </div>
-                <div class="note" id="note4">
-                    <a href="article/hts/4.html#ref4">[4]</a>
-                    日本では $\sqrt[n]{a}$ を<strong>「 $\boldsymbol n$ 乗根 $\boldsymbol a$ 」</strong>と呼ぶ謎の習慣がある。これは $n$ 乗して $a$ になる実数のことで、 $n$ が奇数の場合はただ1つ存在する。 $n$ が偶数のときは正負2つ存在するから、そのうち正であるものを $\sqrt[n]{a}$ と表す。 $n$ 個存在する「 $a$ の $n$ 乗根」と非常に紛らわしい。
-                </div>
-            </footer>
-        </main>
-        <footer>
-            <p id="copyright">&copy; 2022 Ruri</p>
-        </footer>
-    </body>
+      <footer>
+        <div class="note" id="note1">
+          <a href="article/hts/4.html#ref1">[1]</a>
+          紛らわしいのは他にもいっぱい
+          <figure>
+            <img src="-img/hts4/n1.jpg" alt="">
+          </figure>
+        </div>
+        <div class="note" id="note2">
+          <a href="article/hts/4.html#ref2">[2]</a>
+          形式的な記号ですが、これを使うと結構便利なことがあります。実数 $a$ の3乗根のうち実数のもの
+          <sup class="ref" id="ref3"><a href="article/hts/4.html#note3">[3]</a></sup>
+          を、 $\sqrt[3]{a}$ と表せば
+          <sup class="ref" id="ref4"><a href="article/hts/4.html#note4">[4]</a></sup>
+          $a$ の3つの3乗根は、 $\omega$ を用いて
+          <div class="eq">$$
+            \sqrt[3]{a}, \quad
+            \sqrt[3]{a}\omega, \quad
+            \sqrt[3]{a}\omega^2
+          $$</div>
+          と表せます。これを $\omega$ を用いずに表すと、
+          <div class="eq">$$
+            \sqrt[3]{a}, \quad
+            \sqrt[3]{a} \cdot \dfrac{-1+\sqrt{3}i}{2}, \quad
+            \sqrt[3]{a} \cdot \dfrac{-1-\sqrt{3}i}{2}
+          $$</div>
+          となります。どちらがわかりやすいかは一目瞭然ですね。
+          こんな便利な書き方ですが、試験で使うと×になります。ちゃんと計算しましょう（ただし $\sqrt[3]{a}$ はまだ習ってないので出てきません。大丈夫）
+        </div>
+        <div class="note" id="note3">
+          <a href="article/hts/4.html#ref3">[3]</a>
+          これはただ1つ存在します。 $y=x^3$ のグラフを描けば明らか
+        </div>
+        <div class="note" id="note4">
+          <a href="article/hts/4.html#ref4">[4]</a>
+          日本では $\sqrt[n]{a}$ を<strong>「 $\boldsymbol n$ 乗根 $\boldsymbol a$ 」</strong>と呼ぶ謎の習慣がある。これは $n$ 乗して $a$ になる実数のことで、 $n$ が奇数の場合はただ1つ存在する。 $n$ が偶数のときは正負2つ存在するから、そのうち正であるものを $\sqrt[n]{a}$ と表す。 $n$ 個存在する「 $a$ の $n$ 乗根」と非常に紛らわしい。
+        </div>
+      </footer>
+    </main>
+    <footer>
+      <p id="copyright">&copy; 2022 Ruri</p>
+    </footer>
+  </body>
 </html>

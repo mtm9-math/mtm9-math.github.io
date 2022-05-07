@@ -25,10 +25,18 @@
     <meta name="twitter:image" content="https://mtm9-math.github.io/-img/-thumb/hts1.png" />
   </head>
   <body>
-    <header>
-      <div id="logo">
+
+    <header class="header">
+      <div class="site">
         <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
       </div>
+
+      <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-times"></i>
+        <span class="sr-only">MENU</span>
+      </button>
+
       <nav id="gbnav">
         <ul>
           <li><a href="index.html">TOP</a></li>
@@ -39,9 +47,10 @@
         </ul>
       </nav>
     </header>
+
     <main>
-      <header>
-        <nav id="pankuzu">
+      <header class="title">
+        <nav class="title__pankuzu">
           <ul>
             <li><a href="index.html">TOP</a></li>
             <li><a href="article/index.html">記事一覧</a></li>

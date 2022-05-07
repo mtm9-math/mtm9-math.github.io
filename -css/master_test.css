@@ -1,7 +1,4 @@
 @charset "utf-8";
-@import "header.css";
-@import "link.css";
-@import "quiz.css";
 
 :root {
   --h2_color: rgb(255, 168, 188);
@@ -16,6 +13,7 @@
   --font_serif: serif;
 }
 
+/* 基本 */
 html {
   font-size: 62.5%;
   font-size: clamp(1rem, 2.5vw, 1.1rem);
@@ -23,19 +21,192 @@ html {
 body {
   max-width: 1000px;
   margin: auto;
-  padding: 1rem;
+  /* padding: 1rem; */
 
   background-color: rgb(242, 241, 241);
   color: black;
   font-family: var(--font_sans);
 }
-main {
+h1, h2, h3, h4, h5, h6, p, pre, figure, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+  line-height: 1.8;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  display: block;
+
+  /* オリジナルサイズより拡大しない */
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* 水平コンテナ */
+.hz-container {
+  width: min(92%, 1166px);
+  margin: auto;
+  position: relative;
+}
+
+
+
+
+
+/* ヘッダー 
+============================== */
+.header {
+  height: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #ffdddf;
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.site {
+  /* height: 5rem; */
+  width: 12rem;
+}
+.site img {
+  width: 100%;
+  margin: -1rem 0;
+}
+
+/* アイコン型のボタン */
+.navbtn {
+  padding: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 30px;
+}
+.open .navbtn {
+  z-index: 110;
+  color: #fff;
+}
+.navbtn .fa-bars {
+  display: revert;
+}
+.open .navbtn .fa-bars {
+  display: none;
+}
+.navbtn .fa-times {
+  display: none;
+}
+.open .navbtn .fa-times {
+  display: revert;
+}
+@media (min-width: 768px) {
+  .navbtn {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav {
+    position: fixed;
+    inset: 0 -100% 0 100%;
+    z-index: 100;
+    background-color: #4e483ae6;
+
+    transition: transform 0.3s;
+  }
+  .open nav {
+    transform: translate(-100%, 0);
+  }
+  .open body {
+    position: fixed;
+    overflow: hidden;
+  }
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 1rem;
+    color: #fff;
+  }
+}
+@media (min-width: 768px) {
+  .nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    color: #707070;
+  }
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+}
+.nav ul {
+  margin: 0;
+  padding: 0;
+
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  list-style-position: outside; */
+}
+.nav ul li {
+  display: block;
+  text-align: center;
+  width: 5.5em;
+  max-width: 100%;
+  padding: 0 1%;
+  margin-bottom: 0.5rem;
+}
+.nav ul li a {
+  display: block;
+  border-bottom: 0.2rem solid gray;
+  text-decoration: none;
+  font-family: var(--font_serif);
+}
+.nav ul li a:hover {
+  background-color: gray;
+  color: white;
+  transition-property: all;
+  transition-duration: 300ms;
+}
+
+
+
+
+
+
+
+
+
+/* main {
   margin: auto;
   padding: 2rem;
 
   border-radius: 0.5rem;
   background-color: rgb(255, 252, 249);
-}
+} */
+
 main > footer {
   margin: auto;
   margin-top: 3rem;
@@ -65,13 +236,13 @@ main > footer .eq {
   content: "　";
 }
 
-body > footer {
+.footer {
   border-radius: 0.5rem;
   padding: 0;
   background-color: lightgray;
   color: gray;
 }
-#copyright {
+.copy {
   margin-right: 1rem;
   text-align: right;
 }
@@ -82,11 +253,11 @@ body > footer {
   main > header 
 ---------------------
 */
-#pankuzu {
+.title__pankuzu {
   margin-bottom: 1rem;
   font-size: 0.9rem;
 }
-#pankuzu ul {
+.title__pankuzu ul {
   margin: 0;
   padding: 0;
   display: flex;
@@ -95,13 +266,13 @@ body > footer {
   list-style-type: none;
   list-style-position: outside;
 }
-#pankuzu li {
+.title__pankuzu li {
   margin-right: 0.5rem;
 }
-#pankuzu ul :not(:last-child) ::after{
+.title__pankuzu ul :not(:last-child) ::after{
   content: " /";
 }
-#pankuzu a {
+.title__pankuzu a {
   color: gray;
 }
 .subtitle {
@@ -341,4 +512,28 @@ strong {
   content: " ";
 } strong::after {
   content: " ";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* リンク */
+.arrowlink {
+  color: var(--arrowlink_color);
+  text-decoration: none;
+} .arrowlink::after {
+  content: var(--arrow);
+} .arrowlink:hover {
+  text-decoration: underline;
 }

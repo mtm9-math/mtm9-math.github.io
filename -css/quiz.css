@@ -1,74 +1,74 @@
 .quiz input[type="radio"] {
-    display: none;
+  display: none;
 }
 .quiz .choice {
-    margin-left: 1rem;
-    display: flex;
-    flex-wrap: wrap;
+  margin-left: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 .quiz label:not(:last-child) {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 .quiz label {
-    display: block;
-    padding: 0.5rem;
-    width: fit-content;
-    min-width: 5rem;
-    margin-bottom: 0.3rem;
-    text-align: center;
-    background-color: azure;
-    border: 0.1rem solid gray;
-    border-radius: 0.2rem;
+  display: block;
+  padding: 0.5rem;
+  width: fit-content;
+  min-width: 5rem;
+  margin-bottom: 0.3rem;
+  text-align: center;
+  background-color: azure;
+  border: 0.1rem solid gray;
+  border-radius: 0.2rem;
 }
 .quiz label:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 .quiz .a_print,
 .quiz .w_print {
-    display: none;
-    margin: 1rem;
-    font-family: sans-serif;
-    font-weight: bold;
+  display: none;
+  margin: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 .quiz .a_print::before,
 .quiz .w_print::before {
-    content: "　";
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    background-size: contain;
-    vertical-align: middle;
+  content: "　";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-size: contain;
+  vertical-align: middle;
 }
 .quiz .a_print::before {
-    background-image: url("../-img/correct.svg");
+  background-image: url("../-img/correct.svg");
 }
 .quiz .w_print::before {
-    background-image: url("../-img/wrong.svg");
+  background-image: url("../-img/wrong.svg");
 }
 
 .quiz .a:checked~.choice label.la {
-    background-color: lightgreen;
+  background-color: lightgreen;
 }
 .quiz .w:checked~.choice label.lw {
-    background-color: lightpink;
+  background-color: lightpink;
 }
 .quiz .a:checked ~ .a_print {
-    display: block;
+  display: block;
 }
 .quiz .w:checked ~ .w_print {
-    display: block;
+  display: block;
 }
 .quiz .expl,
 .quiz .close {
-    display: none;
-    margin: 1rem;
+  display: none;
+  margin: 1rem;
 }
 .quiz input:checked ~ .expl,
 .quiz input:checked ~ .close {
-    display: block;
+  display: block;
 }
 
 /* .quiz .close:visited,
 .quiz .close:visited~.expl {
-    display: none;
+  display: none;
 } */
