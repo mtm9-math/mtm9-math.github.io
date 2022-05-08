@@ -6,7 +6,8 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../../">
-    <link rel="stylesheet" href="-css/master.css">
+    <link rel="stylesheet" href="-css/master_new.css">
+    <script src="https://kit.fontawesome.com/ef1d60642a.js" crossorigin="anonymous"></script>
     
     <script>
       MathJax = {
@@ -19,6 +20,7 @@
       };
     </script>
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="#1 剰余の定理" />
     <meta name="twitter:description" content="高次方程式入門｜iを紡ぐ" />
@@ -27,46 +29,48 @@
   <body>
 
     <header class="header">
-      <div class="site">
-        <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+      <div class="header-container hz-container">
+        <div class="site">
+          <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+        </div>
+        <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-times"></i>
+          <span class="sr-only">MENU</span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+            <li><a href="tips/index.html">Tips</a></li>
+            <li><a href="about/index.html">About $i^i$ </a></li>
+            <li><a href="mania/index.html">暇人編</a></li>
+          </ul>
+        </nav>
       </div>
-
-      <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
-        <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-times"></i>
-        <span class="sr-only">MENU</span>
-      </button>
-
-      <nav id="gbnav">
-        <ul>
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="article/index.html">記事一覧</a></li>
-          <li><a href="tips/index.html">Tips</a></li>
-          <li><a href="about/index.html">About $i^i$ </a></li>
-          <li><a href="mania/index.html">暇人編</a></li>
-        </ul>
-      </nav>
     </header>
 
-    <main>
-      <header class="title">
-        <nav class="title__pankuzu">
+    <main class="hz-container main">
+
+      <section class="title">
+        <div class="title-pankuzu">
           <ul>
             <li><a href="index.html">TOP</a></li>
             <li><a href="article/index.html">記事一覧</a></li>
             <li><a href="article/hts/1.html">高次方程式入門</a></li>
           </ul>
-        </nav>
+        </div>
         <span class="subtitle">高次方程式入門 #1</span>
         <h1>剰余の定理</h1>
         <div id="p_and_n">
           <a href="article/hts/2.html" id="next">#2 因数定理</a>
         </div>
-        <div class="info">最終更新日：22.1.25</div>
         <div class="thumb">
           <img src="-img/-thumb/hts1.png" alt="">
         </div>
-      </header>
+        <div class="info">最終更新日：22.01.25</div>
+      </section>
+
       <section>
         <h2>多項式の掛け算</h2>
         <p>
@@ -332,7 +336,7 @@
           これが私たちの得た剰余の定理です。この定理の何がすごいって、<strong>実際に割り算を行うことなく</strong>あまりを求めることができちゃうんです。これって、すごく便利ですよね。
         </p>
       </section>
-      <section id="quiz">
+      <!-- <section id="quiz">
         <h2>確認問題</h2>
         <p><strong>飛ばさないで！！！！！！！</strong></p>
         <div class="dasoku">
@@ -354,7 +358,6 @@
             </div>
             <div class="a_print">正解</div>
             <div class="w_print">不正解</div>
-            <!-- <label for="hide1" class="close">閉じる</label> -->
             <div class="expl">
               <div>
                 答え：16
@@ -382,7 +385,6 @@
             </div>
             <div class="a_print">正解</div>
             <div class="w_print">不正解</div>
-            <!-- <label for="hide1" class="close">閉じる</label> -->
             <div class="expl">
               <div>
                 答え：-3
@@ -413,7 +415,6 @@
             </div>
             <div class="a_print">正解</div>
             <div class="w_print">不正解</div>
-            <!-- <label for="hide1" class="close">閉じる</label> -->
             <div class="expl">
               <div>
                 答え： $\dfrac{23}{3}$ 
@@ -458,7 +459,6 @@
             </div>
             <div class="a_print">正解</div>
             <div class="w_print">不正解</div>
-            <!-- <label for="hide1" class="close">閉じる</label> -->
             <div class="expl">
               <div>
                 答え： $x+4$ 
@@ -518,7 +518,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section>
         <h2>次回予告</h2>
         <p>
@@ -534,20 +534,9 @@
         </div>
       </section>
 
-      <section class="tweet">
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </section>
-
-      <section class="form">
-        <h2>アンケート</h2>
-        <p>全て任意回答です。一つだけでも答えてくれると嬉しい</p>
-        <iframe width="100%" height= "480px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__R751CxUNkNTMlhETlM4OU9SMUZWVEEyMUNPNTROOS4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-      </section>
-
       <section>
         <div class="dasoku">
-          <span class="boxtitle">蛇足</span>
+          <div class="boxtitle">蛇足</div>
           <p>
             気づいてほしいのは、$\bigcirc$や$\big(\cdots\cdots\big)$や$\triangle$のように書くのと、 $\alpha,\;Q(x),\;r$ のように書くのでは、後者の方がいかにも数学っぽく感じられるかもしれないけれど、意味としては<strong>全く同じことを表している</strong>ということです。変数を表すのに $\Box$ と書こうが $x$ と書こうが何ら変わりはありません。中学校に入って $x$ や $y$ といった文字がでてきて戸惑う人は一定数いますが、小学校のときすでに「 $\Box$ を使った計算」をやっているはずです。
           </p>
@@ -557,7 +546,7 @@
         </div>
       </section>
 
-      <footer>
+      <section class="footnotes">
         <div class="note" id="note1">
           <a href="article/hts/1.html#ref1">[1]</a>こういうこと↓
           <div class="eq">
@@ -581,11 +570,11 @@
           </div>
           筆者はこの流儀には反対で、 $x^3,x^2,x,(\text{定数})$ の縦のラインを揃えたほうがいいと思う。だって普通の整数の割り算は 千の位 十の位 一の位 を揃えて書くでしょ？
         </div>
-        <p class="note" id="note2">
+        <div class="note" id="note2">
           <a href="article/hts/1.html#ref2">[2]</a>
           まあそもそも文字だってそれ自体はただの図形に過ぎなくて、それに人間が「記号」としての意味を共通認識として持っているだけなんだけれども。。
-        </p>
-      </footer>
+        </div>
+      </section>
     </main>
     <footer>
       <p id="copyright">&copy; 2022 Ruri</p>

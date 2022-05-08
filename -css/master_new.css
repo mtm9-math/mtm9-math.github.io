@@ -19,17 +19,22 @@ html {
   font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 body {
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: auto;
-  /* padding: 1rem; */
 
-  background-color: rgb(242, 241, 241);
+  /* background-color: rgb(220, 237, 246); */
+  background-color: #fff;
+
   color: black;
   font-family: var(--font_sans);
+  font-weight: normal;
+  font-size: normal;
 }
 h1, h2, h3, h4, h5, h6, p, pre, figure, ul {
   margin: 0;
   padding: 0;
+}
+ul {
   list-style: none;
 }
 p {
@@ -51,7 +56,7 @@ img {
 
 /* 水平コンテナ */
 .hz-container {
-  width: min(92%, 1166px);
+  width: min(92%, 800px);
   margin: auto;
   position: relative;
 }
@@ -66,7 +71,7 @@ img {
   height: fit-content;
   margin-bottom: 1rem;
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   background-color: #ffdddf;
   text-align: center;
 }
@@ -79,13 +84,10 @@ img {
   height: 100%;
 }
 
-.site {
-  /* height: 5rem; */
-  width: 12rem;
-}
 .site img {
-  width: 100%;
-  margin: -1rem 0;
+  height: 50px;
+  aspect-ratio: 3.5/1;
+  object-fit: cover;
 }
 
 /* アイコン型のボタン */
@@ -142,7 +144,7 @@ img {
     justify-content: center;
     align-items: center;
     height: 100%;
-    gap: 1rem;
+    gap: 2rem;
     color: #fff;
   }
 }
@@ -150,41 +152,23 @@ img {
   .nav ul {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
-    color: #707070;
+    align-items: flex-end;
+    gap: 0.7rem;
   }
 }
 
-.nav {
-  margin: 0;
-  padding: 0;
-}
-.nav ul {
-  margin: 0;
-  padding: 0;
-
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style-type: none;
-  list-style-position: outside; */
-}
-.nav ul li {
+.nav li {
   display: block;
   text-align: center;
-  width: 5.5em;
-  max-width: 100%;
-  padding: 0 1%;
-  margin-bottom: 0.5rem;
+  width: 5em;
 }
-.nav ul li a {
+.nav li a {
   display: block;
   border-bottom: 0.2rem solid gray;
   text-decoration: none;
   font-family: var(--font_serif);
 }
-.nav ul li a:hover {
+.nav li a:hover {
   background-color: gray;
   color: white;
   transition-property: all;
@@ -195,8 +179,94 @@ img {
 
 
 
+/* トップページ用
+======================= */
+/* ヒーロー */
+.hero-container {
+  height: 250px;
+  display: grid;
+  grid-template-rows: 100%;
+}
+.hero-container > * {
+  grid-area: 1/1;
+}
+.hero-img-container {
+  height: 100%;
+  width: 100%;
+}
+.hero-img-container img {
+  width: 100%;
+
+  /* 指定しないと溢れる */
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 60%;
+}
+.hero-title-container {
+  padding: 5px 30px;
+  width: fit-content;
+  background-color: rgba(251, 223, 150, 0.839);
+
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 5px;
+}
+.hero-subtitle {
+  font-weight: bolder;
+}
+
+.intro {
+  padding: 3rem 0;
+}
+
+.posts {
+  padding: 3rem 0;
+  background-color: #f3f1ed;
+}
+.posts-heading {
+  position: absolute;
+  top: -4.2rem;
+  font-size: 1.8rem;
+}
 
 
+
+/* 記事カード
+===================== */
+.articlecards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 0.7rem;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .articlecards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.articlecard {
+  border-bottom: solid #aaa 1px;
+}
+.articlecard:hover {
+  background-color: #ddd;
+}
+.articlecard a {
+  display: block;
+}
+.articlecard-title {
+  margin: 1rem 0;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 1rem;
+}
+.articlecard img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+}
 
 
 /* main {
@@ -207,7 +277,7 @@ img {
   background-color: rgb(255, 252, 249);
 } */
 
-main > footer {
+.footnotes {
   margin: auto;
   margin-top: 3rem;
   padding-top: 1rem;
@@ -216,10 +286,10 @@ main > footer {
   font-size: 0.9rem;
   line-height: 1rem;
 }
-main > footer p {
+.footnotes p {
   line-height: 1.5rem;
 }
-main > footer .eq {
+.footnotes .eq {
   font-size: 1rem;
 }
 /* 脚注 */
@@ -248,16 +318,20 @@ main > footer .eq {
 }
 
 
-/*  
----------------------
-  main > header 
----------------------
-*/
-.title__pankuzu {
+
+/* 各記事ページ
+=================== */
+.main section {
+  margin: 5rem 0;
+}
+.main .title {
+  margin-top: 2rem;
+}
+.title-pankuzu {
   margin-bottom: 1rem;
   font-size: 0.9rem;
 }
-.title__pankuzu ul {
+.title-pankuzu ul {
   margin: 0;
   padding: 0;
   display: flex;
@@ -266,13 +340,13 @@ main > footer .eq {
   list-style-type: none;
   list-style-position: outside;
 }
-.title__pankuzu li {
+.title-pankuzu li {
   margin-right: 0.5rem;
 }
-.title__pankuzu ul :not(:last-child) ::after{
+.title-pankuzu ul :not(:last-child) ::after{
   content: " /";
 }
-.title__pankuzu a {
+.title-pankuzu a {
   color: gray;
 }
 .subtitle {
@@ -280,7 +354,7 @@ main > footer .eq {
   color: rgb(60, 60, 60);
   font-size: 0.9rem;
 }
-.kind {
+/* .kind {
   width: fit-content;
   padding: 0rem 0.3rem;
 
@@ -289,14 +363,17 @@ main > footer .eq {
   font-size: 1.2rem;
   font-weight: bolder;
   border-radius: 0.3rem;
-}
+} */
 
-h1 {
+.main h1 {
   margin-top: 0;
-  border-bottom: 0.3rem solid skyblue;
+  margin-bottom: 1rem;
+  border-bottom: 0.2rem solid skyblue;
   font-weight: normal;
   font-size: 1.8rem;
 }
+
+
 #p_and_n {
   /* Previous and Next */
   display: flex;
@@ -341,49 +418,61 @@ h1 {
 
 
 
-h2 {
-  margin-top: 3rem;
-  border-left: 0.3rem solid rgb(255, 168, 188);
+.main h2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  margin-bottom: 1rem;
   width: fit-content;
-
+  
+  border-left: 0.3rem solid rgb(255, 168, 188);
   background-color: rgb(251, 215, 223);
 
   font-weight: normal;
   font-size: 1.3rem;
 }
 
-
-h3 {
-  margin-left: 0.5rem;
-  margin-bottom: 0;
-  font-weight: normal;
-  font-size: 1rem;
-  
+.main h3 {
+  margin: 1rem 0.5rem;
   width: fit-content;
+  
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   border-bottom: 0.2rem solid lightgray;
+  
+  font-size: 1rem;
 }
-h4 {
-  margin-bottom: 0;
-  font-weight: normal;
-}
-
-p {
+.main p {
   line-height: 2rem;
 }
 
+/* 削除したい */
 .center {
   text-align: center;
 }
 
 
+.dasoku {
+  margin: 1rem;
+  border-left: #aaa solid 1px;
+  padding: 0 0.7rem;
+  width: fit-content;
+
+  color: #666;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+.dasoku p {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+
+
 
 /* ブロックレベル */
 
-
+/* 特集ページ等で使用
+==================== */
 .article {
   margin: 1rem 0;
   padding: 1rem;
@@ -459,19 +548,7 @@ figure.bigfig img {
   max-width: 30rem;
 }
 
-.dasoku {
-  padding: 0.2rem 0.2rem;
-  width: fit-content;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-  font-size: 0.8rem;
-  line-height: 1rem;
-  background-color: rgb(222, 222, 222);
-}
-.dasoku p {
-  font-size: 0.8rem;
-  line-height: 1rem;
-}
+
 
 /* 囲みボックス */
 .box {
@@ -480,8 +557,8 @@ figure.bigfig img {
   border: 0.3rem solid powderblue;
 }
 .boxtitle {
-  font-family: sans-serif;
   font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 .boxtitle::after {
   content: "　";
