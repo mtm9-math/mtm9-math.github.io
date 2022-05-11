@@ -1,0 +1,47 @@
+/* 特集ページ等で使用
+==================== */
+.article {
+  margin: 1rem 0;
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+  background-color: rgb(255, 244, 219);
+}
+.article__title {
+  width: fit-content;
+  margin: 0;
+  padding: 0.5rem 1rem;
+
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(201, 235, 247);
+
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+.article__title::before {
+  color: rgb(130, 180, 255);
+  content: "●　";
+}
+
+
+.articlecard-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(10px, 1rem, 50px);
+}
+@media (min-width: 768px) {
+  .articlecard-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.articlecard__item img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.articlecard__item a:hover {
+  transition: 0.5s all;
+}
+.articlecard__item a:hover img{
+  transform: scale(1.1, 1.1);
+}

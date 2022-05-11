@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
     <link rel="stylesheet" href="-css/master.css">
+    <script src="https://kit.fontawesome.com/ef1d60642a.js" crossorigin="anonymous"></script>
     
     <script>
       MathJax = {
@@ -21,28 +22,36 @@
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   </head>
   <body>
-    <header>
-      <div id="logo">
-        <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+
+    <header class="header">
+      <div class="header-container hz-container">
+        <div class="site">
+          <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+        </div>
+        <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-times"></i>
+          <span class="sr-only">MENU</span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+            <li><a href="tips/index.html">Tips</a></li>
+            <li><a href="about/index.html">About $i^i$ </a></li>
+            <li><a href="mania/index.html">暇人編</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav id="gbnav">
-        <ul>
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="article/index.html">記事一覧</a></li>
-          <li><a href="tips/index.html">Tips</a></li>
-          <li><a href="about/index.html">About $i^i$ </a></li>
-          <li><a href="mania/index.html">暇人編</a></li>
-        </ul>
-      </nav>
     </header>
-    <main>
-      <nav id="pankuzu">
+    <main class="hz-container main">
+      <div class="title-pankuzu">
         <ul>
           <li><a href="index.html">TOP</a></li>
           <li><a href="tips/index.html">Tips</a></li>
           <li><a href="tips/ask.html">質問すること</a></li>
         </ul>
-      </nav>
+      </div>
       <h1>質問すること</h1>
       <p>「わからないことがあったら、友達なり先生なり、わかる人に聞け」</p>
       <p>
@@ -58,8 +67,10 @@
         もちろん、世の中そう「教えるのがうまい」人間ばかりではありませんし、「わからない人の気持ちを想像しようともしない」最低なやつもいます。「何を知りたいのか」が明確になっていればそういう人たちからもある程度情報を引き出すことができます。ですが、少なくとも「授業内容が怪しい」段階では、そんなこと考えずにとにかく<strong>聞きまくってください</strong>。「忙しそうだから」とか気を遣ってる場合じゃありません。本当に。頼みます。
       </p>
     </main>
-    <footer>
-      <p id="copyright">&copy; 2022 Ruri</p>
+    <footer class="footer">
+      <div class="footer-copy">
+        &copy; 2022 Ruri
+      </div>
     </footer>
   </body>
 </html>

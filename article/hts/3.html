@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../../">
     <link rel="stylesheet" href="-css/master.css">
+    <script src="https://kit.fontawesome.com/ef1d60642a.js" crossorigin="anonymous"></script>
     
     <script>
       MathJax = {
@@ -26,29 +27,39 @@
     <meta name="twitter:image" content="https://mtm9-math.github.io/-img/-thumb/hts3.png" />
   </head>
   <body>
-    <header>
-      <div id="logo">
-        <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+
+    <header class="header">
+      <div class="header-container hz-container">
+        <div class="site">
+          <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+        </div>
+        <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-times"></i>
+          <span class="sr-only">MENU</span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+            <li><a href="tips/index.html">Tips</a></li>
+            <li><a href="about/index.html">About $i^i$ </a></li>
+            <li><a href="mania/index.html">暇人編</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav id="gbnav">
-        <ul>
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="article/index.html">記事一覧</a></li>
-          <li><a href="tips/index.html">Tips</a></li>
-          <li><a href="about/index.html">About $i^i$ </a></li>
-          <li><a href="mania/index.html">暇人編</a></li>
-        </ul>
-      </nav>
     </header>
-    <main>
-      <header>
-        <nav id="pankuzu">
+
+    <main class="hz-container main">
+
+      <section class="title">
+        <div class="title-pankuzu">
           <ul>
             <li><a href="index.html">TOP</a></li>
             <li><a href="article/index.html">記事一覧</a></li>
             <li><a href="article/hts/1.html">高次方程式入門</a></li>
           </ul>
-        </nav>
+        </div>
         <span class="subtitle">高次方程式入門 #3</span>
         <h1>方程式を解く</h1>
         <div id="p_and_n">
@@ -59,7 +70,7 @@
         <div class="thumb">
           <img src="-img/-thumb/hts3.png" alt="">
         </div>
-      </header>
+      </section>
 
       <section>
         <h2>はじめに</h2>
@@ -167,8 +178,8 @@
         <p>
           やることは簡単です。3次以上の方程式が与えられたら、左辺を因数分解して2次以下の形にするだけです。
         </p>
-        <div class="Q">
-          <div class="boxtitle">例1</div>
+        <div class="box box-q">
+          <div class="box_title">例1</div>
           $x^3-3x^2-16x+48=0$ を解け。
         </div>
         <p>
@@ -198,8 +209,8 @@
         <p>
           もう一つ例を見ましょう。
         </p>
-        <div class="Q">
-          <div class="boxtitle">例2</div>
+        <div class="box box-q">
+          <div class="box_title">例2</div>
           <div class="eq">$$
             x^3-3x^2+4=0
           $$</div>
@@ -221,8 +232,8 @@
         <p>
           2重解があれば3重解というのもありそうですね。
         </p>
-        <div class="Q">
-          <div class="boxtitle">例3</div>
+        <div class="box box-q">
+          <div class="box_title">例3</div>
           <div class="eq">$$
             x^3-3x+3x-1 = 0
           $$</div>
@@ -250,8 +261,8 @@
 
         <h3>虚数解の場合</h3>
         <p>虚数解が出る場合も見ておきましょう</p>
-        <div class="Q">
-          <div class="boxtitle">例4</div>
+        <div class="box box-q">
+          <div class="box_title">例4</div>
           <div class="eq">$$
             x^4-x^3-2x^2+6x-4 = 0
           $$</div>
@@ -285,10 +296,10 @@
         </p>
       </section>
 
-      <section id="matome">
+      <section>
         <h2>まとめ</h2>
-        <div class="box">
-          <ul>
+        <div class="box box-border">
+          <ul class="list">
             <li>高校では因数分解できる高次方程式しか扱わないが、実際にはそうではない。</li>
             <li>高次方程式は、<strong>2次以下の式に因数分解する</strong>ことで解けることがある。</li>
             <li>因数分解して $\left(x-\bigcirc\right)^2$ という形が出てくるとき、 $x=\bigcirc$ を<strong>2重解</strong>という。</li>
@@ -305,11 +316,11 @@
       <section>
         <h2>次回予告</h2>
         <p>ちょっと冒頭私の趣味が出てしまいましたが、広い世界では「方程式がいつもうまく解けるわけではない」ことが伝わったと思います。次回は「1の3乗根」の興味深い（しかし、実は当たり前の）性質を追っていきます。</p>
-        <div class="articlelink">
-          <article>
+        <div class="articlecards-container">
+          <article class="articlecard">
             <a href="article/hts/4.html">
               <img src="-img/-thumb/hts4.png" alt="">
-              <div class="articlename">#4 ω 〜1の3乗根〜</div>
+              <div class="articlecard_title">#4 ω 〜1の3乗根〜</div>
             </a>
           </article>
         </div>
@@ -338,8 +349,10 @@
         </p>
       </footer>
     </main>
-    <footer>
-      <p id="copyright">&copy; 2022 Ruri</p>
+    <footer class="footer">
+      <div class="footer-copy">
+        &copy; 2022 Ruri
+      </div>
     </footer>
   </body>
 </html>

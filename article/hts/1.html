@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../../">
     <link rel="stylesheet" href="-css/master.css">
+    <script src="https://kit.fontawesome.com/ef1d60642a.js" crossorigin="anonymous"></script>
     
     <script>
       MathJax = {
@@ -25,29 +26,39 @@
     <meta name="twitter:image" content="https://mtm9-math.github.io/-img/-thumb/hts1.png" />
   </head>
   <body>
-    <header>
-      <div id="logo">
-        <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+
+    <header class="header">
+      <div class="header-container hz-container">
+        <div class="site">
+          <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+        </div>
+        <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-times"></i>
+          <span class="sr-only">MENU</span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+            <li><a href="tips/index.html">Tips</a></li>
+            <li><a href="about/index.html">About $i^i$ </a></li>
+            <li><a href="mania/index.html">暇人編</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav id="gbnav">
-        <ul>
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="article/index.html">記事一覧</a></li>
-          <li><a href="tips/index.html">Tips</a></li>
-          <li><a href="about/index.html">About $i^i$ </a></li>
-          <li><a href="mania/index.html">暇人編</a></li>
-        </ul>
-      </nav>
     </header>
-    <main>
-      <header>
-        <nav id="pankuzu">
+
+    <main class="hz-container main">
+
+      <section class="title">
+        <div class="title-pankuzu">
           <ul>
             <li><a href="index.html">TOP</a></li>
             <li><a href="article/index.html">記事一覧</a></li>
             <li><a href="article/hts/1.html">高次方程式入門</a></li>
           </ul>
-        </nav>
+        </div>    
         <span class="subtitle">高次方程式入門 #1</span>
         <h1>剰余の定理</h1>
         <div id="p_and_n">
@@ -57,7 +68,8 @@
         <div class="thumb">
           <img src="-img/-thumb/hts1.png" alt="">
         </div>
-      </header>
+      </section>
+
       <section>
         <h2>多項式の掛け算</h2>
         <p>
@@ -92,7 +104,7 @@
         <div class="dasoku">
           「列を揃える」を強調しているのは、むろん雑に書くと係数が0の項が出たときに悲惨なことが起こるからです。
         </div> -->
-        <!-- <div class="Q">
+        <!-- <div class="box box-q">
           確認問題
           クリックで答えを表示
         </div> -->
@@ -133,7 +145,7 @@
         <p>
           同じようにして、 $(x-2),\; (x-3)$ で割る計算を自分で一回やってみてください。
         </p>
-        <div class="Q">
+        <div class="box box-q">
            $x^4-6x^2+7x-6$ を $(x-2),\; (x-3)$ で割った商とあまりを求めよ
         </div>
         <p class="dasoku">
@@ -313,8 +325,8 @@
         <p>
           それでは最後にこのことを「きちんと」記述してみます。
         </p>
-        <div class="Q">
-          <div class="boxtitle">剰余の定理</div>
+        <div class="box box-q">
+          <div class="box_title">剰余の定理</div>
           <div class="center">
             $P(x)$ を $(x-\alpha)$ で割ったあまりは、 $\boldsymbol{P(\alpha)}$ に等しい。
           </div>
@@ -327,15 +339,15 @@
         <h2>確認問題</h2>
         <p><strong>飛ばさないで！！！！！！！</strong></p>
         <div class="dasoku">
-          <div class="boxtitle">例外</div>
+          <div class="box_title">例外</div>
           確認問題をやるのが嫌で記事を読む気を無くすんだったら飛ばして次の記事に行ってください。最終的にちゃんと問題集などで「自分で考える練習」ができればいいです。
         </div>
         <div>
           <h3>第1問</h3>
-          <div class="Q">
+          <div class="box box-q">
             $P(x)=x^3-2x^2+x+4$ を $(x-3)$ で割ったあまりを求めよ
           </div>
-          <div class="quiz">
+          <div class="box box-quiz">
             <input type="radio" name="q1" id="q1_a" class="a">
             <input type="radio" name="q1" id="q1_w" class="w">
             <div class="choice">
@@ -360,10 +372,10 @@
         </div>
         <div>
           <h3>第2問</h3>
-          <div class="Q">
+          <div class="box box-q">
              $P(x)=3x^3+6x^2-3$ を $(x+2)$ で割ったあまりを求めよ
           </div>
-          <div class="quiz">
+          <div class="box box-quiz">
             <input type="radio" name="q2" id="q2_a" class="a">
             <input type="radio" name="q2" id="q2_w" class="w">
             <div class="choice">
@@ -391,10 +403,10 @@
         </div>
         <div>
           <h3>第3問</h3>
-          <div class="Q">
+          <div class="box box-q">
              $P(x)=3x^3+2x^2-5x+9$ を $(3x-1)$ で割ったあまりを求めよ
           </div>
-          <div class="quiz">
+          <div class="box box-quiz">
             <input type="radio" name="q3" id="q3_a" class="a">
             <input type="radio" name="q3" id="q3_w" class="w">
             <div class="choice">
@@ -435,10 +447,10 @@
         </div>
         <div>
           <h3>第4問（チャレンジ問題。飛ばしてもいい）</h3>
-          <div class="Q">
+          <div class="box box-q">
              $P(x)$ を $(x-1)$ で割ると $5$ あまり、 $(x+7)$ で割ると $-3$ あまるという。 $P(x)$ を $(x-1)(x+7)$ で割ったあまりを求めよ。 
           </div>
-          <div class="quiz">
+          <div class="box box-quiz">
             <input type="radio" name="q4" id="q4_a" class="a">
             <input type="radio" name="q4" id="q4_w" class="w">
             <div class="choice">
@@ -515,11 +527,11 @@
         <p>
           お疲れ様でした。最後まで読んでいただいてありがとうございます。次回は剰余の定理の特別な場合である「因数定理」について紹介します。お楽しみに！
         </p>
-        <div class="articlelink">
-          <article>
+        <div class="articlecards-container">
+          <article class="articlecard">
             <a href="article/hts/2.html">
               <img src="-img/-thumb/hts2.png" alt="">
-              <div class="articlename">#2 因数定理</div>
+              <div class="articlecard_title">#2 因数定理</div>
             </a>
           </article>
         </div>
@@ -538,7 +550,7 @@
 
       <section>
         <div class="dasoku">
-          <span class="boxtitle">蛇足</span>
+          <span class="box_title">蛇足</span>
           <p>
             気づいてほしいのは、$\bigcirc$や$\big(\cdots\cdots\big)$や$\triangle$のように書くのと、 $\alpha,\;Q(x),\;r$ のように書くのでは、後者の方がいかにも数学っぽく感じられるかもしれないけれど、意味としては<strong>全く同じことを表している</strong>ということです。変数を表すのに $\Box$ と書こうが $x$ と書こうが何ら変わりはありません。中学校に入って $x$ や $y$ といった文字がでてきて戸惑う人は一定数いますが、小学校のときすでに「 $\Box$ を使った計算」をやっているはずです。
           </p>
@@ -578,8 +590,10 @@
         </p>
       </footer>
     </main>
-    <footer>
-      <p id="copyright">&copy; 2022 Ruri</p>
+    <footer class="footer">
+      <div class="footer-copy">
+        &copy; 2022 Ruri
+      </div>
     </footer>
   </body>
 </html>

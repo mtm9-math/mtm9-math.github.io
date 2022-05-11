@@ -2,11 +2,11 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>剰余の定理 - 高次方程式#1｜iを紡ぐ</title>
+    <title>剰余の定理_new - 高次方程式#1｜iを紡ぐ</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="../../">
-    <link rel="stylesheet" href="-css/master_new.css">
+    <link rel="stylesheet" href="../../-css/master.css">
+    <script src="../../-js/header.js"></script>
     <script src="https://kit.fontawesome.com/ef1d60642a.js" crossorigin="anonymous"></script>
     
     <script>
@@ -26,8 +26,8 @@
     <meta name="twitter:description" content="高次方程式入門｜iを紡ぐ" />
     <meta name="twitter:image" content="https://mtm9-math.github.io/-img/-thumb/hts1.png" />
   </head>
-  <body>
 
+  <body onload="header_href_prefix('../../')">
     <header class="header">
       <div class="header-container hz-container">
         <div class="site">
@@ -62,13 +62,17 @@
         </div>
         <span class="subtitle">高次方程式入門 #1</span>
         <h1>剰余の定理</h1>
-        <div id="p_and_n">
-          <a href="article/hts/2.html" id="next">#2 因数定理</a>
+        <div class="relation-nav">
+          <a href="" class="prev">あああああ</a>
+          <a href="2.html" class="next">#2 因数定理</a>
         </div>
         <div class="thumb">
-          <img src="-img/-thumb/hts1.png" alt="">
+          <img src="../../-img/-thumb/hts1.png" alt="">
         </div>
-        <div class="info">最終更新日：22.01.25</div>
+        <div class="info">
+          <p>最終更新日：22.01.25</p>
+          <p>執筆者：るり</p>
+        </div>
       </section>
 
       <section>
@@ -105,7 +109,7 @@
         <div class="dasoku">
           「列を揃える」を強調しているのは、むろん雑に書くと係数が0の項が出たときに悲惨なことが起こるからです。
         </div> -->
-        <!-- <div class="Q">
+        <!-- <div class="box box-q">
           確認問題
           クリックで答えを表示
         </div> -->
@@ -146,7 +150,7 @@
         <p>
           同じようにして、 $(x-2),\; (x-3)$ で割る計算を自分で一回やってみてください。
         </p>
-        <div class="Q">
+        <div class="box box-q">
            $x^4-6x^2+7x-6$ を $(x-2),\; (x-3)$ で割った商とあまりを求めよ
         </div>
         <p class="dasoku">
@@ -326,8 +330,8 @@
         <p>
           それでは最後にこのことを「きちんと」記述してみます。
         </p>
-        <div class="Q">
-          <div class="boxtitle">剰余の定理</div>
+        <div class="box box-q">
+          <div class="box_title">剰余の定理</div>
           <div class="center">
             $P(x)$ を $(x-\alpha)$ で割ったあまりは、 $\boldsymbol{P(\alpha)}$ に等しい。
           </div>
@@ -340,15 +344,15 @@
         <h2>確認問題</h2>
         <p><strong>飛ばさないで！！！！！！！</strong></p>
         <div class="dasoku">
-          <div class="boxtitle">例外</div>
+          <div class="box_title">例外</div>
           確認問題をやるのが嫌で記事を読む気を無くすんだったら飛ばして次の記事に行ってください。最終的にちゃんと問題集などで「自分で考える練習」ができればいいです。
         </div>
         <div>
           <h3>第1問</h3>
-          <div class="Q">
+          <div class="box box-q">
             $P(x)=x^3-2x^2+x+4$ を $(x-3)$ で割ったあまりを求めよ
           </div>
-          <div class="quiz">
+          <div class="box box-quiz">
             <input type="radio" name="q1" id="q1_a" class="a">
             <input type="radio" name="q1" id="q1_w" class="w">
             <div class="choice">
@@ -372,10 +376,10 @@
         </div>
         <div>
           <h3>第2問</h3>
-          <div class="Q">
+          <div class="box box-q">
              $P(x)=3x^3+6x^2-3$ を $(x+2)$ で割ったあまりを求めよ
           </div>
-          <div class="quiz">
+          <div class="box box-quiz">
             <input type="radio" name="q2" id="q2_a" class="a">
             <input type="radio" name="q2" id="q2_w" class="w">
             <div class="choice">
@@ -402,10 +406,10 @@
         </div>
         <div>
           <h3>第3問</h3>
-          <div class="Q">
+          <div class="box box-q">
              $P(x)=3x^3+2x^2-5x+9$ を $(3x-1)$ で割ったあまりを求めよ
           </div>
-          <div class="quiz">
+          <div class="box box-quiz">
             <input type="radio" name="q3" id="q3_a" class="a">
             <input type="radio" name="q3" id="q3_w" class="w">
             <div class="choice">
@@ -445,10 +449,10 @@
         </div>
         <div>
           <h3>第4問（チャレンジ問題。飛ばしてもいい）</h3>
-          <div class="Q">
+          <div class="box box-q">
              $P(x)$ を $(x-1)$ で割ると $5$ あまり、 $(x+7)$ で割ると $-3$ あまるという。 $P(x)$ を $(x-1)(x+7)$ で割ったあまりを求めよ。 
           </div>
-          <div class="quiz">
+          <div class="box box-quiz">
             <input type="radio" name="q4" id="q4_a" class="a">
             <input type="radio" name="q4" id="q4_w" class="w">
             <div class="choice">
@@ -524,11 +528,11 @@
         <p>
           お疲れ様でした。最後まで読んでいただいてありがとうございます。次回は剰余の定理の特別な場合である「因数定理」について紹介します。お楽しみに！
         </p>
-        <div class="articlelink">
-          <article>
-            <a href="article/hts/2.html">
-              <img src="-img/-thumb/hts2.png" alt="">
-              <div class="articlename">#2 因数定理</div>
+        <div class="articlecards-container">
+          <article class="articlecard">
+            <a href="2.html">
+              <img src="../../-img/-thumb/hts2.png" alt="">
+              <div class="articlecard_title">#2 因数定理</div>
             </a>
           </article>
         </div>
@@ -536,7 +540,7 @@
 
       <section>
         <div class="dasoku">
-          <div class="boxtitle">蛇足</div>
+          <div class="box_title">蛇足</div>
           <p>
             気づいてほしいのは、$\bigcirc$や$\big(\cdots\cdots\big)$や$\triangle$のように書くのと、 $\alpha,\;Q(x),\;r$ のように書くのでは、後者の方がいかにも数学っぽく感じられるかもしれないけれど、意味としては<strong>全く同じことを表している</strong>ということです。変数を表すのに $\Box$ と書こうが $x$ と書こうが何ら変わりはありません。中学校に入って $x$ や $y$ といった文字がでてきて戸惑う人は一定数いますが、小学校のときすでに「 $\Box$ を使った計算」をやっているはずです。
           </p>
@@ -576,8 +580,10 @@
         </div>
       </section>
     </main>
-    <footer>
-      <p id="copyright">&copy; 2022 Ruri</p>
+    <footer class="footer">
+      <div class="footer-copy">
+        &copy; 2022 Ruri
+      </div>
     </footer>
   </body>
 </html>

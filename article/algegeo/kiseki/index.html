@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>軌跡 - 図形と方程式｜iを紡ぐ</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../-css/master.css">
+    <script src="../../../-js/header.js"></script>
+    <script src="https://kit.fontawesome.com/ef1d60642a.js" crossorigin="anonymous"></script>
+    
+    <script>
+      MathJax = {
+        chtml: {
+        matchFontHeight: false
+        },
+        tex: {
+        inlineMath: [['$', '$']]
+        }
+      };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="#1 剰余の定理" />
+    <meta name="twitter:description" content="高次方程式入門｜iを紡ぐ" />
+    <meta name="twitter:image" content="https://mtm9-math.github.io/-img/-thumb/hts1.png" />
+  </head>
+
+  <body onload="header_href_prefix('../../../')">
+    <header class="header">
+      <div class="header-container hz-container">
+        <div class="site">
+          <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+        </div>
+        <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-times"></i>
+          <span class="sr-only">MENU</span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+            <li><a href="tips/index.html">Tips</a></li>
+            <li><a href="about/index.html">About $i^i$ </a></li>
+            <li><a href="mania/index.html">暇人編</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-img-container">
+          <img src="hero.jpg" alt="">
+        </div>
+        <div class="hero-text-container">
+          <h1 class="hero_title">
+            <span class="hero-subtitle">
+              もう「 $\boldsymbol t $ を消去」なんて言わない！
+            </span>
+            キセキを描く
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <main class="hz-container main">
+      <section>
+        <blockquote class="saying">
+          小・中学校で三角形や長方形の上を動き回って散々受験生を苦しめた 点 $ \mathrm P$、今度は<!-- 円の上や直線の上、2点を結ぶ線分の中点・内分点・外分点、極め付けは三角形の重心 --> $ xy $ 平面上を自由自在に動いて高校生を苦しめる。
+        </blockquote>
+      </section>
+      <section>
+        <h2>はじめに</h2>
+        <p>
+          誰しも一度は<strong>「計算で答えは出るけど何が起こっているかわからない」</strong>という気持ち悪い感覚を味わったことがあるでしょう。特に軌跡は「逆チェック」「除外点」という厄介な存在があり、計算の方ではたとえば
+          <span class="center">「 $ \mathrm P(x,y), \quad \mathrm Q(s,t) $ とおいて $ \mathrm Q $ の座標を $ x,y $ で表し、 $ \mathrm  Q $ の関係式に代入することで $ s,t $ を<strong>消去する</strong>」</span>
+          のようなちょっと<strong>軌跡特有の解き方(!?)</strong>があって、とりあえず「軌跡は計算でゴリ押せばいい、あとはおまじない程度に逆チェック」と思ってしまうのも無理はありません。
+        </p>
+      </section>
+
+      <section>
+        <h2>方程式の表す図形とは</h2>
+      </section>
+
+      <section>
+        <h2>軌跡を求める手順</h2>
+        <p>とりあえずは深く考えなくていいので、次の<span class="mark">手順</span>をみてください。</p>
+        <div class="box box-border">
+          <span class="box_title">軌跡を求める手順</span>
+          与えられた条件を満たす点 $\mathrm P $ の座標は次のように求められる。
+          <ol>
+            <li>点 $\mathrm P $ の座標を $ (X,Y) $ とおく</li>
+            <li>与えられた条件から $ X,Y $ の関係式を導く</li>
+            <li>2. の関係式を満たすような点の集まりがどんな図形になるか考える</li>
+            <li>3.の図形上の点は全て条件を満たすのか調べる　… <strong>“逆チェック”</strong></li>
+            <li>求める軌跡は、</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- <section>
+        <p>
+          さっそく例題に入りましょう。おそらく「軌跡」の単元で一番最初に見る問題です。
+        </p>
+        <div class="box box-q">
+          <span class="box_title">Q1</span>
+          2点 $ A(0,1), B(1,0) $ から等距離にある点Pの軌跡を求めよ
+        </div>
+        <p>
+          次の<span class="mark">解答(?)</span>をみてください。
+        </p>
+        <div class="box box-ans">
+          <span class="box_title">解答(?)</span>
+          点 $ P $ の座標を $ P(x,y) $ とすると、三平方の定理より
+          $$ AP=\sqrt{x^2+(y-1)^2} $$
+          $$ BP=\sqrt{(x-1)^2+y^2} $$
+           $ AP=BP $ より、
+          $$ \sqrt{x^2+(y-1)^2}=\sqrt{(x-1)^2+y^2} $$
+          両辺を2乗して
+          $$ x^2+(y-1)^2=(x-1)^2+y^2 $$
+          $$ -2y = -2x $$
+          $$ \therefore \boldsymbol{ y=x } \cdots\text{（答？）} $$
+        </div>
+        <p>
+          この解答には致命的な欠陥があり、下手をすると0点になりかねません。どこが問題なのでしょうか。
+        </p>
+        <div class="dasoku">
+          <strong>10秒でもいいので考えてからスクロールしてください。</strong>
+          <br>＊<br>＊<br>＊<br>＊<br>＊<br>＊<br>＊<br>＊<br>＊<br>＊
+        </div>
+        <p>
+          問題点は2つあります。
+        </p>
+        <p class="center">
+          <ol>
+            <li><strong>逆チェックを行っていない</strong></li>
+            <li><strong>答えが答えになっていない</strong></li>
+          </ol>
+        </p>
+        <p>
+          1.は気づいた人も多いのではないでしょうか。「軌跡」を習うときには耳にたこができるほど<strong>「逆チェックを忘れるな」</strong>と言われますね。これについては後で詳しく話します。
+        </p>
+        <p>
+          2.はどういうことでしょうか。問題文には「…点Pの<strong>軌跡を求めよ</strong>」とあります。点Pの軌跡というのは条件を満たすようにPが動き回るときに描く<strong>図形</strong>のことですから、「どんな図形を表すのか」を答える必要があります。上の<span class="mark">解答(?)</span>で答えとしている $ y=x $ は、ただの<strong>点Pの座標 $ \boldsymbol{(x,y)} $ の間に成り立つ関係式</strong>に過ぎません。
+        </p>
+        <div class="dasoku">
+          このあと詳しく説明するので、「あーそうなんだなー」程度に聞き流して大丈夫です。
+        </div>
+        <p>
+          得られた式 $ y=x $ は $ xy $ 平面上で直線を表す式ですから、正しくは
+          <div class="center">
+            <strong>直線</strong> $ y=x $ 
+          </div>
+          と答えるべきでした。
+        </p>
+      </section> -->
+      
+      <section>
+        <h2>
+          媒介変数表示
+          <sapn class="subheading">〜もう「 $ t $ を消去」なんて言わない〜</sapn>
+        </h2>
+        <p>
+          条件を $ X $ と $ Y $ だけの式で表すことができるときはさして難しくありません。問題がややこしくなるのは、 $ P $ の座標が $ a $ や $ t $ のような別の文字（<strong>媒介変数</strong>）で表されている場合です。
+        </p>
+        <p>
+          よく見る例題です。
+        </p>
+        <div class="box box-q">
+          <span class="box_title">
+            問題
+          </span>
+          放物線 $ y=x^2-4ax+3 $ の頂点を $ P $ とする。<br>
+           $ a $ が実数全体を動くとき、 $ P $ の軌跡を求めよ。
+        </div>
+      </section>
+    </main>
+  </body>

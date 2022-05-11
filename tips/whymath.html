@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
     <link rel="stylesheet" href="-css/master.css">
+    <script src="https://kit.fontawesome.com/ef1d60642a.js" crossorigin="anonymous"></script>
     
     <script>
       MathJax = {
@@ -21,35 +22,49 @@
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   </head>
   <body>
-    <header>
-      <div id="logo">
-        <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+
+    <header class="header">
+      <div class="header-container hz-container">
+        <div class="site">
+          <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+        </div>
+        <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-times"></i>
+          <span class="sr-only">MENU</span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+            <li><a href="tips/index.html">Tips</a></li>
+            <li><a href="about/index.html">About $i^i$ </a></li>
+            <li><a href="mania/index.html">暇人編</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav id="gbnav">
-        <ul>
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="article/index.html">記事一覧</a></li>
-          <li><a href="tips/index.html">Tips</a></li>
-          <li><a href="about/index.html">About $i^i$ </a></li>
-          <li><a href="mania/index.html">暇人編</a></li>
-        </ul>
-      </nav>
     </header>
-    <main>
-      <header>
-        <nav id="pankuzu">
+
+    <main class="hz-container main">
+
+      <section class="title">
+        <div class="title-pankuzu">
           <ul>
             <li><a href="tips/whymath.html">知ってたら苦労しないよ</a></li>
           </ul>
-        </nav>
+        </div>
         <h1>なぜ数学を学ぶのか</h1>
-      </header>
-      <p style="margin-bottom: 10rem;">私も知りません。</p>
-      <p>・・・というのはあまりにも無責任なので持論をどうぞ。人によって答えは違うと思います</p>
-      <div class="boxlink"><a href="tips/whymath2.html">なせ数学を学ぶのか（真面目な方）</a></div>
+      </section>
+      <section>
+        <p style="margin-bottom: 10rem;">私も知りません。</p>
+        <p>・・・というのはあまりにも無責任なので持論をどうぞ。人によって答えは違うと思います</p>
+        <a href="tips/whymath2.html" class="blocklink">なせ数学を学ぶのか（真面目な方）</a>
+      </section>
     </main>
-    <footer>
-      <p id="copyright">&copy; 2022 Ruri</p>
+    <footer class="footer">
+      <div class="footer-copy">
+        &copy; 2022 Ruri
+      </div>
     </footer>
   </body>
 </html>

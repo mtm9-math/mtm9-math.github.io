@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
     <link rel="stylesheet" href="-css/master.css">
+    <script src="https://kit.fontawesome.com/ef1d60642a.js" crossorigin="anonymous"></script>
     
     <script>
       MathJax = {
@@ -26,29 +27,39 @@
     <meta name="twitter:image" content="https://mtm9-math.github.io/-img/MTest.png" />
   </head>
   <body>
-    <header>
-      <div id="logo">
-        <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+
+    <header class="header">
+      <div class="header-container hz-container">
+        <div class="site">
+          <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+        </div>
+        <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-times"></i>
+          <span class="sr-only">MENU</span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+            <li><a href="tips/index.html">Tips</a></li>
+            <li><a href="about/index.html">About $i^i$ </a></li>
+            <li><a href="mania/index.html">暇人編</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav id="gbnav">
-        <ul>
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="article/index.html">記事一覧</a></li>
-          <li><a href="tips/index.html">Tips</a></li>
-          <li><a href="about/index.html">About $i^i$ </a></li>
-          <li><a href="mania/index.html">暇人編</a></li>
-        </ul>
-      </nav>
     </header>
-    <main>
-      <header>
-        <nav id="pankuzu">
+
+    <main class="hz-container main">
+
+      <section class="title">
+        <div class="title-pankuzu">
           <ul>
             <li><a href="index.html">TOP</a></li>
             <li><a href="article/index.html">記事一覧</a></li>
             <li><a href="article/22_02.html">学年末考査</a></li>
           </ul>
-        </nav>
+        </div>
         <div class="subtitle">
           <strong>試験中止</strong>
         </div>
@@ -56,14 +67,14 @@
         <div class="thumb">
           <img src="-img/MTest.png" alt="">
         </div>
-      </header>
+      </section>
     
       <p>分からないor不安な問題があれば関連記事をチェック！</p>
 
       <h3>高次方程式入門</h3>
 
-      <div class="Q">
-        <div class="boxtitle">Q1</div>
+      <div class="box box-q">
+        <div class="box_title">Q1</div>
         $P(x)=x^3-2x^2+x+4$ を $(x-3)$ で割ったあまりを求めよ
       </div>
       <div class="arrow_articlelink">
@@ -73,8 +84,8 @@
         </a>
       </div>
 
-      <div class="Q">
-        <div class="boxtitle">Q2</div>
+      <div class="box box-q">
+        <div class="box_title">Q2</div>
         $P(x)=x^3-3x^2-16x+48$ を有理数の範囲で因数分解せよ
       </div>
       <div class="arrow_articlelink">
@@ -84,8 +95,8 @@
         </a>
       </div>
 
-      <div class="Q">
-        <div class="boxtitle">Q3</div>
+      <div class="box box-q">
+        <div class="box_title">Q3</div>
          $x^4-x^3-2x^2+6x-4 = 0$ を解け
       </div>
       <div class="arrow_articlelink">
@@ -95,8 +106,8 @@
         </a>
       </div>
 
-      <div class="Q">
-        <div class="boxtitle">Q4</div>
+      <div class="box box-q">
+        <div class="box_title">Q4</div>
          $\omega$ を1の3乗根のうち虚数であるものの一つとして、 $\omega^2$ も1の3乗根であることを示せ。
       </div>
       <div class="arrow_articlelink">
@@ -108,7 +119,7 @@
 
 
       <h3>その他の記事</h3>
-      <div class="articlelink">
+      <div class="articlecards-container">
         <article>
           <a href="article/hts/t.html">
             <img src="-img/-thumb/htsT.png" alt="">
@@ -117,34 +128,34 @@
         <!-- <article>
           <a href="article/hts/1.html">
             <img src="-img/-thumb/hts1.png" alt="">
-            <div class="articlename">#1 剰余の定理</div>
+            <div class="articlecard_title">#1 剰余の定理</div>
           </a>
         </article>
         <article>
           <a href="article/hts/2.html">
             <img src="-img/-thumb/hts2.png" alt="">
-            <div class="articlename">#2 因数定理</div>
+            <div class="articlecard_title">#2 因数定理</div>
           </a>
         </article>
         <article>
           <a href="article/hts/3.html">
             <img src="-img/-thumb/hts3.png" alt="">
-            <div class="articlename">#3 方程式を解く</div>
+            <div class="articlecard_title">#3 方程式を解く</div>
           </a>
         </article>
         <article>
           <a href="article/hts/4.html">
             <img src="-img/-thumb/hts4.png" alt="">
-            <div class="articlename">#4 ω 〜1の3乗根〜</div>
+            <div class="articlecard_title">#4 ω 〜1の3乗根〜</div>
           </a>
         </article> -->
       </div>
       <h3>整数の性質</h3>
-      <div class="articlelink">
+      <div class="articlecards-container">
         <article>
           <a href="article/seisu/S.html">
             <img src="-img/-thumb/seisuS.png" alt="">
-            <div class="articlename">#S 応用編</div>
+            <div class="articlecard_title">#S 応用編</div>
           </a>
         </article>
       </div>
@@ -152,10 +163,10 @@
       
       <h2>試験情報</h2>
       <div class="dasoku">
-        <span class="boxtitle">免責事項</span>
+        <span class="box_title">免責事項</span>
         気をつけてはいますが、万一不備があった場合の責任は負いかねます。各自で一次情報を確認してください。
       </div>
-      <div class="box">
+      <div class="box box-border">
         <dl>
           <dt>試験日</dt>
             <dd><strong>試験中止</strong></dd>
@@ -179,8 +190,10 @@
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </section>
     </main>
-    <footer>
-      <p id="copyright">&copy; 2022 Ruri</p>
+    <footer class="footer">
+      <div class="footer-copy">
+        &copy; 2022 Ruri
+      </div>
     </footer>
   </body>
 </html>

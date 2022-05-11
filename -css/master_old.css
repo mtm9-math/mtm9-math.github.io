@@ -1,0 +1,344 @@
+@charset "utf-8";
+@import "header.css";
+@import "link.css";
+@import "quiz.css";
+
+:root {
+  --h2_color: rgb(255, 168, 188);
+  --arrowlink_color: rgb(19, 98, 255);
+  --blocklink_color: rgb(155, 215, 239);
+  --blocklink_color_hover: rgb(194, 233, 249);
+
+  --arrow: " ＞";
+  --font_r: "TsukuBRdGothic-Regular", "Hiragino Sans W1", "Hiragino Sans W3", "Hiragino Maru Gothic ProN", "YuGothic Medium", sans-serif;
+  --font_b: "TsukuBRdGothic-Bold", "Hiragino Sans W3", "YuGothic Medium", sans-serif;
+  --font_sans: sans-serif;
+  --font_serif: serif;
+}
+
+html {
+  font-size: 62.5%;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+body {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+
+  background-color: rgb(242, 241, 241);
+  color: black;
+  font-family: var(--font_sans);
+}
+main {
+  margin: auto;
+  padding: 2rem;
+
+  border-radius: 0.5rem;
+  background-color: rgb(255, 252, 249);
+}
+main > footer {
+  margin: auto;
+  margin-top: 3rem;
+  padding-top: 1rem;
+
+  border-top: 0.1rem solid gray;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+main > footer p {
+  line-height: 1.5rem;
+}
+main > footer .eq {
+  font-size: 1rem;
+}
+/* 脚注 */
+.ref a, .note a{
+  color: gray;
+}
+.ref a:hover, .note a:hover {
+  color: lightgray;
+}
+.note {
+  margin: 1rem auto;
+}
+.note a::after {
+  content: "　";
+}
+
+body > footer {
+  border-radius: 0.5rem;
+  padding: 0;
+  background-color: lightgray;
+  color: gray;
+}
+#copyright {
+  margin-right: 1rem;
+  text-align: right;
+}
+
+
+/*  
+---------------------
+  main > header 
+---------------------
+*/
+#pankuzu {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+#pankuzu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  list-style-position: outside;
+}
+#pankuzu li {
+  margin-right: 0.5rem;
+}
+#pankuzu ul :not(:last-child) ::after{
+  content: " /";
+}
+#pankuzu a {
+  color: gray;
+}
+.subtitle {
+  margin-bottom: 0;
+  color: rgb(60, 60, 60);
+  font-size: 0.9rem;
+}
+.kind {
+  width: fit-content;
+  padding: 0rem 0.3rem;
+
+  background-color:crimson;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  border-radius: 0.3rem;
+}
+
+h1 {
+  margin-top: 0;
+  border-bottom: 0.3rem solid skyblue;
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+#p_and_n {
+  /* Previous and Next */
+  display: flex;
+  flex-direction: row;
+}
+#previous::before {
+  content: "＜　";
+}
+#next::after {
+  content: "　＞";
+}
+#p_and_n a {
+  display: flexbox;
+  margin-right: 1rem;
+  padding: 0 0.5rem;
+  background-color: var(--blocklink_color);
+  font-size: 0.9rem;
+}
+.tweet {
+  margin-top: 2rem;
+  margin-right: 1rem;
+  text-align: right;
+}
+.info {
+  text-align: right;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  color: rgb(60, 60, 60);
+  font-size: 0.9rem;
+}
+/* サムネイル */
+.thumb {
+  margin: 1rem;
+  text-align: center;
+}
+.thumb img {
+  margin: 0;
+  width: 70%;
+  max-width: 40rem;
+  min-width: min(30rem, 100%);
+}
+
+
+
+h2 {
+  margin-top: 3rem;
+  border-left: 0.3rem solid rgb(255, 168, 188);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: fit-content;
+
+  background-color: rgb(251, 215, 223);
+
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+
+
+h3 {
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 1rem;
+  
+  width: fit-content;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-bottom: 0.2rem solid lightgray;
+}
+h4 {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.center {
+  text-align: center;
+}
+
+
+
+/* ブロックレベル */
+
+
+.article {
+  margin: 1rem 0;
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+  background-color: rgb(255, 244, 219);
+}
+.article__title {
+  width: fit-content;
+  margin: 0;
+  padding: 0.5rem 1rem;
+
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(201, 235, 247);
+
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+.article__title::before {
+  color: rgb(130, 180, 255);
+  content: "●　";
+}
+
+
+.saying {
+  font-family: serif;
+  font-weight: bolder;
+}
+.saying cite {
+  display: block;
+  text-align: right;
+  font-style: normal;
+}
+.saying cite::before {
+  content: "──";
+}
+
+.Q,.A {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  overflow-x: auto;
+}
+.Q {
+  background-color: rgb(192, 232, 246);
+}
+.A {
+  background-color: lightpink;
+}
+.eq {
+  margin: 1rem auto;
+  text-align: center;
+}
+#matome ul li {
+  margin: 1rem 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+figure img {
+  margin: 0;
+  width: 70%;
+  max-width: 20rem;
+}
+figure.bigfig img {
+  margin: 0;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.dasoku {
+  padding: 0.2rem 0.2rem;
+  width: fit-content;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  background-color: rgb(222, 222, 222);
+}
+.dasoku p {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+/* 囲みボックス */
+.box {
+  margin: 1rem;
+  padding: 0 1rem;
+  border: 0.3rem solid powderblue;
+}
+.box_title {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.box_title::after {
+  content: "　";
+}
+
+dt {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+dt:not(:last-child) {
+  margin-top: 1rem;
+}
+dd {
+  margin: 0;
+}
+
+
+
+
+
+
+/* Inline */
+strong {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+} strong::before {
+  content: " ";
+} strong::after {
+  content: " ";
+}

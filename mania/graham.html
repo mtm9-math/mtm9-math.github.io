@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
     <link rel="stylesheet" href="-css/master.css">
+    <script src="https://kit.fontawesome.com/ef1d60642a.js" crossorigin="anonymous"></script>
     
     <script>
       MathJax = {
@@ -22,27 +23,35 @@
 
   </head>
   <body>
-    <header>
-      <div id="logo">
-        <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+
+    <header class="header">
+      <div class="header-container hz-container">
+        <div class="site">
+          <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+        </div>
+        <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-times"></i>
+          <span class="sr-only">MENU</span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+            <li><a href="tips/index.html">Tips</a></li>
+            <li><a href="about/index.html">About $i^i$ </a></li>
+            <li><a href="mania/index.html">暇人編</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav id="gbnav">
-        <ul>
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="article/index.html">記事一覧</a></li>
-          <li><a href="tips/index.html">Tips</a></li>
-          <li><a href="about/index.html">About $i^i$ </a></li>
-          <li><a href="mania/index.html">暇人編</a></li>
-        </ul>
-      </nav>
     </header>
-    <main>
-      <nav id="pankuzu">
+    <main class="hz-container main">
+      <div class="title-pankuzu">
         <ul>
           <li><a href="index.html">TOP</a></li>
           <li><a href="mania/index.html">暇人編</a></li>
         </ul>
-      </nav>
+      </div>
       <h1>巨大数入門　〜グラハム数を理解する〜</h1>
       <div class="info">執筆者：kou</div>
       <div class="info">最終更新日：22.3.19</div>
@@ -93,7 +102,7 @@
       <p>
         これまでのことをまとめると、指数タワーにおいては、数を大きくする方法の優劣は以下のように言える。
       </p>
-      <div class="Q">
+      <div class="box box-q">
         <strong>タワーを高くする ≫ タワーの上の方の数を大きくする ＞ タワーの下の方の数を大きくする</strong>
       </div>
       
@@ -101,8 +110,8 @@
       <p>
         さて、巨大数界最弱の指数タワーをマスターしたところで、次は巨大数界で2番目に弱いテトレーションについて考えていこう。先の議論で、指数タワーを使って数を効率的に大きくするためにはタワーを高くすることが最もよいとわかった。ということは、タワーを効率的に高くすることができればさらに大きい数を作ることができるのではないか、という考えで作られたのがテトレーションである。テトレーションの定義は以下のようなものである。
       </p>
-      <div class="Q">
-        <span class="boxtitle">テトレーション</span>
+      <div class="box box-q">
+        <span class="box_title">テトレーション</span>
         <p>
           $ a $ テトレーション $ b $ とは、 $ a $ を $ b $ 個使ってタワーを作ったもの。
           $\huge\boldsymbol{ {}^b a }$  と表す。
@@ -161,7 +170,7 @@
       
       <h3>定義</h3>
       <p>クヌースの矢印表記はその名の通り矢印 $ \uparrow $ を使って表される演算である。この演算の定義は以下のようなものである。</p>
-      <div class="Q">\begin{aligned}
+      <div class="box box-q">\begin{aligned}
         \large\boldsymbol{a \uparrow b}
         &= \large{a^b}\\\\
 
@@ -242,7 +251,7 @@
         $
         と書くのは煩雑なので、 $ \uparrow $ を $ n $ 個並べたものを $ a \uparrow^n b $ で表す。
       </p>
-      <div class="Q">$$
+      <div class="box box-q">$$
         a \uparrow^n b = 
         a
         \underbrace{
@@ -256,7 +265,7 @@
       <p>
         この記法によると、 $ a \uparrow^n b $ は、
       </p>
-      <div class="Q">$$
+      <div class="box box-q">$$
         a \uparrow^n b =
         \underbrace{
           a \uparrow^{n-1} a \uparrow^{n-1}  a \uparrow^{n-1} \cdots \uparrow^{n-1} a \uparrow^{n-1} a
@@ -290,14 +299,14 @@
       </p>
       <p>
         ここまでくればグラハム数を理解するのにあと一歩のところであるが、ここで恒例の、どうすれば効率的に数を大きくできるか問題に挑戦しよう。選択肢は3つ。
-        <ul>
+        <ul class="list">
           <li>矢印の前の数字を大きくする</li>
           <li>矢印の後の数字を大きくする</li>
           <li>矢印の数を増やす</li>
         </ul>
         である。とはいえ、上の計算を見るとどれが一番よいかはなんとなくわかるだろう。正解は、
       </p>
-      <div class="Q"><strong>矢印の数を増やす ≫ 矢印の後の数字を増やす ＞ 矢印の前の数字を増やす</strong></div>
+      <div class="box box-q"><strong>矢印の数を増やす ≫ 矢印の後の数字を増やす ＞ 矢印の前の数字を増やす</strong></div>
       <p>である。</p>
       
 
@@ -359,7 +368,7 @@
         $$</div>
         で表す。同じように、 $ f(f(f(x))) $ を $ f^3(x) $ で表す。
       </p>
-      <div class="Q">
+      <div class="box box-q">
         <div class="eq">$$
           \large
           f^n(x)=
@@ -376,7 +385,7 @@
       <p>
         グラハム数とは、<strong>グラハム問題</strong>という問題を成立させる解の上限として発表された数であり、数学の証明において用いられた数の中で最大の数である。それは、以下のような数である。
       </p>
-      <div class="Q center">
+      <div class="box box-q center">
         <strong>$\boldsymbol{G(n)=3\uparrow^n3 }$ として、 $\boldsymbol{ G^{64}(4) }. $ </strong>
       </div>
       
@@ -457,8 +466,8 @@
       <p>
         こんな記事を最後まで読んでくれたあなたのために、一つ問題を用意した。すでに習った数学とこの記事の情報だけで解くことができるから、時間があったら挑戦してみてほしい。ネットにはこの問題の答えがあるので、どうしてもわからなかったら見てみると良い。
       </p>
-      <div class="Q">
-        <span class="boxtitle">問題</span>
+      <div class="box box-q">
+        <span class="box_title">問題</span>
         グラハム数を十進数で表すとその一桁目の数字はいくつ？
       </div>
       
@@ -482,8 +491,10 @@
         </p>
       </footer>
     </main>
-    <footer>
-      <p id="copyright">&copy; 2022 Ruri</p>
+    <footer class="footer">
+      <div class="footer-copy">
+        &copy; 2022 Ruri
+      </div>
     </footer>
   </body>
 </html>

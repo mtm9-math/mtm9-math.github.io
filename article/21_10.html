@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
     <link rel="stylesheet" href="-css/master.css">
+    <script src="https://kit.fontawesome.com/ef1d60642a.js" crossorigin="anonymous"></script>
     
     <script>
       MathJax = {
@@ -21,32 +22,40 @@
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   </head>
   <body>
-    <header>
-      <div id="logo">
-        <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+
+    <header class="header">
+      <div class="header-container hz-container">
+        <div class="site">
+          <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+        </div>
+        <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-times"></i>
+          <span class="sr-only">MENU</span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+            <li><a href="tips/index.html">Tips</a></li>
+            <li><a href="about/index.html">About $i^i$ </a></li>
+            <li><a href="mania/index.html">暇人編</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav id="gbnav">
-        <ul>
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="article/index.html">記事一覧</a></li>
-          <li><a href="tips/index.html">Tips</a></li>
-          <li><a href="about/index.html">About $i^i$ </a></li>
-          <li><a href="mania/index.html">暇人編</a></li>
-        </ul>
-      </nav>
     </header>
-    <main>
-      <nav id="pankuzu">
+    <main class="hz-container main">
+      <div class="title-pankuzu">
         <ul>
           <li><a href="index.html">TOP</a></li>
           <li><a href="article/index.html">記事一覧</a></li>
           <li><a href="article/21_10.html">2学期中間考査</a></li>
         </ul>
-      </nav>
+      </div>
       <h1>2学期中間考査</h1>
 
       <h2>試験情報</h2>
-      <div class="box">
+      <div class="box box-border">
         <h3>数学I</h3>
         <ul>
           <li>三角比・三角関数</li>
@@ -58,13 +67,15 @@
       </div>
 
       <h2>関連ページ</h2>
-      <ul class="arrowlink">
+      <ul class="arrowlink-list">
         <li><a href="basic/sankaku/index.html">三角関数入門</a></li>
         <li><a href="article/-archive/21/sankaku1.pdf">三角函数の教科書（PDF、追試に向けて作った）</a></li>
       </ul>
     </main>
-    <footer>
-      <p id="copyright">&copy; 2022 Ruri</p>
+    <footer class="footer">
+      <div class="footer-copy">
+        &copy; 2022 Ruri
+      </div>
     </footer>
   </body>
 </html>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../../">
     <link rel="stylesheet" href="-css/master.css">
+    <script src="https://kit.fontawesome.com/ef1d60642a.js" crossorigin="anonymous"></script>
     
     <script>
       MathJax = {
@@ -26,29 +27,39 @@
     <meta name="twitter:image" content="https://mtm9-math.github.io/-img/-thumb/hts2.png" />
   </head>
   <body>
-    <header>
-      <div id="logo">
-        <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+
+    <header class="header">
+      <div class="header-container hz-container">
+        <div class="site">
+          <a href="index.html"><img src="-img/toplogo.svg" alt="iを紡ぐ"></a>
+        </div>
+        <button class="navbtn" onclick="document.querySelector('html').classList.toggle('open')">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-times"></i>
+          <span class="sr-only">MENU</span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+            <li><a href="tips/index.html">Tips</a></li>
+            <li><a href="about/index.html">About $i^i$ </a></li>
+            <li><a href="mania/index.html">暇人編</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav id="gbnav">
-        <ul>
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="article/index.html">記事一覧</a></li>
-          <li><a href="tips/index.html">Tips</a></li>
-          <li><a href="about/index.html">About $i^i$ </a></li>
-          <li><a href="mania/index.html">暇人編</a></li>
-        </ul>
-      </nav>
     </header>
-    <main>
-      <header>
-        <nav id="pankuzu">
+
+    <main class="hz-container main">
+
+      <section class="title">
+        <div class="title-pankuzu">
           <ul>
             <li><a href="index.html">TOP</a></li>
             <li><a href="article/index.html">記事一覧</a></li>
             <li><a href="article/hts/1.html">高次方程式入門</a></li>
           </ul>
-        </nav>
+        </div>
         <span class="subtitle">高次方程式入門 #2</span>
         <h1>因数定理</h1>
         <div id="p_and_n">
@@ -59,12 +70,12 @@
         <div class="thumb">
           <img src="-img/-thumb/hts2.png" alt="">
         </div>
-      </header>
+      </section>
 
       <section>
         <h2>おさらい</h2>
-        <div class="Q">
-          <div class="boxtitle">剰余の定理</div>
+        <div class="box box-q">
+          <div class="box_title">剰余の定理</div>
           <div class="center">
             $P(x)$ を $(x-\alpha)$ で割ったあまりは、 $\boldsymbol{P(\alpha)}$ に等しい。
           </div>
@@ -92,8 +103,8 @@
       <section>
         <h2>因数定理</h2>
         <p>ということで、剰余の定理の特別な場合として、次の因数定理が成り立ちます。</p>
-        <div class="Q">
-          <div class="boxtitle">因数定理</div>
+        <div class="box box-q">
+          <div class="box_title">因数定理</div>
           <div class="center">
             $P(x)$ が $(x-\alpha)$ で割り切れる $\boldsymbol{\Leftrightarrow P(\alpha)=0}$ 
           </div>
@@ -102,7 +113,7 @@
       <section>
         <h2>ものすごく面倒な因数分解</h2>
         <p>因数定理を使うと、3次式以上の式が因数分解できるようになることがあります。</p>
-        <div class="Q">
+        <div class="box box-q">
           $P(x)=x^3-2x^2+2x+5$ を因数分解する。
         </div>
         <p>
@@ -190,7 +201,7 @@
         <h3> $\alpha$ の候補</h3>
         <p>
           一般に、 $P(\alpha)=0$ となるような $\alpha$ の候補は、
-          <div class="Q">
+          <div class="box box-q">
             $$\boldsymbol{
               \pm\dfrac{|\bf{定数項}|\bf{の約数}}{|\bf{最高次係数}|\bf{の約数}}
             }$$
@@ -295,8 +306,8 @@
         <h2>まとめ</h2>
 
         <h3>因数定理</h3>
-        <div class="Q">
-          <div class="boxtitle">因数定理</div>
+        <div class="box box-q">
+          <div class="box_title">因数定理</div>
           <div class="center">
             $P(x)$ が $(x-\alpha)$ で割り切れる $\boldsymbol{\Leftrightarrow P(\alpha)=0}$ 
           </div>
@@ -304,7 +315,7 @@
 
 
         <h3> $\alpha$ の候補</h3>
-        <div class="Q">
+        <div class="box box-q">
           $P(\alpha)=0$ となるような $\alpha$ の候補は、
           $$\boldsymbol{
             \pm\dfrac{|\bf{定数項}|\bf{の約数}}{|\bf{最高次係数}|\bf{の約数}}
@@ -313,7 +324,7 @@
         </div>
 
         <h3>因数分解</h3>
-        <div class="Q">
+        <div class="box box-q">
           <p>筆算なんてせずにいきなり書いて係数を調整</p>
           <figure>
             <img src="-img/-thumb/hts2/5.jpg" alt="">
@@ -325,15 +336,15 @@
         <h2>確認問題</h2>
         <p><strong>飛ばさないで！！！！！！！</strong></p>
         <div class="dasoku">
-          <div class="boxtitle">例外</div>
+          <div class="box_title">例外</div>
           確認問題をやるのが嫌で記事を読む気を無くすんだったら飛ばして次の記事に行ってください。最終的にちゃんと問題集などで「自分で考える練習」ができればいいです。
         </div>
         <div>
           <h3>第1問</h3>
-          <div class="Q">
+          <div class="box box-q">
              $P(x)=x^3-3x^2+4$ を有理数の範囲で因数分解せよ
           </div>
-          <div class="quiz">
+          <div class="box box-quiz">
             <input type="radio" name="q1" id="q1_a" class="a">
             <input type="radio" name="q1" id="q1_w" class="w">
             <div class="choice">
@@ -386,10 +397,10 @@
         </div>
         <div>
           <h3>第2問</h3>
-          <div class="Q">
+          <div class="box box-q">
              $P(x)=x^3-3x^2-16x+48$ を有理数の範囲で因数分解せよ
           </div>
-          <div class="quiz">
+          <div class="box box-quiz">
             <input type="radio" name="q2" id="q2_a" class="a">
             <input type="radio" name="q2" id="q2_w" class="w">
             <div class="choice">
@@ -433,10 +444,10 @@
         </div>
         <div>
           <h3>第3問（最後）</h3>
-          <div class="Q">
+          <div class="box box-q">
              $P(x)=8x^3-12x^2-2x+3$ を有理数の範囲で因数分解せよ
           </div>
-          <div class="quiz">
+          <div class="box box-quiz">
             <input type="radio" name="q3" id="q3_a" class="a">
             <input type="radio" name="q3" id="q3_w" class="w">
             <div class="choice">
@@ -512,7 +523,7 @@
 
       <section>
         <div class="dasoku">
-          <div class="boxtitle">注意</div>
+          <div class="box_title">注意</div>
           ここまで因数定理を使って3次式を因数分解してきましたが、一つ覚えておいてほしいのは<strong>「多項式がいつも因数分解できるとは限らない」</strong>ということです。実際に世の中にある多項式は因数分解できないものばかりです。因数分解ができるのはすごく恵まれた、レアなケースなのです。でも、心配しないで大丈夫。「因数分解せよ」と問題が出されたらそれは因数分解できる多項式に決まっています。ただ、「私たちが高校で扱っているものは、すごく特別なケースなんだ、いつもうまくいくわけではないんだ」ということを心に留めておいてください。
         </div>
       </section>
@@ -520,11 +531,11 @@
       <section>
         <h2>次回予告</h2>
         <p>実際に方程式解くよ</p>
-        <div class="articlelink">
-          <article>
+        <div class="articlecards-container">
+          <article class="articlecard">
             <a href="article/hts/3.html">
               <img src="-img/-thumb/hts3.png" alt="">
-              <div class="articlename">#3 方程式を解く</div>
+              <div class="articlecard_title">#3 方程式を解く</div>
             </a>
           </article>
         </div>
@@ -573,8 +584,10 @@
         </p>
       </footer>
     </main>
-    <footer>
-      <p id="copyright">&copy; 2022 Ruri</p>
+    <footer class="footer">
+      <div class="footer-copy">
+        &copy; 2022 Ruri
+      </div>
     </footer>
   </body>
 </html>
