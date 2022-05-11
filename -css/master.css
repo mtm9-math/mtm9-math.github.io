@@ -120,7 +120,7 @@ img {
 .hero-subtitle {
   display: block;
   font-size: 1rem;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 
@@ -259,6 +259,34 @@ img {
 .info dd {
   display: inline;
 } */
+.author-card {
+  margin-left: auto;
+  width: fit-content;
+  height: fit-content;
+}
+.author-card a {
+  padding: 10px 20px;
+  width: fit-content;
+  border: #999 solid 1px;
+  border-radius: 5px;
+  background-color: #eee;
+  display: flex;
+}
+.author-card img {
+  height: 3.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.author {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.author_title {
+  display: block;
+  color: #444;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
 
 
 
@@ -324,7 +352,7 @@ img {
 .saying {
   margin: 0;
   font-family: serif;
-  font-weight: bolder;
+  font-weight: bold;
   line-height: 2rem;
 }
 .saying cite {
@@ -431,7 +459,7 @@ strong {
   padding: 0 0.5rem;
   background-color: #dbe4e7;
   border-radius: 0.3rem;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 /* 場所どうする？てか綺麗にしなさい */
@@ -442,7 +470,7 @@ strong {
   background-color: #ffcc56;
   border: rgb(255, 255, 255) solid 1px;
   border-radius: 0.3rem;
-  font-weight: bolder;
+  font-weight: bold;
   color: #333;
 }
 
@@ -508,7 +536,7 @@ strong {
 }
 .articlecard_title {
   margin: 1rem 0;
-  font-weight: bolder;
+  font-weight: bold;
   text-align: center;
   line-height: 1.5rem;
 }

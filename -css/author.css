@@ -1,4 +1,4 @@
-.author {
+.author_div {
   display: grid;
   grid-template-rows: 1rem max-content;
   grid-template-columns: max-content 1fr;
