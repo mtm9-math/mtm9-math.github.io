@@ -4,7 +4,7 @@
 
 :root {
   /* --h2_color: rgb(255, 168, 188); */
-  --arrowlink_color: rgb(19, 98, 255);
+  --link-arrow_color: rgb(19, 98, 255);
   --blocklink_color: rgb(155, 215, 239);
   --blocklink_color_hover: rgb(194, 233, 249);
 
@@ -69,7 +69,8 @@ img {
 
 
 
-/* ヒーロー */
+/* ヒーロー
+================== */
 .hero-container {
   height: 250px;
   display: grid;
@@ -93,13 +94,6 @@ img {
 
   opacity: 70%;
 }
-.hero-container-link img {
-  transition: 0.5s opacity, 0.5s transform;
-}
-.hero-container-link:hover img {
-  opacity: 40%;
-  transform: scale(1.2,1.2);
-}
 .hero-text-container {
   width: fit-content;
   height: fit-content;
@@ -112,13 +106,10 @@ img {
   justify-content: center;
   justify-items: right; */
 }
-.hero-text-container i {
-  margin-left: 1rem;
-  font-size: 3rem;
-}
 .hero_title {
   padding: 5px 30px;
   width: fit-content;
+  border-radius: 10px;
   background-color: rgba(251, 223, 150, 0.839);
 
   display: grid;
@@ -182,6 +173,8 @@ img {
   margin-top: 2rem;
   margin-bottom: -3rem;
 }
+
+/* パンくず */
 .title-pankuzu {
   margin-bottom: 1rem;
   font-size: 0.9rem;
@@ -204,6 +197,7 @@ img {
 .title-pankuzu a {
   color: gray;
 }
+
 .subtitle {
   margin-bottom: 0;
   color: rgb(60, 60, 60);
@@ -235,7 +229,7 @@ img {
   margin-right: 1rem;
   padding: 0 0.5rem;
   /* background-color: var(--blocklink_color); */
-  color: var(--arrowlink_color);
+  color: var(--link-arrow_color);
   font-size: 0.9rem;
 }
 .relation-nav a:hover {
@@ -294,39 +288,11 @@ img {
   display: block;
   font-size: 1rem;
 }
-.main p {
-  line-height: 2rem;
-}
 .list {
   margin-left: 1rem;
   list-style: revert;
 }
 
-.mark {
-  display: inline-block;
-  margin: 0 0.5rem;
-  padding: 0 0.5rem;
-  background-color: #dbe4e7;
-  border-radius: 0.3rem;
-  font-weight: bolder;
-}
-
-/* 場所どうする？てか綺麗にしなさい */
-.state {
-  display: inline-block;
-  margin: 0 0.5rem;
-  padding: 0 0.5rem;
-  background-color: #ffd0b4;
-  border-radius: 0.3rem;
-  font-weight: bolder;
-}
-
-/* 削除したい */
-.center {
-  margin: 1rem;
-  display: block;
-  text-align: center;
-}
 
 
 .dasoku {
@@ -347,8 +313,13 @@ img {
 
 
 
-/* ブロックレベル */
 
+/* 削除したい */
+.center {
+  margin: 1rem;
+  display: block;
+  text-align: center;
+}
 
 .saying {
   margin: 0;
@@ -385,7 +356,7 @@ img {
 .box-q {
   background-color: rgb(201, 241, 255);
 }
-.box-ans {
+.box-a {
   /* background-color: rgb(255, 221, 226); */
   background-color: rgb(198, 254, 211);
 }
@@ -434,11 +405,9 @@ dd {
 }
 
 
+/* インライン
+================== */
 
-
-
-
-/* Inline */
 strong {
   font-family: sans-serif;
   font-style: normal;
@@ -449,16 +418,47 @@ strong {
   content: " ";
 }
 
+.img-inline {
+  display: inline-block;
+  height: 1em;
+  margin: 0 0.5rem;
+}
 
-/* リンク */
-.arrowlink {
-  color: var(--arrowlink_color);
+
+.mark {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0 0.5rem;
+  background-color: #dbe4e7;
+  border-radius: 0.3rem;
+  font-weight: bolder;
+}
+
+/* 場所どうする？てか綺麗にしなさい */
+.state {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0 0.5rem;
+  background-color: #ffcc56;
+  border: rgb(255, 255, 255) solid 1px;
+  border-radius: 0.3rem;
+  font-weight: bolder;
+  color: #333;
+}
+
+
+
+
+/* リンク
+=====================*/
+.link-arrow {
+  color: var(--link-arrow_color);
   text-decoration: none;
 }
-.arrowlink::after {
+.link-arrow::after {
   content: var(--arrow);
 }
-.arrowlink:hover {
+.link-arrow:hover {
   text-decoration: underline;
 }
 
@@ -494,10 +494,14 @@ strong {
   }
 }
 .articlecard {
-  border-bottom: solid #aaa 1px;
+  /* background-color: rgb(254, 243, 228); */
+  background-color: rgb(230, 237, 255);
+  border: solid #aaa 1px;
+  overflow: hidden;
+  transition: background-color 0.5s;
 }
 .articlecard:hover {
-  background-color: #ddd;
+  background-color: rgb(208, 218, 255);
 }
 .articlecard a {
   display: block;
@@ -512,4 +516,8 @@ strong {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   width: 100%;
+  transition: transform 0.5s;
+}
+.articlecard:hover img {
+  transform: scale(1.2,1.2);
 }

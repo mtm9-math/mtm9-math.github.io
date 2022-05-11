@@ -1,0 +1,38 @@
+/* top.css */
+
+.top-section {
+  padding: 3rem 0;
+}
+.top-section:nth-child(even) {
+  background-color: #f3f1ed;
+
+}
+.top-section-heading {
+  position: absolute;
+  top: -4.2rem;
+  font-size: 1.8rem;
+}
+/* レイアウト崩れ防止 */
+.history dt:first-child {
+  margin-top: 0;
+}
+
+/* ここだけ特殊 */
+.hero {
+  padding: 0;
+}
+
+.hero-container-link {
+  border: 2px lightblue solid;
+}
+
+.hero-container-link img {
+  transition: transform 0.5s;
+}
+.hero-container-link:hover img {
+  transform: scale(1.2,1.2);
+}
+.hero-text-container i {
+  margin-left: 1rem;
+  font-size: 3rem;
+}
