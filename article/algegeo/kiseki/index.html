@@ -180,15 +180,30 @@
         <p>
           とりあえずは深く考えなくていいので、次の<span class="mark">軌跡を求める手順</span>をみてください。
         </p>
-        <div class="box box-border">
+        <div class="box box-border" id="tejun">
           <span class="box_title">軌跡を求める手順</span>
           与えられた条件をみたす点 $\mathrm P $ の軌跡は次のように求められる。
           <ol>
-            <li><a href="#tejun1" class="link">点 $\mathrm P $ の座標を $ (X,Y) $ とおく</a></li>
-            <li>与えられた条件から $ X,Y $ の関係式を導く</li>
-            <li>2. の関係式をみたすような点の集まりがどんな図形になるか考える</li>
-            <li>3.の図形上の点は全て条件をみたすのか調べる　… <strong>“逆チェック”</strong></li>
-            <li>求める軌跡は、3.の図形から、条件をみたさない点を除いたもの</li>
+            <li><a href="#tejun1">
+              点 $\mathrm P $ の座標を $ (X,Y) $ とおく
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </a></li>
+            <li><a href="#tejun2">
+              与えられた条件から $ X,Y $ の関係式を導く
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </a></li>
+            <li><a href="#tejun3">
+              2. の関係式をみたすような点の集まりがどんな図形になるか考える
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </a></li>
+            <li><a href="#tejun4">
+              3.の図形上の点は全て条件をみたすのか調べる　… <strong>“逆チェック”</strong>
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </a></li>
+            <li><a href="#tejun5">
+              求める軌跡は、3.の図形から、条件をみたさない点を除いたもの
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </a></li>
           </ol>
         </div>
         <p>
@@ -202,7 +217,7 @@
         <div class="box box-a">
           <span class="box_title">解答例</span>
           <p>
-            <span class="highlight">点 $\mathrm P $ の座標を $\mathrm P(X,Y) $ とする</span>と（ <a href="#tejun1" class="link link-noarrow">①</a> ）、三平方の定理より
+            <span class="highlight" id="tejun1_ans">点 $\mathrm P $ の座標を $\mathrm P(X,Y) $ とする</span>と（ <a href="#tejun1" class="link link-noarrow">…①</a> ）、三平方の定理より
             $$ \mathrm{AP}^2=X^2+(Y-1)^2 $$
             $$ \mathrm{BP}^2=(X-1)^2+Y^2 $$
 
@@ -210,10 +225,13 @@
             \begin{align}
               X^2+(Y-1)^2 &= (X-1)^2+Y^2 \\
               -2Y &= -2X \\
-              Y &= X \; \cdots\textbf{②}
+              Y &= X
             \end{align}
+            <div class="right" id="tejun2_ans">
+              （ <a href="#tejun2" class="link link-noarrow">…②</a> ）
+            </div>
 
-            したがって、<span class="highlight">点 $ \mathrm P $ は直線 $ y=x $ 上にある</span>（③）。
+            したがって、<span class="highlight" id="tejun3_ans">点 $ \mathrm P $ は直線 $ y=x $ 上にある</span>（<a href="#tejun3" class="link link-noarrow">…③</a>）。
           </p>
           <hr>
           <p>
@@ -234,43 +252,136 @@
             $$ \mathrm{AP} = \mathrm{BP} $$
           </p>
           <p>
-            よって<span class="highlight">点 $ \mathrm{P} $ は（ $ \mathrm{A} $ および $ \mathrm{B} $ からの距離が等しいという）条件を満たす</span>（…④）。
+            よって<span class="highlight" id="tejun4_ans">点 $ \mathrm{P} $ は（ $ \mathrm{A} $ および $ \mathrm{B} $ からの距離が等しいという）条件を満たす</span>（<a href="#tejun4" class="link link-noarrow">…④</a>）。
           </p>
           <p>
             以上より、求める軌跡は
             <div class="center">
-              <span class="highlight">直線 $ y=x $ …（⑤ 答）</span>
+              <span class="highlight" id="tejun5_ans"><strong>直線 $ \boldsymbol{y=x} $</strong></span>
+              <div class="right">
+                <a href="#tejun5" class="link link-noarrow">（…⑤）</a>
+              </div>
             </div>
           </p>
         </div>
 
-        <h3 id="tejun1">1. 点 $ \mathrm P $ の座標を $ (X,Y) $ とおく</h3>
-        <p>
-          書いてあるとおり $ \mathrm P(X,Y) $ とおくだけなのですが、ここでひとつ注意してほしいことがあります。よく教科書なんかではこれを $ \mathrm P(x,y) $ のように小文字でおいていませんか？
-        </p>
-        <p>
-          これはだめではないのですが、あまりよろしくないです。それは実際に点 $ \mathrm P $ を座標平面上に書いてみるとわかります。
-        </p>
-        <p>
-          これは座標平面です。
-          <figure><img src="" alt="2直線だけ記入"></figure>
-          何かが足りません。おっと、原点 $ \mathrm O $ が抜けていました。
-          <figure><img src="" alt="原点を記入"></figure>
-          まだ足りません。横軸のラベル $ x $ と縦軸のラベル $ y $ を書く必要があります。
-          <figure><img src="" alt="xyも記入した"></figure>
+        <section id="tejun1">
+          <h3>1. 点 $ \mathrm P $ の座標を $ (X,Y) $ とおく</h3>
+          <div class="right">
+            <a href="#tejun" class="blocklink link-noarrow">
+              <i class="fa-solid fa-backward-step"></i> 手順
+            </a>
+            <a href="#tejun1_ans" class="blocklink link-noarrow">
+              <i class="fa-solid fa-backward-step"></i> 解答
+            </a>
+          </div>
+          <p>
+            書いてあるとおり $ \mathrm P(X,Y) $ とおくだけなのですが、ここでひとつ注意してほしいことがあります。よく教科書なんかではこれを $ \mathrm P(x,y) $ のように小文字でおいていませんか？
+          </p>
+          <p>
+            これはだめではないのですが、あまりよろしくないです。それは実際に点 $ \mathrm P $ を座標平面上に書いてみるとわかります。
+          </p>
+          <p>
+            これは座標平面です。
+            <figure><img src="" alt="2直線だけ記入"></figure>
+            何かが足りません。おっと、原点 $ \mathrm O $ が抜けていました。
+            <figure><img src="" alt="原点を記入"></figure>
+            まだ足りません。横軸のラベル $ x $ と縦軸のラベル $ y $ を書く必要があります。
+            <figure><img src="" alt="xyも記入した"></figure>
+  
+            それでは点 $ \mathrm P $ を記入しましょう。
+            <figure><img src="" alt="点Pのみ記入"></figure>
+            点 $ \mathrm P $ の座標は $ (x,y) $ ですから…
+            <figure><img src="" alt="x軸にx、y軸にyを記入"></figure>
+            あれれ？？　なんかおかしいですね。 $ x,y $ という文字がそれぞれ2個登場していて、ひとつは点 $ \mathrm P $ の座標として、もう一つは座標軸のラベルとして使われています。これは混乱の元です。
+          </p>
+          <p>
+            そこでこのような無用な混乱を避けるためにも、点の座標は $ (X,Y) $ とおくことにします。
+          </p>
+          <div class="dasoku">
+            ここではあまり立ち止まらず、「 $ (x,y) $ でおくと紛らわしいから $ (X,Y) $ で置くんだな〜」程度に思っていただいて大丈夫です。こう置くことの意味・メリットはあとでわかります。
+          </div>
+        </section>
 
-          それでは点 $ \mathrm P $ を記入しましょう。
-          <figure><img src="" alt="点Pのみ記入"></figure>
-          点 $ \mathrm P $ の座標は $ (x,y) $ ですから…
-          <figure><img src="" alt="x軸にx、y軸にyを記入"></figure>
-          あれれ？？　なんかおかしいですね。 $ x,y $ という文字がそれぞれ2個登場していて、ひとつは点 $ \mathrm P $ の座標として、もう一つは座標軸のラベルとして使われています。これは混乱の元です。
-        </p>
-        <p>
-          そこでこのような無用な混乱を避けるためにも、点の座標は $ (X,Y) $ とおくことにします。
-        </p>
-        <div class="dasoku">
-          ここではあまり立ち止まらず、「 $ (x,y) $ でおくと紛らわしいから $ (X,Y) $ で置くんだな〜」程度に思っていただいて大丈夫です。こう置くことの意味・メリットはあとでわかります。
-        </div>
+        <section id="tejun2">
+          <h3>2.与えられた条件から $\boldsymbol{X,Y} $ の関係式を導く</h3>
+          <div class="right">
+            <a href="#tejun" class="blocklink link-noarrow">
+              <i class="fa-solid fa-backward-step"></i> 手順
+            </a>
+            <a href="#tejun2_ans" class="blocklink link-noarrow">
+              <i class="fa-solid fa-backward-step"></i> 解答
+            </a>
+          </div>
+          <p>
+            与えられた条件を式で表します。<br>
+            点 $ \mathrm{P} $ が 点 $ \mathrm A(0,1) $ および $ \mathrm B(1,0) $ から等距離であるということは
+            $$ \mathrm{AP}=\mathrm{BP} $$
+            と書けます。このあとで三平方の定理を使うことを見越して両辺を2乗しておくと
+            $$ \mathrm{AP}^2=\mathrm{BP}^2 $$
+            が言えます。
+            ここで3点の座標は $ \mathrm A(0,1),\; \mathrm B(1,0),\; \mathrm{P}(X,Y) $ となっていますから、三平方の定理を用いればこの関係式を $ X,Y $ で表せます。
+          </p>
+          <p>
+            条件式を整理すると、 $ Y=X $ を得ます。
+          </p>
+        </section>
+
+        <section id="tejun3">
+          <h3>3.関係式をみたすような点の集まりがどんな図形になるか考える</h3>
+          <div class="right">
+            <a href="#tejun" class="blocklink link-noarrow">
+              <i class="fa-solid fa-backward-step"></i> 手順
+            </a>
+            <a href="#tejun3_ans" class="blocklink link-noarrow">
+              <i class="fa-solid fa-backward-step"></i> 解答
+            </a>
+          </div>
+          <p>
+            さて、このようにして関係式 $ Y=X $ が得られましたが、ここでそのまま<strong>「求める軌跡は直線 $ \boldsymbol{y=x} $ 」とすることはできません</strong>。なぜでしょうか。
+          </p>
+          <p>
+            関係式 $ Y=X $ は、<strong>点 $ \boldsymbol{\mathrm{P}} $ の座標についての条件</strong>です。
+          </p>
+          <p>
+            この式から読み取れるのは、条件（2点 $ \mathrm{A,B} $ からの距離が等しい）をみたす点 $ \mathrm{P} $ について、その<strong> $ \boldsymbol x $ 座標と $ \boldsymbol y $ 座標が等しい</strong>ということだけです。
+            <figure class="fig-wide"><img src="fig/ex1_11.jpeg" alt=""></figure>
+          </p>
+          <p>
+            逆に、<strong>$\boldsymbol x $ 座標と $\boldsymbol y $ 座標の値が等しいような点がすべて条件（ $\boldsymbol{\mathrm{AP}=\mathrm{BP}} $ ）をみたしているかどうかは全くわからない</strong>のです。
+            <figure class="fig-wide"><img src="" alt="逆が成り立つかはわからない"></figure>
+            そこで、4.のようにしてチェックする必要があります。
+          </p>
+          <div class="dasoku" id="douchi_ref">
+            「？？」と思った場合は <a href="#douchi_note" class="link">こちら</a>
+          </div>
+          <p>
+            ともかく、点 $ \mathrm{P} $ の $ x $ 座標と $ y $ 座標が等しいことはわかりました。「図形と方程式」でみたように、このような点の集まりは直線 $ y=x $ ですから、<span class="highlight">点 $ \mathrm{P} $ が直線 $ y=x $ 上の<strong>どこかに</strong>ある</span>ということは間違いありません。
+            <figure><img src="" alt="直線上の点P"></figure>
+            くどいようですが、逆にこの直線上の点がすべて条件を満たすかどうかは調べないとわかりません。
+          </p>
+        </section>
+        
+        <section id="tejun4">
+          <h3>4.逆チェック</h3>
+          <div class="right">
+            <a href="#tejun" class="blocklink link-noarrow">
+              <i class="fa-solid fa-backward-step"></i> 手順
+            </a>
+            <a href="#tejun4_ans" class="blocklink link-noarrow">
+              <i class="fa-solid fa-backward-step"></i> 解答
+            </a>
+          </div>
+        </section>
+        <section id="tejun5">
+          <h3>5.</h3>
+          <a href="#tejun" class="blocklink link-noarrow">
+            <i class="fa-solid fa-backward-step"></i> 手順
+          </a>
+          <a href="#tejun5_ans" class="blocklink link-noarrow">
+            <i class="fa-solid fa-backward-step"></i> 解答
+          </a>
+        </section>
         
       </section>
 
@@ -352,12 +463,20 @@
       </section>
 
       <section class="footnote">
-        <p>
-          ここから下は趣味的な話なので読み飛ばしてok
-        </p>
+        <p>注釈</p>
+        <div class="note" id="douchi_note">
+          <a href="#douchi_ref">[必要条件と十分条件]</a>
+          <p>
+            命題「 $ p \Longrightarrow q $ 」が真だからといって、その逆「 $ q \Longrightarrow p $ 」が真であるとは限らない。たとえば
+            $$ (x=2) \Longrightarrow (x^2=4) $$
+            は明らかに正しいが、その逆
+            $$ (x=2) \Longleftarrow (x^2=4) $$
+            は成り立たない。じっさい、 $ x=-2 $ のときも $ x^2=4 $ が成り立つから、 $ x^2=4 $ のとき必ずしも $ x=2 $ とはならない。
+          </p>
+        </div>
         <div class="note" id="note1">
           <a href="#ref1">[1]</a>
-          厳密な話をしだすとキリがないので割愛。
+          <p>厳密な話をしだすとキリがないので割愛。</p>
         </div>
         <div class="note" id="note2">
           <a href="#ref2">[2]</a>

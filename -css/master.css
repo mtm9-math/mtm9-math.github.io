@@ -351,6 +351,11 @@ img {
   display: block;
   text-align: center;
 }
+.right {
+  margin: 1rem;
+  display: block;
+  text-align: right;
+}
 
 .saying {
   margin: 0;
@@ -500,7 +505,7 @@ strong {
   color: var(--link_color);
   text-decoration: none;
 }
-.link:not(.link-noarrow):after {
+.link::after {
   content: var(--arrow);
 }
 .link:hover {
@@ -508,8 +513,8 @@ strong {
 }
 
 .blocklink {
-  display: block;
-  margin: 1rem 0;
+  display: inline-block;
+  /* margin: 1rem 0; */
   padding: 0 0.5rem;
   width: fit-content;
   border-radius: 0.5rem;
@@ -521,6 +526,10 @@ strong {
 }
 .blocklink:hover {
   background-color: var(--blocklink_color_hover);
+}
+
+.link-noarrow::after {
+  content: none;
 }
 
 
