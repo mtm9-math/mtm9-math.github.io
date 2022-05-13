@@ -5,7 +5,7 @@
 
 :root {
   --h2_color: rgb(255, 168, 188);
-  --link-arrow_color: rgb(19, 98, 255);
+  --link_color: rgb(19, 98, 255);
   --blocklink_color: rgb(155, 215, 239);
   --blocklink_color_hover: rgb(194, 233, 249);
 
@@ -282,7 +282,7 @@ figure img {
   width: 70%;
   max-width: 20rem;
 }
-figure.bigfig img {
+figure.fig-max img {
   margin: 0;
   width: 100%;
   max-width: 30rem;

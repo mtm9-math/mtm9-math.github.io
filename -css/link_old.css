@@ -3,12 +3,12 @@ a {
   color: black;
 }
 
-.link-arrow a {
-  color: var(--link-arrow_color);
+.link a {
+  color: var(--link_color);
   text-decoration: none;
-} .link-arrow a::after {
+} .link a::after {
   content: var(--arrow);
-} .link-arrow a:hover {
+} .link a:hover {
   text-decoration: underline;
 }
 

@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>軌跡 - 図形と方程式｜iを紡ぐ</title>
+    <title>軌跡①  - 図形と方程式｜iを紡ぐ</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../-css/master.css">
@@ -57,11 +57,38 @@
         </div>
         <div class="hero-text-container">
           <h1 class="hero_title">
-            <span class="hero-subtitle">
-              もう「 $\boldsymbol t $ を消去」なんて言わない！
-            </span>
-            キセキを描く
+            <span class="hero-subtitle">軌跡　第1話</span>
+            方程式のグラフと軌跡
+            <span class="hero-subtitle">〜"逆チェック"の意味〜</span>
           </h1>
+        </div>
+      </div>
+
+      
+      <div class="info hz-container">
+        <div class="title-pankuzu">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="article/index.html">記事一覧</a></li>
+          </ul>
+        </div>
+        <div class="author-card">
+          <a href="../../../about/author.html">
+            <img src="../../../-img/-icon/ruri.png" alt="">
+            <div class="author">
+              <span class="author_title">執筆者</span>
+              ruri
+            </div>
+          </a>
+        </div>
+        <div class="author-card">
+          <a href="../../../about/author.html">
+            <img src="../../../-img/-icon/intai.png" alt="">
+            <div class="author">
+              <span class="author_title">執筆者</span>
+              引 退
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -69,7 +96,7 @@
     <main class="hz-container main">
       <section>
         <blockquote class="saying">
-          小・中学校で三角形や長方形の上を動き回って散々受験生を苦しめた 点 $ \mathrm P$、今度は<!-- 円の上や直線の上、2点を結ぶ線分の中点・内分点・外分点、極め付けは三角形の重心 --> $ xy $ 平面上を自由自在に動いて高校生を苦しめる。
+          小・中学校で三角形や長方形の上を動き回って散々受験生を苦しめた 点 $ \mathrm P$、今度は $ xy $ 平面上を自由自在に動いて高校生を苦しめる。
         </blockquote>
       </section>
       <section>
@@ -77,28 +104,174 @@
         <p>
           誰しも一度は<strong>「計算で答えは出るけど何が起こっているかわからない」</strong>という気持ち悪い感覚を味わったことがあるでしょう。特に軌跡は「逆チェック」「除外点」という厄介な存在があり、計算の方ではたとえば
           <span class="center">「 $ \mathrm P(x,y), \quad \mathrm Q(s,t) $ とおいて $ \mathrm Q $ の座標を $ x,y $ で表し、 $ \mathrm  Q $ の関係式に代入することで $ s,t $ を<strong>消去する</strong>」</span>
-          のようなちょっと<strong>軌跡特有の解き方(!?)</strong>があって、とりあえず「軌跡は計算でゴリ押せばいい、あとはおまじない程度に逆チェック」と思ってしまうのも無理はありません。
+          のようなちょっと<strong>軌跡特有の解き方(!?)</strong>があって、とりあえず「軌跡は計算でゴリ押せばいい、逆チェックの言葉は減点されないためのおまじない」と思ってしまうのも無理はありません。
+        </p>
+        <p>
+          第1話ではまず「図形と方程式」の復習をします。方程式の意味が不安な人は特に読んでください。次に簡単な例題を通して「逆チェック」の意味について解説します。（あまりくどくは書かないので安心してください。）
+        </p>
+        <p>
+          第2話では媒介変数表示された点の軌跡について扱います。もう「 $ t $ を消去して…」なんて言いません。
         </p>
       </section>
 
       <section>
-        <h2>方程式の表す図形とは</h2>
+        <h2>図形と方程式</h2>
+        <p>
+          「図形と方程式」では、文字通り<strong>方程式が表している図形</strong>を扱います。ではその「方程式が表している図形」とは一体なんでしょうか？
+        </p>
+
+        <!-- 直線の例 -->
+        <p>
+          <strong>「直線 $ \boldsymbol{y=x} $」</strong> という言葉を見たら、すぐに次のようなグラフが頭に浮かぶと思います。
+          <figure class="fig-small"><img src="fig/line_01.png" alt=""></figure>
+          もはや当たり前すぎて意識していませんが、どうしてこのような直線になるのでしょうか。
+        </p>
+        <p>
+          直線であることをいったん忘れて、「 $ y=x $ 」という式を<strong>平面上の点の条件式</strong>としてみるとどうでしょうか。
+        </p>
+        <p>
+          この式は<strong>「その点の $ \boldsymbol y $ 座標の値が $ \boldsymbol x $ 座標の値に等しい」</strong>という条件を表しているように見えませんか？
+          <figure><img src="fig/line_02.png" alt=""></figure>
+        </p>
+        <p>
+          例えば点 $ (1,1) $ は $ y $ 座標の値も $ x $  座標の値も $ 1 $ で等しいので方程式を満たします。
+          <figure class="fig-small"><img src="fig/line_03.png" alt=""></figure>
+          しかし $ (1,2) $ は $ y $ 座標の $ 2 $ が $ x $ 座標の $ 1 $ と等しくないため、方程式を満たしていません。
+          <figure><img src="" alt="(1,2)の図"></figure> 
+        </p>
+        <p>
+          $ x $ 座標と $ y $ 座標の値が等しい点は $ (1,1) $ 以外にもあります。
+          <figure class="fig-small"><img src="fig/line_05.png" alt=""></figure>
+          そのような点を全て平面上に打つと、やがて1本の直線が見えてきます。
+          <figure><img src="fig/line_06.png" alt=""></figure>
+          図で点を描くと隙間ができてしまいますが、 $ y=x $ をみたすような点を本当に全部集めたら、この直線を完全に<strong>隙間なく埋め尽くす</strong>はずです。<span class="ref" id="ref1"><a href="#note1">[1]</a></span>
+        </p>
+        <p>
+          隙間なく埋め尽くしているのですから、逆にこの直線の上にある点は全て方程式 $ y=x $ を満たしています。
+          <figure><img src="" alt="直線上の点の図"></figure>
+          すなわち<strong>直線 $\boldsymbol{y=x} $ 上のどこの点を取っても必ず $ \boldsymbol x $ 座標と $ \boldsymbol y $ 座標が等しく</strong>なっています。
+        </p>
+        <p>
+          条件 $ y=x $ をみたすような点を全て集めたら直線になりました。そこで、この直線自体を<strong>「直線 $ \boldsymbol{y=x} $ 」</strong>という名前で呼んでしまおうというのが図形の方程式の発想です。
+          <figure class="fig-wide"><img src="fig/line_07.jpg" alt=""></figure>
+        </p>
+        <!-- /直線の例 -->
+
+        <!-- 余裕があれば円の例 -->
+      
+        <!-- まとめ -->
+        <p>
+          つまり、「直線 $ y=x $ 」や「円 $ x^2+y^2=1 $ 」などの $ x,y $ についての方程式で表されたは、<strong>方程式をみたすような点を全て集めたもの</strong>のことなのです。<span class="ref" id="ref2"><a href="#note2">[2]</a></span>
+          <figure class="fig-wide"><img src="fig/graph_11.jpeg" alt=""></figure>
+        </p>
+        <div class="box box-border center">
+          <strong>方程式で表された図形は、方程式をみたす点の集まりだ！</strong>
+        </div>
+        <!-- <div class="dasoku">
+          そんなのわかってる！馬鹿にするな！　という声が聞こえてきそうですが、図形が「方程式を満たす点の集まり」であること、逆に「図形上の点がすべて条件を満たす」ことを意識していないと、逆チェックの意味がわからなくなります。
+        </div> -->
       </section>
 
       <section>
         <h2>軌跡を求める手順</h2>
-        <p>とりあえずは深く考えなくていいので、次の<span class="mark">手順</span>をみてください。</p>
+        <p>
+          以上のことを踏まえて、本題の軌跡に入りましょう。
+        </p>
+        <p>
+          とりあえずは深く考えなくていいので、次の<span class="mark">軌跡を求める手順</span>をみてください。
+        </p>
         <div class="box box-border">
           <span class="box_title">軌跡を求める手順</span>
-          与えられた条件を満たす点 $\mathrm P $ の座標は次のように求められる。
+          与えられた条件をみたす点 $\mathrm P $ の軌跡は次のように求められる。
           <ol>
-            <li>点 $\mathrm P $ の座標を $ (X,Y) $ とおく</li>
+            <li><a href="#tejun1" class="link">点 $\mathrm P $ の座標を $ (X,Y) $ とおく</a></li>
             <li>与えられた条件から $ X,Y $ の関係式を導く</li>
-            <li>2. の関係式を満たすような点の集まりがどんな図形になるか考える</li>
-            <li>3.の図形上の点は全て条件を満たすのか調べる　… <strong>“逆チェック”</strong></li>
-            <li>求める軌跡は、</li>
+            <li>2. の関係式をみたすような点の集まりがどんな図形になるか考える</li>
+            <li>3.の図形上の点は全て条件をみたすのか調べる　… <strong>“逆チェック”</strong></li>
+            <li>求める軌跡は、3.の図形から、条件をみたさない点を除いたもの</li>
           </ol>
         </div>
+        <p>
+          言葉にすると長いですから、例題を通してひとつづつ見ていきましょう。
+        </p>
+        <div class="box box-q">
+          <div class="box_title">例題</div>
+          2点 $ \mathrm A(0,1),\; \mathrm B(1,0) $ からの距離が等しい点Pの座標を求めよ。
+          <figure><img src="fig/ex1_1.jpeg" alt=""></figure>
+        </div>
+        <div class="box box-a">
+          <span class="box_title">解答例</span>
+          <p>
+            <span class="highlight">点 $\mathrm P $ の座標を $\mathrm P(X,Y) $ とする</span>と（ <a href="#tejun1" class="link link-noarrow">①</a> ）、三平方の定理より
+            $$ \mathrm{AP}^2=X^2+(Y-1)^2 $$
+            $$ \mathrm{BP}^2=(X-1)^2+Y^2 $$
+
+            $ \mathrm{AP}=\mathrm{BP} $ より $ \mathrm{AP}^2=\mathrm{BP}^2 $ であるから
+            \begin{align}
+              X^2+(Y-1)^2 &= (X-1)^2+Y^2 \\
+              -2Y &= -2X \\
+              Y &= X \; \cdots\textbf{②}
+            \end{align}
+
+            したがって、<span class="highlight">点 $ \mathrm P $ は直線 $ y=x $ 上にある</span>（③）。
+          </p>
+          <hr>
+          <p>
+            逆に、点 $ \mathrm P $ が直線 $ y=x $ 上にあるとき条件を満たすことかどうか調べる。
+          </p>
+          <p>
+            点 $ \mathrm P $ が直線 $ y=x $ 上にあるとき、その座標は
+            $$ \mathrm P(t,t) \quad\left(t\text{は実数}\right)$$
+            と表せる。
+          </p>
+          <p>
+            三平方の定理より
+            $$ \mathrm{AP}^2=t^2+(t-1)^2 $$
+            $$ \mathrm{BP}^2=(t-1)^2+t^2 $$
+            であるから
+            $$ \mathrm{AP}^2 = \mathrm{BP}^2 $$
+            ここで $ \mathrm{AP}>0,\; \mathrm{BP}>0 $ に注意すると
+            $$ \mathrm{AP} = \mathrm{BP} $$
+          </p>
+          <p>
+            よって<span class="highlight">点 $ \mathrm{P} $ は（ $ \mathrm{A} $ および $ \mathrm{B} $ からの距離が等しいという）条件を満たす</span>（…④）。
+          </p>
+          <p>
+            以上より、求める軌跡は
+            <div class="center">
+              <span class="highlight">直線 $ y=x $ …（⑤ 答）</span>
+            </div>
+          </p>
+        </div>
+
+        <h3 id="tejun1">1. 点 $ \mathrm P $ の座標を $ (X,Y) $ とおく</h3>
+        <p>
+          書いてあるとおり $ \mathrm P(X,Y) $ とおくだけなのですが、ここでひとつ注意してほしいことがあります。よく教科書なんかではこれを $ \mathrm P(x,y) $ のように小文字でおいていませんか？
+        </p>
+        <p>
+          これはだめではないのですが、あまりよろしくないです。それは実際に点 $ \mathrm P $ を座標平面上に書いてみるとわかります。
+        </p>
+        <p>
+          これは座標平面です。
+          <figure><img src="" alt="2直線だけ記入"></figure>
+          何かが足りません。おっと、原点 $ \mathrm O $ が抜けていました。
+          <figure><img src="" alt="原点を記入"></figure>
+          まだ足りません。横軸のラベル $ x $ と縦軸のラベル $ y $ を書く必要があります。
+          <figure><img src="" alt="xyも記入した"></figure>
+
+          それでは点 $ \mathrm P $ を記入しましょう。
+          <figure><img src="" alt="点Pのみ記入"></figure>
+          点 $ \mathrm P $ の座標は $ (x,y) $ ですから…
+          <figure><img src="" alt="x軸にx、y軸にyを記入"></figure>
+          あれれ？？　なんかおかしいですね。 $ x,y $ という文字がそれぞれ2個登場していて、ひとつは点 $ \mathrm P $ の座標として、もう一つは座標軸のラベルとして使われています。これは混乱の元です。
+        </p>
+        <p>
+          そこでこのような無用な混乱を避けるためにも、点の座標は $ (X,Y) $ とおくことにします。
+        </p>
+        <div class="dasoku">
+          ここではあまり立ち止まらず、「 $ (x,y) $ でおくと紛らわしいから $ (X,Y) $ で置くんだな〜」程度に思っていただいて大丈夫です。こう置くことの意味・メリットはあとでわかります。
+        </div>
+        
       </section>
 
       <!-- <section>
@@ -144,7 +317,7 @@
           1.は気づいた人も多いのではないでしょうか。「軌跡」を習うときには耳にたこができるほど<strong>「逆チェックを忘れるな」</strong>と言われますね。これについては後で詳しく話します。
         </p>
         <p>
-          2.はどういうことでしょうか。問題文には「…点Pの<strong>軌跡を求めよ</strong>」とあります。点Pの軌跡というのは条件を満たすようにPが動き回るときに描く<strong>図形</strong>のことですから、「どんな図形を表すのか」を答える必要があります。上の<span class="mark">解答(?)</span>で答えとしている $ y=x $ は、ただの<strong>点Pの座標 $ \boldsymbol{(x,y)} $ の間に成り立つ関係式</strong>に過ぎません。
+          2.はどういうことでしょうか。問題文には「…点Pの<strong>軌跡を求めよ</strong>」とあります。点Pの軌跡というのは条件をみたすようにPが動き回るときに描く<strong>図形</strong>のことですから、「どんな図形を表すのか」を答える必要があります。上の<span class="mark">解答(?)</span>で答えとしている $ y=x $ は、ただの<strong>点Pの座標 $ \boldsymbol{(x,y)} $ の間に成り立つ関係式</strong>に過ぎません。
         </p>
         <div class="dasoku">
           このあと詳しく説明するので、「あーそうなんだなー」程度に聞き流して大丈夫です。
@@ -177,5 +350,48 @@
            $ a $ が実数全体を動くとき、 $ P $ の軌跡を求めよ。
         </div>
       </section>
+
+      <section class="footnote">
+        <p>
+          ここから下は趣味的な話なので読み飛ばしてok
+        </p>
+        <div class="note" id="note1">
+          <a href="#ref1">[1]</a>
+          厳密な話をしだすとキリがないので割愛。
+        </div>
+        <div class="note" id="note2">
+          <a href="#ref2">[2]</a>
+          <p>
+            「図形と方程式」を習う前に扱っていたグラフは、 $ y=ax+b $（1次関数） や $ y=ax^2+bx+c $ （2次関数）、 $ y=\sin x $ など、<strong>yがxの関数となっているもの（$ y=f(x) $）</strong>だけだった。
+          </p>
+          <p>
+            ところが、「図形と方程式」で新たに習った円の方程式「 $ x^2+y^2=1 $ 」は<strong>yがxの関数になっていない</strong>。これはグラフを見れば明らかだ
+            <figure><img src="" alt="（グラフ）"></figure>
+            たとえば $ x=0 $ のとき、 方程式をみたす $ y $ の値は $ -1 $ と $ 1 $ の2つあってひとつに定まらない。「図形と方程式」では、このような「関数の形になっていない方程式」のグラフも扱う。
+          </p>
+          <p>
+            $ y $ が $ x $ の関数になっていないものも扱うから、一般にはこういう方程式を「 $ y=f(x) $ 」という形で表すことができない。そこで、次のような書き方をすることがある：
+            <strong class="center">方程式 $ \boldsymbol{F(x,\;y)=0} $ </strong>
+          </p>
+          <p>
+            $ F(x,\;y) $ という見慣れない形が出てきたが、これは $ x,y $ を含んだなんらかの式と思って差し支えない。たとえば $ x^3+x^2+y^2-y+xy+1 $ のようなものである。
+          </p>
+          <p>
+            この形を使えば、直線 $ y=ax+b $ は、 $ F(x,y)=ax-y+b $ として
+            $$ ax-y+b=0 $$
+            のように、円 $ x^2+y^2=1 $ は、 $ F(x,y)=x^2+y^2-1 $ として
+            $$ x^2+y^2-1=0 $$
+            のように表せる。
+          </p>
+          <p>
+            なお、2変数関数を知っていると、この $ F(x,\;y)=0 $ が表しているのが、関数 $ z=F(x,y) $ のグラフ（立体である！）を平面 $ z=0 $ で切ったときの切り口であることがわかる。
+          </p>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="footer-copy">
+        &copy; 2022 $i^i$
+      </div>
+    </footer>
   </body>

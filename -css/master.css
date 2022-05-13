@@ -4,7 +4,7 @@
 
 :root {
   /* --h2_color: rgb(255, 168, 188); */
-  --link-arrow_color: rgb(19, 98, 255);
+  --link_color: rgb(19, 98, 255);
   --blocklink_color: rgb(155, 215, 239);
   --blocklink_color_hover: rgb(194, 233, 249);
 
@@ -176,7 +176,7 @@ img {
 
 /* パンくず */
 .title-pankuzu {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-size: 0.9rem;
 }
 .title-pankuzu ul {
@@ -192,7 +192,7 @@ img {
   margin-right: 0.5rem;
 }
 .title-pankuzu ul :not(:last-child) ::after{
-  content: " /";
+  content: " ＞ ";
 }
 .title-pankuzu a {
   color: gray;
@@ -229,7 +229,7 @@ img {
   margin-right: 1rem;
   padding: 0 0.5rem;
   /* background-color: var(--blocklink_color); */
-  color: var(--link-arrow_color);
+  color: var(--link_color);
   font-size: 0.9rem;
 }
 .relation-nav a:hover {
@@ -263,6 +263,9 @@ img {
   margin-left: auto;
   width: fit-content;
   height: fit-content;
+}
+.author-card + .author-card {
+  margin-top: 1rem;
 }
 .author-card a {
   padding: 10px 20px;
@@ -407,18 +410,29 @@ img {
   text-align: center;
 }
 
+
+
 figure {
   margin: 0;
   padding: 0;
 }
 figure img {
   margin: 1rem auto;
-  width: min(70%, 20rem);
+  height: 12rem;
+  width: auto;
 }
-figure.bigfig img {
+figure.fig-wide img {
+  width: min(100%, 25rem);
+  height: auto;
+}
+/* figure.fig-small img  {
+  height: 12rem;
+  width: auto;
+} */
+figure.fig-max img {
   margin: 0;
   width: 100%;
-  max-width: 30rem;
+  height: auto;
 }
 
 dt {
@@ -444,6 +458,9 @@ strong {
   content: " ";
 } strong::after {
   content: " ";
+}
+.highlight {
+  background-color: rgba(255, 255, 0, 0.793);
 }
 
 .img-inline {
@@ -479,14 +496,14 @@ strong {
 
 /* リンク
 =====================*/
-.link-arrow {
-  color: var(--link-arrow_color);
+.link {
+  color: var(--link_color);
   text-decoration: none;
 }
-.link-arrow::after {
+.link:not(.link-noarrow):after {
   content: var(--arrow);
 }
-.link-arrow:hover {
+.link:hover {
   text-decoration: underline;
 }
 
