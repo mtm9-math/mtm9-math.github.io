@@ -95,10 +95,193 @@
 
     <main class="hz-container main">
       <section>
-        <h2>はじめに</h2>
         <p>
-          前回の記事で「逆チェック」の意味については説明しましたが、いまいちピンと来ず、「結局『逆に〜』だけ書いておけばいいんでしょ？」と思っている方も多いと思います。
+          前回の記事で「逆チェック」の意味については説明しましたが、いまいちピンと来ず、「結局『逆に〜』だけ書いておけばいいんでしょ？」と思っている方も多いと思います。そこで今回は「除外点」が発生し、常には逆が成り立たない例を紹介します。
         </p>
+      </section>
+      <section>
+        <h2>三角形</h2>
+        <div class="box box-q">
+          <div class="box_title">例題</div>
+          2点 $ \mathrm{A}(-4,0),\; \mathrm{B}(2,0) $ と点 $ \mathrm{P} $ を頂点とする <span class="highlight bold">三角形 $ \mathrm{PAB} $</span> が
+          $$ \mathrm{AP}:\mathrm{PB}=2:1 $$
+          をみたしている。<br>
+          点 $ \mathrm{P} $ が動くときの軌跡を求めよ。
+          <figure><img src="fig/jogai_1.jpg" alt=""></figure>
+        </div>
+        <div class="box box-a">
+          <div class="box_title">解答例</div>
+          <p>
+            点 $ \mathrm{P} $ の座標を $ (X,Y) $ とすると、
+            $$ \mathrm{AP}^2=(X+4)^2+Y^2 $$
+            $$ \mathrm{BP}^2=(X-2)^2+Y^2 $$
+          </p>
+          <p>
+            $ \mathrm{AP}:\mathrm{BP}=2:1 $ すなわち $ \mathrm{AP}=2\mathrm{BP} $ より $ \mathrm{AP}^2=4\mathrm{BP}^2 $ であるから、
+            $$ (X+4)^2+Y^2 = 4\left\{(X-2)^2+Y^2\right\} $$
+            これを整理して
+            \begin{align}
+              3X^2-24X+3Y^2&=0 \\
+              X^2-8X+Y^2&=0 \\
+              (X-4)^2+Y^2&=16
+            \end{align}
+            <div class="right">
+              （…②）
+            </div>
+          </p>
+          <p>
+            したがって、<span class="highlight">点Pは円 $ (x-4)^2+y^2=16 $ 上にある</span>（…③）。
+          </p>
+          <hr>
+          <p>
+            逆に点Pがこの円の上にあるとする。
+            <ul class="list">
+              <li>
+                $ \mathrm{P}(0,0) $ および $ \mathrm{P}(8,0) $ のとき、点Pは直線AB上にあるから三角形PABが成立しない
+                <!-- <figure class="fig-mid"><img src="fig/jogai_4.jpg" alt=""></figure> -->
+              </li>
+              <li>
+                <span class="highlight">そうでないとき条件を満たす。</span>
+              </li>
+            </ul>
+            <div class="right">（…④）</div>
+          </p>
+          <p>
+            よって、求める軌跡は
+            <div class="bold center">
+              円 $\boldsymbol{(x-4)^2+y^2=16} $ <br>
+              ただし点 $ \boldsymbol{(0,0)} $ および $ \boldsymbol{(8,0)} $ を除く
+            </div>
+            <span class="right">（…⑤　答）</span>
+            <figure><img src="fig/jogai_5.jpg" alt=""></figure>
+          </p>
+        </div>
+
+        <p>
+          前回と同じようにして、②のように<span class="bold"> $ \boldsymbol{X,Y} $の関係式を導き</span>ます。今回は前回ほどシンプルにはならず、
+          $$ (X-4)^2+Y^2=16 $$
+          という式が得られました。
+        </p>
+        <p>
+          これをみた瞬間に「あ、円だ」と気づくわけですが、答えを出すにはまだ早すぎます。「円だ」と書きましたが、この時点でわかっているのは
+          <div class="center bold">
+            Pの座標 $\boldsymbol{(X,Y)} $ は必ず条件 $\boldsymbol{(X-4)^2+Y^2=16} $ をみたしている
+          </div>
+          ということ、言い換えれば
+          <div class="center bold">
+            Pは円 $\boldsymbol{(x-4)^2+y^2=16} $ 上にある
+          </div>
+          ということです。
+        </p>
+        <p>
+          ここで円 $ (x-4)^2+y^2=16 $ というのは、<span class="highlight">中心 $ (4,0) $,  半径 $ 4 $ の円のことを表す方程式</span>です（図の青線）。
+          <figure><img src="fig/jogai_2.jpg" alt=""></figure>
+        </p>
+        <p>
+          ですが、前にも述べたように逆にこの円周上の点がすべて条件を満たすかどうかはわかりません。ここで「とりあえず『逆に』って書いておけばいいんでしょ」って思っていると足元をすくわれます。
+        </p>
+
+        <h3>三角形ABP!!!!</h3>
+        <p>
+          最初の条件に「三角形ABPが〜」と書いてありました。ということは当然三角形ABPが存在していないといけません。三角形ABPは常に成立するでしょうか。
+        </p>
+        <p>
+          先ほどの「中心 $ (4,0) $,  半径 $ 4 $ の円」を、2点A,Bといっしょに図示するとこのようになります。
+          <figure><img src="fig/jogai_3.jpg" alt=""></figure>
+        </p>
+        <p>
+          これをみれば、三角形ABPが成り立たない点があることは明らかです。
+          <figure class="fig-mid"><img src="fig/jogai_4.jpg" alt=""></figure>
+          $ \mathrm{P}(0,0) $ および $ \mathrm{P}(8,0) $ のときは、3点A,B,Pが一直線上に並んでしまい、三角形になりません。
+        </p>
+        <p>
+          このことを逆チェックの記述に含めてあげる必要があります。
+        </p>
+        <div class="box box-a">
+          <p>
+            逆に点Pがこの円の上にあるとする。
+            <ul class="list">
+              <li>
+                $ \mathrm{P}(0,0) $ および $ \mathrm{P}(8,0) $ のとき、点Pは直線AB上にあるから三角形PABが成立しない
+                <!-- <figure class="fig-mid"><img src="fig/jogai_4.jpg" alt=""></figure> -->
+              </li>
+            </ul>
+          </p>
+        </div>
+        <p>
+          大抵の模範解答ではこのあとすぐ「よって、求める軌跡は〜」と答えてしまいますが、そういう「模範」解答を見ると、<span class="bold">「え、この場合は逆チェックしなくていいの？　逆チェックするときとしないときの違いは何？？？？」</span>という混乱に陥ってしまいます。
+        </p>
+        <p id="ref_gyakucheck">
+          結論からいうと、<span class="highlight">「逆に〜」の記述は、意味を理解した上で、<span class="bold">毎回必ず書くべき</span></span>です。<a href="#note_gyakucheck" class="ref">[1]</a>
+        </p>
+        <p>
+          そこで今回も、
+          <div class="box box-a">
+            <p>
+              逆に点Pがこの円の上にあるとする。
+              <ul class="list">
+                <li>
+                  $ \mathrm{P}(0,0) $ および $ \mathrm{P}(8,0) $ のとき、点Pは直線AB上にあるから三角形PABが成立しない
+                  <!-- <figure class="fig-mid"><img src="fig/jogai_4.jpg" alt=""></figure> -->
+                </li>
+                <li>
+                  <span class="highlight">そうでないとき条件を満たす。</span>
+                </li>
+              </ul>
+            </p>
+          </div>
+          というふうにして、2点 $ \mathrm{P}(0,0) $ および $ \mathrm{P}(8,0) $ を除けば確かに求める軌跡になることを念押ししています。
+        </p>
+        <div class="dasoku">
+          <p>勘のいい人は、「え、でも実際どうなの？逆はちゃんと成り立つの？」と不安になると思います。計算は面倒ですが、前半の証明を逆にたどることによって元の条件を導くことができます。</p>
+          <p>ちゃんとした説明は省かせていただきますが、<strong>常識的な式変形をしている限りは</strong>、このあと述べるような除外点をのぞくすべての点で逆が成り立つことが保証されます。</p>
+          <p>これを正しく理解するためには、数学Aで少しだけ触れた「必要条件と十分条件」がもとになった<strong>同値変形</strong>の理解が不可欠になってきます。また時間のあるときに話しましょう。</p>
+        </div>
+        <p>
+          したがって、最終的な答えは
+          <div class="bold center">
+            円 $\boldsymbol{(x-4)^2+y^2=16} $ <br>
+            ただし点 $ \boldsymbol{(0,0)} $ および $ \boldsymbol{(8,0)} $ を除く
+          </div>
+          <figure><img src="fig/jogai_5.jpg" alt=""></figure>
+          となります。
+        </p>
+      </section>
+
+      <section>
+        <h2>どんな時に除外点が発生するか</h2>
+        <div class="dasoku">
+          ※こういうテクニック的なことは本当は書きたくない。ただ、問題を見て「これ、怪しいぞ。除外点発生しそうだな」というような感覚を持つことは大事なのであえて書く。
+        </div>
+        <p>
+          除外点が発生するようなケースは非常に限られていて、今回のように
+          <div class="center bold">三角形が成立しないことがあるケース</div>
+          や、
+          <div class="center bold">文字での割り算が発生するとき（分母を0にするような値だけ別にチェックする必要がある）</div>
+          です。というか問題の作り方としてそのくらいしかないのです。
+        </p>
+        <p>
+          後者に関しては、青チャートIIの重要例題111等を参照してください。
+        </p>
+      </section>
+
+      <section>
+        <h2>おわりに</h2>
+        <p>
+          いかがだったでしょうか。テスト前でバタバタしてしまって結局直前になってしまい申し訳ないです。モヤモヤしやすいこの単元の意味が少しでも伝わったら幸いです。質問等はお気軽にどうぞ
+        </p>
+      </section>
+
+      <section>
+        <h2>質問・感想</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSczB-URacogIBI3rb0xjjhG4qMVtaOTjSs_rrS4ttJluXrn_g/viewform?embedded=true" width="100%" height="600px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </section>
+
+      <section class="footnote">
+        <div class="note" id="note_gyakucheck">
+          <a href="#ref_gyakucheck">[1]</a>
+          <p>同値であることを明言していればそんなものは要りません。しかしなまじ同値変形を知っているとボロが出るので安全に「逆に〜」を書くべきです。</p>
+        </div>
       </section>
     </main>
     <footer class="footer">

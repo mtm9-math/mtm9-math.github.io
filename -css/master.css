@@ -433,6 +433,10 @@ figure img {
   height: 12rem;
   width: auto;
 }
+figure.fig-mid img {
+  width: min(80%, 15rem);
+  height: auto;
+}
 figure.fig-wide img {
   width: min(100%, 25rem);
   height: auto;
