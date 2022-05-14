@@ -173,6 +173,9 @@ img {
   margin-top: 2rem;
   margin-bottom: -3rem;
 }
+.main .section-inner {
+  margin: 2rem 0;
+}
 
 /* パンくず */
 .title-pankuzu {
@@ -319,11 +322,15 @@ img {
   display: block;
   font-size: 1rem;
 }
+
+
 .list {
   margin-left: 1rem;
   list-style: revert;
 }
-
+.list li {
+  line-height: 2rem;
+}
 
 
 .dasoku {
@@ -455,13 +462,16 @@ dd {
 /* インライン
 ================== */
 
-strong {
+strong,
+.bold {
   font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
-} strong::before {
+}
+strong::before {
   content: " ";
-} strong::after {
+}
+strong::after {
   content: " ";
 }
 .highlight {

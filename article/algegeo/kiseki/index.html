@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>軌跡①  - 図形と方程式｜iを紡ぐ</title>
+    <title>軌跡#1 軌跡を求める手順  - 図形と方程式｜iを紡ぐ</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../-css/master.css">
@@ -22,9 +22,9 @@
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="#1 剰余の定理" />
-    <meta name="twitter:description" content="高次方程式入門｜iを紡ぐ" />
-    <meta name="twitter:image" content="https://mtm9-math.github.io/-img/-thumb/hts1.png" />
+    <meta name="twitter:title" content="軌跡#1 軌跡を求める手順" />
+    <meta name="twitter:description" content="「逆チェック」はおまじないだと思っていませんか？ 意味不明な式変形だけして「解答」を導き出すのはもうやめましょう ── 図形と方程式 | iを紡ぐ" />
+    <meta name="twitter:image" content="https://mtm9-math.github.io/article/algegeo/kiseki/hero.jpg" />
   </head>
 
   <body onload="header_href_prefix('../../../')">
@@ -57,9 +57,9 @@
         </div>
         <div class="hero-text-container">
           <h1 class="hero_title">
-            <span class="hero-subtitle">軌跡　第1話</span>
-            方程式のグラフと軌跡
-            <span class="hero-subtitle">〜"逆チェック"の意味〜</span>
+            <span class="hero-subtitle">軌跡</span>
+            #1 軌跡を求める手順
+            <span class="hero-subtitle">〜"逆チェック"の意味・①〜</span>
           </h1>
         </div>
       </div>
@@ -137,7 +137,7 @@
           例えば点 $ (1,1) $ は $ y $ 座標の値も $ x $  座標の値も $ 1 $ で等しいので方程式を満たします。
           <figure class="fig-small"><img src="fig/line_03.png" alt=""></figure>
           しかし $ (1,2) $ は $ y $ 座標の $ 2 $ が $ x $ 座標の $ 1 $ と等しくないため、方程式を満たしていません。
-          <figure><img src="" alt="(1,2)の図"></figure> 
+          <figure><img src="fig/line_04.jpg" alt="(1,2)の図"></figure> 
         </p>
         <p>
           $ x $ 座標と $ y $ 座標の値が等しい点は $ (1,1) $ 以外にもあります。
@@ -147,13 +147,12 @@
           図で点を描くと隙間ができてしまいますが、 $ y=x $ をみたすような点を本当に全部集めたら、この直線を完全に<strong>隙間なく埋め尽くす</strong>はずです。<span class="ref" id="ref1"><a href="#note1">[1]</a></span>
         </p>
         <p>
-          隙間なく埋め尽くしているのですから、逆にこの直線の上にある点は全て方程式 $ y=x $ を満たしています。
-          <figure><img src="" alt="直線上の点の図"></figure>
-          すなわち<strong>直線 $\boldsymbol{y=x} $ 上のどこの点を取っても必ず $ \boldsymbol x $ 座標と $ \boldsymbol y $ 座標が等しく</strong>なっています。
+          隙間なく埋め尽くしているのですから、逆に<strong>直線 $\boldsymbol{y=x} $ 上のどこの点を取っても必ず $ \boldsymbol x $ 座標と $ \boldsymbol y $ 座標が等しく</strong>なっています。
+          <figure><img src="fig/line_07.jpg" alt="直線上の点の図"></figure>
         </p>
         <p>
           条件 $ y=x $ をみたすような点を全て集めたら直線になりました。そこで、この直線自体を<strong>「直線 $ \boldsymbol{y=x} $ 」</strong>という名前で呼んでしまおうというのが図形の方程式の発想です。
-          <figure class="fig-wide"><img src="fig/line_07.jpg" alt=""></figure>
+          <figure class="fig-wide"><img src="fig/line_08.jpg" alt=""></figure>
         </p>
         <!-- /直線の例 -->
 
@@ -214,27 +213,30 @@
           2点 $ \mathrm A(0,1),\; \mathrm B(1,0) $ からの距離が等しい点Pの座標を求めよ。
           <figure><img src="fig/ex1_1.jpeg" alt=""></figure>
         </div>
+
         <div class="box box-a">
           <span class="box_title">解答例</span>
           <p>
-            <span class="highlight" id="tejun1_ans">点 $\mathrm P $ の座標を $\mathrm P(X,Y) $ とする</span>と（ <a href="#tejun1" class="link link-noarrow">…①</a> ）、三平方の定理より
+            <span class="highlight" id="tejun1_ans">点 $\mathrm P $ の座標を $\mathrm P(X,Y) $ とする</span>と（ <a href="#tejun1" class="link link-noarrow">…①</a> ）、
+            三平方の定理より
             $$ \mathrm{AP}^2=X^2+(Y-1)^2 $$
             $$ \mathrm{BP}^2=(X-1)^2+Y^2 $$
-
+          </p>
+          <p id="tejun2_ans">
             $ \mathrm{AP}=\mathrm{BP} $ より $ \mathrm{AP}^2=\mathrm{BP}^2 $ であるから
             \begin{align}
               X^2+(Y-1)^2 &= (X-1)^2+Y^2 \\
               -2Y &= -2X \\
               Y &= X
             \end{align}
-            <div class="right" id="tejun2_ans">
+            <div class="right">
               （ <a href="#tejun2" class="link link-noarrow">…②</a> ）
             </div>
 
             したがって、<span class="highlight" id="tejun3_ans">点 $ \mathrm P $ は直線 $ y=x $ 上にある</span>（<a href="#tejun3" class="link link-noarrow">…③</a>）。
           </p>
           <hr>
-          <p>
+          <p  id="tejun4_ans">
             逆に、点 $ \mathrm P $ が直線 $ y=x $ 上にあるとき条件を満たすことかどうか調べる。
           </p>
           <p>
@@ -244,20 +246,18 @@
           </p>
           <p>
             三平方の定理より
-            $$ \mathrm{AP}^2=t^2+(t-1)^2 $$
-            $$ \mathrm{BP}^2=(t-1)^2+t^2 $$
+            $$ \mathrm{AP}=\sqrt{t^2+(t-1)^2} $$
+            $$ \mathrm{BP}=\sqrt{(t-1)^2+t^2} $$
             であるから
-            $$ \mathrm{AP}^2 = \mathrm{BP}^2 $$
-            ここで $ \mathrm{AP}>0,\; \mathrm{BP}>0 $ に注意すると
             $$ \mathrm{AP} = \mathrm{BP} $$
           </p>
           <p>
-            よって<span class="highlight" id="tejun4_ans">点 $ \mathrm{P} $ は（ $ \mathrm{A} $ および $ \mathrm{B} $ からの距離が等しいという）条件を満たす</span>（<a href="#tejun4" class="link link-noarrow">…④</a>）。
+            よって<span class="highlight">点 $ \mathrm{P} $ は（ $ \mathrm{A} $ および $ \mathrm{B} $ からの距離が等しいという）条件を満たす</span>（<a href="#tejun4" class="link link-noarrow">…④</a>）。
           </p>
-          <p>
+          <p id="tejun5_ans">
             以上より、求める軌跡は
             <div class="center">
-              <span class="highlight" id="tejun5_ans"><strong>直線 $ \boldsymbol{y=x} $</strong></span>
+              <span class="highlight"><strong>直線 $ \boldsymbol{y=x} $</strong></span>
               <div class="right">
                 <a href="#tejun5" class="link link-noarrow">（…⑤）</a>
               </div>
@@ -265,7 +265,7 @@
           </p>
         </div>
 
-        <section id="tejun1">
+        <section id="tejun1" class="section-inner">
           <h3>1. 点 $ \mathrm P $ の座標を $ (X,Y) $ とおく</h3>
           <div class="right">
             <a href="#tejun" class="blocklink link-noarrow">
@@ -283,17 +283,17 @@
           </p>
           <p>
             これは座標平面です。
-            <figure><img src="" alt="2直線だけ記入"></figure>
-            何かが足りません。おっと、原点 $ \mathrm O $ が抜けていました。
-            <figure><img src="" alt="原点を記入"></figure>
+            <figure><img src="fig/large_01.jpg" alt="2直線だけ記入"></figure>
+            おっと、原点 $ \mathrm O $ が抜けていました。
+            <figure><img src="fig/large_02.jpg" alt="原点を記入"></figure>
             まだ足りません。横軸のラベル $ x $ と縦軸のラベル $ y $ を書く必要があります。
-            <figure><img src="" alt="xyも記入した"></figure>
+            <figure><img src="fig/large_03.jpg" alt="xyも記入した"></figure>
   
             それでは点 $ \mathrm P $ を記入しましょう。
-            <figure><img src="" alt="点Pのみ記入"></figure>
+            <figure><img src="fig/large_04.jpg" alt="点Pのみ記入"></figure>
             点 $ \mathrm P $ の座標は $ (x,y) $ ですから…
-            <figure><img src="" alt="x軸にx、y軸にyを記入"></figure>
-            あれれ？？　なんかおかしいですね。 $ x,y $ という文字がそれぞれ2個登場していて、ひとつは点 $ \mathrm P $ の座標として、もう一つは座標軸のラベルとして使われています。これは混乱の元です。
+            <figure><img src="fig/large_05.jpg" alt="x軸にx、y軸にyを記入"></figure>
+            あれれ？？　なにかおかしいですね。 $ x,y $ という文字がそれぞれ2個登場していて、ひとつは点 $ \mathrm P $ の座標として、もう一つは座標軸のラベルとして使われています。これは混乱の元です。
           </p>
           <p>
             そこでこのような無用な混乱を避けるためにも、点の座標は $ (X,Y) $ とおくことにします。
@@ -303,7 +303,7 @@
           </div>
         </section>
 
-        <section id="tejun2">
+        <section id="tejun2" class="section-inner">
           <h3>2.与えられた条件から $\boldsymbol{X,Y} $ の関係式を導く</h3>
           <div class="right">
             <a href="#tejun" class="blocklink link-noarrow">
@@ -327,7 +327,7 @@
           </p>
         </section>
 
-        <section id="tejun3">
+        <section id="tejun3" class="section-inner">
           <h3>3.関係式をみたすような点の集まりがどんな図形になるか考える</h3>
           <div class="right">
             <a href="#tejun" class="blocklink link-noarrow">
@@ -345,24 +345,24 @@
           </p>
           <p>
             この式から読み取れるのは、条件（2点 $ \mathrm{A,B} $ からの距離が等しい）をみたす点 $ \mathrm{P} $ について、その<strong> $ \boldsymbol x $ 座標と $ \boldsymbol y $ 座標が等しい</strong>ということだけです。
-            <figure class="fig-wide"><img src="fig/ex1_11.jpeg" alt=""></figure>
+            <figure class="fig-wide"><img src="fig/ex1_11.jpg" alt=""></figure>
           </p>
           <p>
             逆に、<strong>$\boldsymbol x $ 座標と $\boldsymbol y $ 座標の値が等しいような点がすべて条件（ $\boldsymbol{\mathrm{AP}=\mathrm{BP}} $ ）をみたしているかどうかは全くわからない</strong>のです。
-            <figure class="fig-wide"><img src="" alt="逆が成り立つかはわからない"></figure>
+            <figure class="fig-wide"><img src="fig/ex1_12.jpg" alt="逆が成り立つかはわからない"></figure>
+            <div class="dasoku" id="douchi_ref">
+              「？？」と思った場合は <a href="#douchi_note" class="link">こちら</a>
+            </div>
             そこで、4.のようにしてチェックする必要があります。
           </p>
-          <div class="dasoku" id="douchi_ref">
-            「？？」と思った場合は <a href="#douchi_note" class="link">こちら</a>
-          </div>
           <p>
             ともかく、点 $ \mathrm{P} $ の $ x $ 座標と $ y $ 座標が等しいことはわかりました。「図形と方程式」でみたように、このような点の集まりは直線 $ y=x $ ですから、<span class="highlight">点 $ \mathrm{P} $ が直線 $ y=x $ 上の<strong>どこかに</strong>ある</span>ということは間違いありません。
-            <figure><img src="" alt="直線上の点P"></figure>
-            くどいようですが、逆にこの直線上の点がすべて条件を満たすかどうかは調べないとわかりません。
+            <figure><img src="fig/ex1_13.jpg" alt="直線上の点P"></figure>
+            くどいようですが、逆にこの直線上の点がすべて条件を満たすかどうかは、実際に調べなてみないとわからないのです。
           </p>
         </section>
         
-        <section id="tejun4">
+        <section id="tejun4" class="section-inner">
           <h3>4.逆チェック</h3>
           <div class="right">
             <a href="#tejun" class="blocklink link-noarrow">
@@ -372,77 +372,95 @@
               <i class="fa-solid fa-backward-step"></i> 解答
             </a>
           </div>
+
+          <p>
+            そこで逆チェックを行います。
+          </p>
+          <p>
+            $ \mathrm{P} $ が直線 $ y=x $ 上にある、すなわち $ \mathrm{P} $ の $ x $ 座標と $ y $ 座標が等しいときに、はじめの条件 $ \mathrm{AP}=\mathrm{BP} $ を満たすかどうか調べます。
+          </p>
+          <p>
+            $ x $ 座標と $ y $ 座標が等しいので、実数 $ t $ を用いて $ \mathrm{P}(t,t) $ と表すことができす。
+            <figure><img src="fig/ex1_14.jpg" alt=""></figure>
+            三平方の定理を用いて $ \mathrm{AP} $ および $ \mathrm{BP} $ の長さを $ t $ で表せば、ただちに $ \mathrm{AP} = \mathrm{BP} $ であることがわかります。
+          </p>
+          <p>
+            ここで晴れて逆、つまり $ \mathrm{P} $ の $ x $ 座標と $ y $ 座標が等しいときに、条件 $ \mathrm{AP}=\mathrm{BP} $ を満たすことが確かめられました。
+          </p>
         </section>
-        <section id="tejun5">
-          <h3>5.</h3>
-          <a href="#tejun" class="blocklink link-noarrow">
-            <i class="fa-solid fa-backward-step"></i> 手順
-          </a>
-          <a href="#tejun5_ans" class="blocklink link-noarrow">
-            <i class="fa-solid fa-backward-step"></i> 解答
-          </a>
+
+        <section id="tejun5" class="section-inner">
+          <h3>5.求める軌跡</h3>
+          <div class="right">
+            <a href="#tejun" class="blocklink link-noarrow">
+              <i class="fa-solid fa-backward-step"></i> 手順
+            </a>
+            <a href="#tejun5_ans" class="blocklink link-noarrow">
+              <i class="fa-solid fa-backward-step"></i> 解答
+            </a>
+          </div>
+          <p>
+            以上の議論から、ようやく求める軌跡は「直線 $ y=x $ 」であると答えることができます。
+          </p>
         </section>
-        
+
+        <hr>
+
+        <section class="section-inner">
+          <p>
+            ここまでの流れを振り返ってみましょう。
+          </p>
+          <ol class="list">
+            <li>
+              点 $\mathrm P $ の座標を $ (X,Y) $ とおいた
+            </li>
+            <li>
+              与えられた条件 $ \mathrm{AP}=\mathrm{BP} $ から $ X,Y $ の関係式（ $ Y=X $ ）を導いた
+            </li>
+            <li>
+              $ \mathrm{P} $ が直線 $ y=x $ 上にあることはわかった。逆が成り立つかどうかはまだわからない
+            </li>
+            <li>
+              $ \mathrm{P}(t,t) $ とおいて $ \mathrm{AP} $ および $ \mathrm{BP} $ を計算することで、逆が成り立つことを確認した
+            </li>
+            <li>
+              求める軌跡は、直線 $ y=x $
+            </li>
+          </ol>
+          <p>
+            4.の $ \mathrm{P}(t,t) $ とおく逆チェックは見慣れないかもしれませんね。通常はこの手順を省いて
+            <div class="center bold">
+              <span class="highlight">逆に $ \boldsymbol{\mathrm{P}} $ が直線 $ \boldsymbol{y=x} $ 上にあるとき、条件を満たす</span>
+            </div>
+            のように書いてしまいます。これは<strong>高校生だけに許された特権的なズル</strong>というべきもので、いちいち「$ \mathrm{P}(t,t) $ とおいて〜」などと書かずとも、この1行さえ書いてしまえば逆チェックを行ったとみなされます。
+          </p>
+          <!-- <p>
+            ですから試験でも逆が成り立つことの証明は書かず、「逆に〜」と書いておけば大丈夫です。ですが、その裏にはこのようなきちんとした逆の確認のプロセスがあることを決して忘れないでください。
+          </p> -->
+          <p>
+            なぜ、ここまでしつこく逆チェックについて説明したのか。それは、この次の記事で扱う「除外点」をみるとわかります。
+          </p>
+          <!-- <div class="dasoku">
+            これを正しく理解するためには、数学Aで少しだけ触れた「必要条件と十分条件」がもとになる<strong>同値変形</strong>の理解が不可欠になってきます。同値変形についての詳しいことを今から説明するのはしんどいので割愛します。ここではきちんと説明できませんが、<strong>常識的な式変形をしている限りは</strong>、このあと述べるような除外点をのぞくすべての点で逆が成り立つことが保証されます。
+          </div> -->
+        </section>
       </section>
 
-      <!-- <section>
-        <p>
-          さっそく例題に入りましょう。おそらく「軌跡」の単元で一番最初に見る問題です。
-        </p>
-        <div class="box box-q">
-          <span class="box_title">Q1</span>
-          2点 $ A(0,1), B(1,0) $ から等距離にある点Pの軌跡を求めよ
-        </div>
-        <p>
-          次の<span class="mark">解答(?)</span>をみてください。
-        </p>
-        <div class="box box-a">
-          <span class="box_title">解答(?)</span>
-          点 $ P $ の座標を $ P(x,y) $ とすると、三平方の定理より
-          $$ AP=\sqrt{x^2+(y-1)^2} $$
-          $$ BP=\sqrt{(x-1)^2+y^2} $$
-           $ AP=BP $ より、
-          $$ \sqrt{x^2+(y-1)^2}=\sqrt{(x-1)^2+y^2} $$
-          両辺を2乗して
-          $$ x^2+(y-1)^2=(x-1)^2+y^2 $$
-          $$ -2y = -2x $$
-          $$ \therefore \boldsymbol{ y=x } \cdots\text{（答？）} $$
-        </div>
-        <p>
-          この解答には致命的な欠陥があり、下手をすると0点になりかねません。どこが問題なのでしょうか。
-        </p>
-        <div class="dasoku">
-          <strong>10秒でもいいので考えてからスクロールしてください。</strong>
-          <br>＊<br>＊<br>＊<br>＊<br>＊<br>＊<br>＊<br>＊<br>＊<br>＊
-        </div>
-        <p>
-          問題点は2つあります。
-        </p>
-        <p class="center">
-          <ol>
-            <li><strong>逆チェックを行っていない</strong></li>
-            <li><strong>答えが答えになっていない</strong></li>
-          </ol>
-        </p>
-        <p>
-          1.は気づいた人も多いのではないでしょうか。「軌跡」を習うときには耳にたこができるほど<strong>「逆チェックを忘れるな」</strong>と言われますね。これについては後で詳しく話します。
-        </p>
-        <p>
-          2.はどういうことでしょうか。問題文には「…点Pの<strong>軌跡を求めよ</strong>」とあります。点Pの軌跡というのは条件をみたすようにPが動き回るときに描く<strong>図形</strong>のことですから、「どんな図形を表すのか」を答える必要があります。上の<span class="mark">解答(?)</span>で答えとしている $ y=x $ は、ただの<strong>点Pの座標 $ \boldsymbol{(x,y)} $ の間に成り立つ関係式</strong>に過ぎません。
-        </p>
-        <div class="dasoku">
-          このあと詳しく説明するので、「あーそうなんだなー」程度に聞き流して大丈夫です。
-        </div>
-        <p>
-          得られた式 $ y=x $ は $ xy $ 平面上で直線を表す式ですから、正しくは
-          <div class="center">
-            <strong>直線</strong> $ y=x $ 
-          </div>
-          と答えるべきでした。
-        </p>
-      </section> -->
-      
       <section>
+        <h2>次の記事</h2>
+        <div class="articlecards-container">
+          <article class="articlecard">
+            <a href="kiseki02.html">
+              <img src="hero.jpg" alt="">
+              <div class="articlecard_title">
+                軌跡#2<br>除外点
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+      
+      <!-- <section>
         <h2>
           媒介変数表示
           <sapn class="subheading">〜もう「 $ t $ を消去」なんて言わない〜</sapn>
@@ -460,7 +478,7 @@
           放物線 $ y=x^2-4ax+3 $ の頂点を $ P $ とする。<br>
            $ a $ が実数全体を動くとき、 $ P $ の軌跡を求めよ。
         </div>
-      </section>
+      </section> -->
 
       <section class="footnote">
         <p>注釈</p>
@@ -485,7 +503,7 @@
           </p>
           <p>
             ところが、「図形と方程式」で新たに習った円の方程式「 $ x^2+y^2=1 $ 」は<strong>yがxの関数になっていない</strong>。これはグラフを見れば明らかだ
-            <figure><img src="" alt="（グラフ）"></figure>
+            <figure><img src="fig/note2.jpg" alt="（グラフ）"></figure>
             たとえば $ x=0 $ のとき、 方程式をみたす $ y $ の値は $ -1 $ と $ 1 $ の2つあってひとつに定まらない。「図形と方程式」では、このような「関数の形になっていない方程式」のグラフも扱う。
           </p>
           <p>
@@ -514,3 +532,4 @@
       </div>
     </footer>
   </body>
+</html>
